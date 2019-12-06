@@ -1,6 +1,7 @@
 ---
-path: This is a test event
+path: test-event-stockholm
 date: 2019-12-26T12:41:31.406Z
+title: This is a test event poop
 description: Test event lol
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet nibh ut urna scelerisque ornare sed suscipit lectus. Suspendisse vitae sapien nibh. Duis vehicula turpis et velit venenatis consequat. Fusce maximus urna facilisis ligula congue, sit amet mollis lectus pharetra. Etiam ac vulputate ex, et consectetur lectus. Mauris auctor turpis non laoreet suscipit. Nunc tempus, sapien sodales tristique malesuada, justo lacus porta dui, vel porta libero lorem id nunc. Curabitur vitae consequat ipsum, non ornare magna. Donec sem lacus, venenatis et orci ut, dapibus malesuada nisi. In non ligula libero. Maecenas molestie nunc turpis, id accumsan diam tempus eget. Sed sodales, leo eu hendrerit iaculis, lectus odio rhoncus purus, quis luctus ipsum mi et ipsum. Aenean eget iaculis neque, vel volutpat risus.

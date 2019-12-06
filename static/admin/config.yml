@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: perriekkola/seogirls
+  repo: kumpan/seogirls
 
 media_folder: static/assets
 public_folder: assets

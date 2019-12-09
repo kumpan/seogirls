@@ -6,6 +6,7 @@ exports.createPages = ({ graphql, actions }) => {
 
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
   const eventPost = path.resolve(`./src/templates/event-post.js`)
+  const pageTemplate = path.resolve(`./src/templates/page-template.js`)
 
   return graphql(
     `
@@ -42,6 +43,22 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         }
+        pages: allMdx(
+          filter: { fileAbsolutePath: { regex: "/(pages)/" } }
+          sort: { fields: [frontmatter___date], order: DESC }
+          limit: 1000
+        ) {
+          edges {
+            node {
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+              }
+            }
+          }
+        }
       }
     `
   ).then(result => {
@@ -52,6 +69,7 @@ exports.createPages = ({ graphql, actions }) => {
     // Create blog posts pages.
     const blogPosts = result.data.blog.edges
     const eventPosts = result.data.events.edges
+    const pages = result.data.pages.edges
 
     blogPosts.forEach((post, index) => {
       const previous =
@@ -80,6 +98,19 @@ exports.createPages = ({ graphql, actions }) => {
         component: eventPost,
         context: {
           slug: post.node.fields.slug,
+          previous,
+          next,
+        },
+      })
+    })
+
+    // Create subpages.
+    pages.forEach((page, index) => {
+      createPage({
+        path: `pages${page.node.fields.slug}`,
+        component: pageTemplate,
+        context: {
+          slug: page.node.fields.slug,
           previous,
           next,
         },

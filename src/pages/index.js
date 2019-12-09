@@ -11,23 +11,25 @@ class IndexPage extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
+    const meta = data.allMdx.edges[0].node.frontmatter
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
-          title="Home"
+          title={meta.metatitle}
+          description={meta.metadescription}
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
         <Image
           fluid={data.mainImage.childImageSharp.fluid}
           alt="This is Gatsby"
         />
-        <h1>
+        <h2>
           Hey people{" "}
           <span role="img" aria-label="wave emoji">
             👋
           </span>
-        </h1>
+        </h2>
         <p>Welcome to your new Gatsby website. You are on your home page.</p>
         <p>
           This starter comes out of the box with styled components and Gatsby's
@@ -59,6 +61,16 @@ export const pageQuery = graphql`
         fluid(maxWidth: 800, maxHeight: 400) {
           ...GatsbyImageSharpFluid
           presentationWidth
+        }
+      }
+    }
+    allMdx(filter: { fileAbsolutePath: { regex: "/(start-page)/" } }) {
+      edges {
+        node {
+          frontmatter {
+            metatitle
+            metadescription
+          }
         }
       }
     }

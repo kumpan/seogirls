@@ -1,0 +1,26 @@
+body {
+  font-family: "Merriweather", serif;
+}
+
+h1,
+h2,
+h3,
+h3 {
+  font-family: "Montserrat", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 752px;
+  margin: 56px auto;
+}
+
+.footer {
+  text-align: center;
+  margin: 24px;
+}

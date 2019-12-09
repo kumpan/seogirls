@@ -5,10 +5,29 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
+  const eventPost = path.resolve(`./src/templates/event-post.js`)
+
   return graphql(
     `
       {
-        allMdx(
+        blog: allMdx(
+          filter: { fileAbsolutePath: { regex: "/(blog)/" } }
+          sort: { fields: [frontmatter___date], order: DESC }
+          limit: 1000
+        ) {
+          edges {
+            node {
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+              }
+            }
+          }
+        }
+        events: allMdx(
+          filter: { fileAbsolutePath: { regex: "/(events)/" } }
           sort: { fields: [frontmatter___date], order: DESC }
           limit: 1000
         ) {
@@ -31,15 +50,34 @@ exports.createPages = ({ graphql, actions }) => {
     }
 
     // Create blog posts pages.
-    const posts = result.data.allMdx.edges
+    const blogPosts = result.data.blog.edges
+    const eventPosts = result.data.events.edges
 
-    posts.forEach((post, index) => {
-      const previous = index === posts.length - 1 ? null : posts[index + 1].node
-      const next = index === 0 ? null : posts[index - 1].node
+    blogPosts.forEach((post, index) => {
+      const previous =
+        index === blogPosts.length - 1 ? null : blogPosts[index + 1].node
+      const next = index === 0 ? null : blogPosts[index - 1].node
 
       createPage({
         path: `blog${post.node.fields.slug}`,
         component: blogPost,
+        context: {
+          slug: post.node.fields.slug,
+          previous,
+          next,
+        },
+      })
+    })
+
+    // Create event posts pages.
+    eventPosts.forEach((post, index) => {
+      const previous =
+        index === eventPosts.length - 1 ? null : eventPosts[index + 1].node
+      const next = index === 0 ? null : eventPosts[index - 1].node
+
+      createPage({
+        path: `events${post.node.fields.slug}`,
+        component: eventPost,
         context: {
           slug: post.node.fields.slug,
           previous,

@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Button from "../components/button"
 
-class Blog extends React.Component {
+class Events extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
@@ -14,17 +14,17 @@ class Blog extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="All posts" />
+        <SEO title="All events" />
         <Bio />
         <div style={{ margin: "20px 0 40px" }}>
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             return (
               <div key={node.fields.slug}>
-                <h3 style={{}}>
+                <h3>
                   <Link
                     style={{ boxShadow: `none` }}
-                    to={`/blog${node.fields.slug}`}
+                    to={`/events${node.fields.slug}`}
                   >
                     {title}
                   </Link>
@@ -47,7 +47,7 @@ class Blog extends React.Component {
   }
 }
 
-export default Blog
+export default Events
 
 export const pageQuery = graphql`
   query {
@@ -57,7 +57,7 @@ export const pageQuery = graphql`
       }
     }
     allMdx(
-      filter: { fileAbsolutePath: { regex: "/(blog)/" } }
+      filter: { fileAbsolutePath: { regex: "/(events)/" } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {

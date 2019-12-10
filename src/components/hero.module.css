@@ -1,0 +1,22 @@
+.hero {
+  min-height: 100vh;
+  background: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.container {
+  max-width: 960px;
+}
+
+.hero p {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.hero a {
+  color: #fff;
+}

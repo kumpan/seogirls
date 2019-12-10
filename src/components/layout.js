@@ -1,5 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
+
+import Hero from "./hero.js"
+
 import styles from "./layout.module.css"
 
 class Layout extends React.Component {
@@ -9,6 +12,7 @@ class Layout extends React.Component {
     return (
       <div>
         <div className={styles.container}>
+          <Hero />
           <header>
             <h1
               style={{

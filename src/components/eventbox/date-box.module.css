@@ -1,0 +1,30 @@
+.datebox {
+  width: 48px;
+  height: 56px;
+  display: inline-flex;
+  background: linear-gradient(295.7deg, #ad2f82 16.33%, #f95555 83.76%);
+  color: #fff;
+  text-transform: uppercase;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  padding: 4px;
+  margin-right: 16px;
+}
+
+.datebox div {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.day {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+.month {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+}

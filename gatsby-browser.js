@@ -1,3 +1,4 @@
 // custom typefaces
-import "typeface-montserrat"
-import "typeface-merriweather"
+import "typeface-crimson-text"
+import "typeface-poppins"
+import "./src/global.css"

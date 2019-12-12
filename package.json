@@ -20,6 +20,7 @@
     "gatsby-plugin-netlify-cms": "^4.0.0",
     "gatsby-plugin-offline": "^2.0.25",
     "gatsby-plugin-react-helmet": "^3.0.12",
+    "gatsby-plugin-react-svg": "^2.1.2",
     "gatsby-plugin-sharp": "^2.0.35",
     "gatsby-plugin-styled-components": "^3.0.7",
     "gatsby-remark-copy-linked-files": "^2.0.11",
@@ -36,8 +37,8 @@
     "react-helmet": "^5.2.0",
     "react-switch": "^5.0.0",
     "styled-components": "^4.2.0",
-    "typeface-merriweather": "0.0.72",
-    "typeface-montserrat": "0.0.54"
+    "typeface-crimson-text": "0.0.72",
+    "typeface-poppins": "0.0.72"
   },
   "devDependencies": {
     "prettier": "^1.17.0"

@@ -1,32 +1,45 @@
-nav {
+.nav {
   width: 100%;
-  height: 96px;
+  height: 80px;
   display: flex;
   align-items: center;
-  background: #000;
-  padding: 8px 24px;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 8px 32px;
   position: fixed;
   z-index: 2;
   top: 0;
   left: 0;
+  backdrop-filter: blur(8px);
 }
 
 .logo {
-  background: #fff;
-  width: 120px;
-  height: 64px;
-  display: inline-flex;
-  justify-content: center;
+  height: 48px;
+  display: flex;
   align-items: center;
-  border-radius: 40px;
-  color: #000 !important;
 }
 
-.logo::after {
-  display: none;
+.logo svg {
+  margin: 0;
+  overflow: visible;
 }
 
-ul {
+.logo svg path:nth-child(1), .logo svg path:nth-child(2), .logo svg path:nth-child(3) {
+  transition: 0.3s all ease;
+}
+
+.logo:hover svg path:nth-child(1), .logo:hover svg path:nth-child(2), .logo:hover svg path:nth-child(3) {
+  transform: translateY(-4px);
+}
+
+.logo svg path:nth-child(4), .logo svg path:nth-child(5), .logo svg path:nth-child(6), .logo svg path:nth-child(7), .logo svg path:nth-child(8) {
+  transition: 0.3s all ease;
+}
+
+.logo:hover svg path:nth-child(4), .logo:hover svg path:nth-child(5), .logo:hover svg path:nth-child(6), .logo:hover svg path:nth-child(7), .logo:hover svg path:nth-child(8) {
+  transform: translateY(4px);
+}
+
+.nav ul {
   margin: 0;
   padding: 0;
   margin-left: auto;
@@ -35,8 +48,209 @@ ul {
   justify-content: center;
 }
 
-ul li {
+.nav ul li {
   list-style: none;
   display: inline-block;
-  margin-left: 24px;
+  margin-left: 32px;
 }
+
+.nav a {
+  font-weight: 400;
+  color: #364441;
+  font-size: 18px;
+  display: inline-flex;
+  height: 100%;
+}
+
+.nav ul:hover a {
+  opacity: 0.3;
+}
+
+.nav ul a:hover {
+  color: #011310;
+  opacity: 1;
+}
+
+.nav a::after {
+  display: none;
+}
+
+.hamburger {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  margin-left: auto;
+  display: none;
+  z-index: 1;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  margin-bottom: 9px;
+  background: #011310;
+  transition: 0.2s all ease;
+}
+
+.hamburger span:last-of-type {
+  margin-bottom: 0;
+}
+
+.lineOne {
+  width: 100%;
+}
+
+.lineTwo {
+  width: 75%;
+  margin-left: auto;
+}
+
+.lineThree {
+  width: 100%;
+}
+
+.hamburger:hover .lineTwo {
+  width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+  .nav {
+    backdrop-filter: none;
+    background: rgba(255, 255, 255, 1);
+  }
+
+  .nav ul {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    padding-bottom: 120px;
+    transition: 0.6s all ease;
+    top: -100%;
+  }
+
+  .nav ul:hover a {
+    opacity: 1;
+  }
+
+  .nav ul li {
+    width: 100%;
+    margin: 0 0 32px 0;
+    text-align: center;
+  }
+
+  .nav ul li:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .nav a {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  .hamburger {
+    display: inline-flex;
+  }
+
+  nav .opened {
+    top: 0 !important;
+    opacity: 1;
+  }
+
+  .hamburger.opened .lineTwo {
+    opacity: 0;
+    width: 0;
+  }
+
+  .hamburger.opened .lineOne {
+    transform: rotate(45deg) translate(9px, 8px);
+  }
+
+  .hamburger.opened .lineThree {
+    transform: rotate(-45deg) translate(9px, -8px);
+  }
+
+  @keyframes fade-up {
+    0% {
+      opacity: 0;
+      transform: translateY(-16px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  nav .opened li {
+    animation: fade-up 1s ease-out 0.4s both;
+  }
+
+  nav .opened li:nth-child(2) {
+    animation-delay: 0.6s;
+  }
+
+  nav .opened li:nth-child(3) {
+    animation-delay: 0.8s;
+  }
+
+  nav .opened li:nth-child(4) {
+    animation-delay: 1s;
+  }
+
+  nav .opened li:nth-child(5) {
+    animation-delay: 1.2s;
+  }
+
+  nav .opened li:nth-child(6) {
+    animation-delay: 1.4s;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .nav {
+    padding: 8px 16px;
+    height: 64px;
+  }
+
+  .logo {
+    height: 32px;
+    display: flex;
+    align-items: center;
+  }
+
+  .logo svg {
+    height: 16px;
+    width: auto;
+  }
+
+  .hamburger {
+    width: 32px;
+    height: 32px;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    padding-bottom: 120px;
+    justify-content: flex-start;
+    padding: 80px 16px 16px;
+  }
+
+  .nav ul li {
+    margin: 0 0 24px 0;
+    text-align: left;
+  }
+
+  .nav a {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+

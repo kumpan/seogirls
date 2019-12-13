@@ -114,13 +114,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `SEO Girls`,
+        short_name: `SEO Girls`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#f16565`,
         display: `minimal-ui`,
-        // edit below
         icon: `content/assets/favicon.png`,
       },
     },

@@ -17,7 +17,7 @@ about:
     accumsan porta leo, eu ornare quam.
 
 
-    <a href="/">Läs mer om oss</a>
+    [Läs mer om oss](/)
   smalltitle: Vad gör vi?
 ---
 

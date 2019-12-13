@@ -10,14 +10,14 @@ import styles from "./hero.module.css"
 
 class Hero extends React.Component {
   render() {
+    const { title, subtitle, link } = this.props
+
     return (
       <header className={styles.hero}>
         <Nav />
         <div className={styles.container}>
-          <h1>
-            Utvecklas och umgås med andra tjejer inom SEO och growth hacking
-          </h1>
-          <Link to="/">Se kommande evenemang</Link>
+          <h1>{title}</h1>
+          <Link to={link}>{subtitle}</Link>
         </div>
         <div className={styles.stars}>
           <StarsOne />

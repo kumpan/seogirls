@@ -55,6 +55,12 @@
   opacity: 1;
 }
 
+@media screen and (max-width: 1400px) {
+  .eventtext {
+    margin-top: -4px;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .eventbox {
     width: 100%;
@@ -77,7 +83,7 @@
 
 @media screen and (max-width: 650px) {
   .eventbox {
-    min-height: 384px;
+    min-height: 320px;
   }
 
   .eventdescription {
@@ -88,6 +94,6 @@
   }
 
   .eventtext {
-    margin-top: -4px;
+    margin-top: 0px;
   }
 }

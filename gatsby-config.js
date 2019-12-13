@@ -64,8 +64,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/general-seo`,
-        name: `generalseo`,
+        path: `${__dirname}/content/start-page`,
+        name: `startpage`,
       },
     },
     {

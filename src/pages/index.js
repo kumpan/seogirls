@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
+import Hero from "../components/hero.js"
 import SEO from "../components/seo"
 import EventBox from "../components/eventbox/event-box"
 
@@ -12,27 +13,48 @@ class IndexPage extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
-    const meta = data.allMdx.edges[0].node.frontmatter
-    const description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae pretium turpis, sed ullamcorper diam. Vivamus leo erat, faucibus a enim eu, egestas ornare eros. Sed quis faucibus dolor, id commodo nulla. Sed consectetur cursus magna ut sodales. Nec semper orci aliquet quis."
+    const content = data.allMdx.edges[0].node.frontmatter
+    const description =
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae pretium turpis, sed ullamcorper diam. Vivamus leo erat, faucibus a enim eu, egestas ornare eros. Sed quis faucibus dolor, id commodo nulla. Sed consectetur cursus magna ut sodales. Nec semper orci aliquet quis."
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
-          title={meta.metatitle}
-          description={meta.metadescription}
+          title={content.title}
+          description={content.description}
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
+        <Hero
+          title={content.hero.headingone}
+          subtitle={content.hero.subtitlelinktext}
+          link={content.hero.subtitlelinkdestination}
+        />
         <div className={styles.events}>
-          <EventBox dated smallTitle="Nästa evenemang" title="SEO-mingel på Södra Teatern" day="4" month="Feb" description={description} backgroundImage={data.coverOne.childImageSharp.fluid} />
-          <EventBox smallTitle="Tidigare händelser" title="Seminarie: Growth Hacking" day="12" month="Dec" description={description} backgroundImage={data.coverTwo.childImageSharp.fluid} />
+          <EventBox
+            dated
+            smallTitle="Nästa evenemang"
+            title="SEO-mingel på Södra Teatern"
+            day="4"
+            month="Feb"
+            description={description}
+            backgroundImage={data.coverOne.childImageSharp.fluid}
+          />
+          <EventBox
+            smallTitle="Tidigare händelser"
+            title="Seminarie: Growth Hacking"
+            day="12"
+            month="Dec"
+            description={description}
+            backgroundImage={data.coverTwo.childImageSharp.fluid}
+          />
         </div>
         <div className={styles.about}>
-          <div className="small-title">
-            Vad gör vi?
-          </div>
-          <h2>Vi ordnar mindre träffar och större evenemang för kvinnor som sysslar med SEO eller growth hacking.</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet pulvinar nibh, eu commodo diam. Integer non varius ex. Ut ullamcorper convallis dolor ac placerat. Ut finibus mollis dui vitae blandit. Nunc accumsan porta leo, eu ornare quam.</p>
-          <Link to="/">Läs mer om oss</Link>
+          <div className="small-title">{content.about.smalltitle}</div>
+          <h2>{content.about.headingtwo}</h2>
+          <p>{content.about.ingress}</p>
+          <Link to={content.about.ingresslinkdestination}>
+            {content.about.ingresslinktext}
+          </Link>
         </div>
       </Layout>
     )
@@ -52,8 +74,20 @@ export const pageQuery = graphql`
       edges {
         node {
           frontmatter {
-            metatitle
-            metadescription
+            title
+            description
+            hero {
+              headingone
+              subtitlelinkdestination
+              subtitlelinktext
+            }
+            about {
+              smalltitle
+              headingtwo
+              ingress
+              ingresslinktext
+              ingresslinkdestination
+            }
           }
         }
       }

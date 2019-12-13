@@ -5,8 +5,8 @@
 }
 
 .about {
-  margin: 144px 0;
-  max-width: 752px;
+  margin: 184px 0;
+  max-width: 960px;
 }
 
 .about a {
@@ -15,7 +15,6 @@
 
 .about h2 {
   margin-top: 8px;
-  max-width: 600px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -27,6 +26,6 @@
 
 @media screen and (max-width: 650px) {
   .about {
-    margin: 56px 0 120px;
+    margin: 120px 0;
   }
 }

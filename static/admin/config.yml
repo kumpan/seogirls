@@ -38,12 +38,36 @@ collections:
       - { name: description, label: Description }
       - { name: body, label: Body, widget: markdown }
 
-  - name: general-seo
-    label: General SEO
-    folder: content/general-seo
+  - name: start-page
+    label: Start Page
+    folder: content/start-page
     create: true
     identifier_field: name
     fields:
       - { name: name, label: Identifier }
-      - { name: metatitle, label: Meta title tag }
-      - { name: metadescription, label: Meta description }
+      - { name: title, label: Title }
+      - { name: description, label: Description }
+      - name: hero
+        label: Hero
+        widget: object
+        fields:
+          - { name: headingone, label: H1, widget: text }
+          - { name: subtitlelinktext, label: Subtitle Link Text, widget: text }
+          - {
+              name: subtitlelinkdestination,
+              label: Subtitle Link Destination,
+              widget: string,
+            }
+      - name: about
+        label: About
+        widget: object
+        fields:
+          - { name: smalltitle, label: Small Title, widget: string }
+          - { name: headingtwo, label: H2, widget: text }
+          - { name: ingress, label: Ingress, widget: text }
+          - { name: ingresslinktext, label: Ingress Link Text, widget: string }
+          - {
+              name: ingresslinkdestination,
+              label: Ingress Link Destination,
+              widget: string,
+            }

@@ -7,7 +7,7 @@
 }
 
 .container {
-  max-width: 960px;
+  max-width: 1200px;
   padding-bottom: 120px;
 }
 
@@ -26,7 +26,7 @@
   animation: fade-up 1s ease-out 0.4s both;
 }
 
-.container p {
+.container a {
   animation: fade-up 1s ease-out 0.7s both;
 }
 
@@ -95,6 +95,12 @@
   top: 0;
   animation: stars-in 1s ease-in-out 0.4s both,
     stars-1-pulse 3s ease-in-out 1.4s infinite forwards;
+}
+
+@media screen and (max-width: 1400px) {
+  .container {
+    max-width: 840px;
+  }
 }
 
 @media screen and (max-width: 1200px) {

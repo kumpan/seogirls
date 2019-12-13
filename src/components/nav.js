@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock"
 
 import styles from "./nav.module.css"
 
@@ -13,6 +14,14 @@ class Nav extends React.Component {
 
   toggleMenu = () => {
     this.setState({ showMenu: !this.state.showMenu })
+
+    if (!this.state.showMenu) {
+      setTimeout(() => {
+        disableBodyScroll(this.targetElement)
+      }, 300)
+    } else {
+      enableBodyScroll(this.targetElement)
+    }
   }
 
   toggleHover = () => {

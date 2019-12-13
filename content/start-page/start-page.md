@@ -7,10 +7,7 @@ hero:
   subtitlelinkdestination: /
   subtitlelinktext: Se kommande evenemang
 about:
-  headingtwo: >-
-    Vi ordnar mindre träffar och större evenemang för kvinnor som sysslar med
-    SEO eller growth hacking.
-  ingress: >-
+  body: >-
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet
     pulvinar nibh, eu commodo diam. Integer non varius ex. Ut ullamcorper
     convallis dolor ac placerat. Ut finibus mollis dui vitae blandit. Nunc
@@ -18,6 +15,9 @@ about:
 
 
     [Läs mer om oss](/)
+  headingtwo: >-
+    Vi ordnar mindre träffar och större evenemang för kvinnor som sysslar med
+    SEO eller growth hacking.
   smalltitle: Vad gör vi?
 ---
 

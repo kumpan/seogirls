@@ -14,7 +14,7 @@ about:
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet
     pulvinar nibh, eu commodo diam. Integer non varius ex. Ut ullamcorper
     convallis dolor ac placerat. Ut finibus mollis dui vitae blandit. Nunc
-    accumsan porta leo, eu ornare quam.
+    accumsan porta leo, eu ornare quam. Proin nibh nisi finibus ut.
   ingresslinkdestination: /
   ingresslinktext: Läs mer om oss
   smalltitle: Vad gör vi?

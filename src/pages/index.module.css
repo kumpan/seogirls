@@ -18,12 +18,14 @@
   max-width: 600px;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 1024px) {
   .events {
     flex-direction: column;
     margin: -80px 0 0;
   }
+}
 
+@media screen and (max-width: 650px) {
   .about {
     margin: 56px 0 120px;
   }

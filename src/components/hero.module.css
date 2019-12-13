@@ -71,59 +71,61 @@
   height: auto;
 }
 
-.stars svg:nth-child(1), .stars svg:nth-child(2) {
+.stars svg:nth-child(1),
+.stars svg:nth-child(2) {
   position: absolute;
 }
 
 .stars svg:nth-child(1) {
   left: 30px;
   top: -90px;
-  animation: stars-in 1s ease-in-out both, stars-1-pulse 3s ease-in-out 1s infinite forwards;
+  animation: stars-in 1s ease-in-out both,
+    stars-1-pulse 3s ease-in-out 1s infinite forwards;
 }
 
 .stars svg:nth-child(2) {
   left: 140px;
   top: 60px;
-  animation: stars-in 1s ease-in-out 0.2s both, stars-1-pulse 3s ease-in-out 1.2s infinite forwards;
+  animation: stars-in 1s ease-in-out 0.2s both,
+    stars-1-pulse 3s ease-in-out 1.2s infinite forwards;
 }
 
 .stars svg:nth-child(3) {
   left: 0;
   top: 0;
-  animation: stars-in 1s ease-in-out 0.4s both, stars-1-pulse 3s ease-in-out 1.4s infinite forwards;
+  animation: stars-in 1s ease-in-out 0.4s both,
+    stars-1-pulse 3s ease-in-out 1.4s infinite forwards;
 }
 
 @media screen and (max-width: 1200px) {
   .stars {
-    right: calc(50% - 120px);
+    right: calc(50% - 400px);
     bottom: 64px;
     width: 320px;
   }
 }
 
 @media screen and (max-width: 650px) {
+  .hero {
+    min-height: 90vh;
+  }
+
   .container {
     padding-bottom: 80px;
   }
 
   .stars {
-    right: calc(50% - 40px);
+    right: calc(50% - 16px);
     bottom: 16px;
-    width: 160px;
+    width: 184px;
   }
 
   .stars svg:nth-child(1) {
-    left: 60px;
-    top: -40px;
+    display: none;
   }
 
   .stars svg:nth-child(2) {
-    left: 64px;
+    left: 125px;
     top: 60px;
-  }
-
-  .stars svg:nth-child(3) {
-    left: 0;
-    top: 0;
   }
 }

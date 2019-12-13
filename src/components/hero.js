@@ -17,9 +17,7 @@ class Hero extends React.Component {
           <h1>
             Utvecklas och umgås med andra tjejer inom SEO och growth hacking
           </h1>
-          <p>
-            Vill du ses? <Link to="/">Se kommande evenemang</Link>
-          </p>
+          <Link to="/">Se kommande evenemang</Link>
         </div>
         <div className={styles.stars}>
           <StarsOne />

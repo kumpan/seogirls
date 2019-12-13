@@ -23,19 +23,31 @@
   overflow: visible;
 }
 
-.logo svg path:nth-child(1), .logo svg path:nth-child(2), .logo svg path:nth-child(3) {
+.logo svg path:nth-child(1),
+.logo svg path:nth-child(2),
+.logo svg path:nth-child(3) {
   transition: 0.3s all ease;
 }
 
-.logo:hover svg path:nth-child(1), .logo:hover svg path:nth-child(2), .logo:hover svg path:nth-child(3) {
+.logo:hover svg path:nth-child(1),
+.logo:hover svg path:nth-child(2),
+.logo:hover svg path:nth-child(3) {
   transform: translateY(-4px);
 }
 
-.logo svg path:nth-child(4), .logo svg path:nth-child(5), .logo svg path:nth-child(6), .logo svg path:nth-child(7), .logo svg path:nth-child(8) {
+.logo svg path:nth-child(4),
+.logo svg path:nth-child(5),
+.logo svg path:nth-child(6),
+.logo svg path:nth-child(7),
+.logo svg path:nth-child(8) {
   transition: 0.3s all ease;
 }
 
-.logo:hover svg path:nth-child(4), .logo:hover svg path:nth-child(5), .logo:hover svg path:nth-child(6), .logo:hover svg path:nth-child(7), .logo:hover svg path:nth-child(8) {
+.logo:hover svg path:nth-child(4),
+.logo:hover svg path:nth-child(5),
+.logo:hover svg path:nth-child(6),
+.logo:hover svg path:nth-child(7),
+.logo:hover svg path:nth-child(8) {
   transform: translateY(4px);
 }
 
@@ -62,7 +74,7 @@
   height: 100%;
 }
 
-.nav ul:hover a {
+.hovered {
   opacity: 0.3;
 }
 
@@ -130,14 +142,14 @@
     left: 0;
     top: 0;
     flex-direction: column;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(8px);
     padding-bottom: 120px;
     transition: 0.6s all ease;
-    top: -100%;
+    top: -140%;
   }
 
-  .nav ul:hover a {
+  .hovered {
     opacity: 1;
   }
 
@@ -190,27 +202,27 @@
   }
 
   nav .opened li {
-    animation: fade-up 1s ease-out 0.4s both;
+    animation: fade-up 0.6s ease-out 0.4s both;
   }
 
   nav .opened li:nth-child(2) {
-    animation-delay: 0.6s;
+    animation-delay: 0.5s;
   }
 
   nav .opened li:nth-child(3) {
-    animation-delay: 0.8s;
+    animation-delay: 0.6s;
   }
 
   nav .opened li:nth-child(4) {
-    animation-delay: 1s;
+    animation-delay: 0.7s;
   }
 
   nav .opened li:nth-child(5) {
-    animation-delay: 1.2s;
+    animation-delay: 0.8s;
   }
 
   nav .opened li:nth-child(6) {
-    animation-delay: 1.4s;
+    animation-delay: 0.9s;
   }
 }
 
@@ -239,18 +251,31 @@
   .nav ul {
     flex-direction: column;
     padding-bottom: 120px;
-    justify-content: flex-start;
-    padding: 80px 16px 16px;
+    padding: 80px 16px 144px;
   }
 
   .nav ul li {
     margin: 0 0 24px 0;
-    text-align: left;
   }
 
   .nav a {
     font-size: 24px;
     line-height: 32px;
   }
-}
 
+  .hamburger span {
+    margin-bottom: 6px;
+  }
+
+  .hamburger.opened .lineOne {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+
+  .hamburger.opened .lineThree {
+    transform: rotate(-45deg) translate(6px, -7px);
+  }
+
+  .hamburger:hover .lineTwo {
+    width: 75%;
+  }
+}

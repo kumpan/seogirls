@@ -7,29 +7,35 @@ import styles from "./event-box.module.css"
 
 class EventBox extends React.Component {
   render() {
-    const { data, backgroundImage, smallTitle, title, dated, day, month, description } = this.props
+    const {
+      backgroundImage,
+      smallTitle,
+      title,
+      dated,
+      day,
+      month,
+      description,
+    } = this.props
 
     return (
-      <a className={"event-box" + ' ' + styles.eventbox}>
+      <div className={"event-box " + styles.eventbox}>
         <div className={styles.eventtitle}>
-          {dated &&
-            <DateBox day={day} month={month} />
-          }
+          {dated && <DateBox day={day} month={month} />}
           <div className={styles.eventtext}>
-            <span className="small-title">{smallTitle || "Write smallTitle"}</span>
+            <span className="small-title">
+              {smallTitle || "Write smallTitle"}
+            </span>
             <h3 className="white-type">{title || "Write title"}</h3>
           </div>
         </div>
-        <div className={styles.eventdescription}>
-          {description}
-        </div>
+        <div className={styles.eventdescription}>{description}</div>
         <Image
-          style={{position: "absolute"}}
+          style={{ position: "absolute" }}
           className={"bg-image gradient"}
           fluid={backgroundImage}
           alt="Event"
         />
-      </a>
+      </div>
     )
   }
 }

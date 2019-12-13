@@ -108,11 +108,15 @@ a:hover::after {
 }
 
 .bg-image.gradient::after {
-  content: '';
+  content: "";
   display: block;
   width: 100%;
   height: 100%;
-  background: linear-gradient(155.13deg, rgba(0, 0, 0, 1) 11.32%, rgba(0, 0, 0, 0.5) 78.51%);
+  background: linear-gradient(
+    155.13deg,
+    rgba(0, 0, 0, 1) 11.32%,
+    rgba(0, 0, 0, 0.5) 78.51%
+  );
   position: absolute;
   top: 0;
   left: 0;
@@ -128,12 +132,14 @@ a:hover::after {
   opacity: 1;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1400px) {
   body {
     font-size: 18px;
     line-height: 32px;
   }
-  
+}
+
+@media screen and (max-width: 1200px) {
   h1 {
     font-size: 56px;
     line-height: 64px;
@@ -145,7 +151,7 @@ a:hover::after {
     font-size: 16px;
     line-height: 26px;
   }
-  
+
   h1 {
     font-size: 32px;
     line-height: 40px;
@@ -156,8 +162,14 @@ a:hover::after {
     line-height: 36px;
   }
 
+  h3 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
   .small-title {
     font-size: 14px;
+    line-height: 20px;
     letter-spacing: 0.1em;
   }
 }

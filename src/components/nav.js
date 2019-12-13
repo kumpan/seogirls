@@ -7,15 +7,16 @@ import Logo from "../../content/assets/seogirls-logo.svg"
 
 class Nav extends React.Component {
   constructor(props) {
-    super(props);
-    this.state = { showMenu: false };
+    super(props)
+    this.state = { showMenu: false, navHover: false }
   }
 
   toggleMenu = () => {
-    this.setState(prevState => {
-      return { showMenu: !prevState.showMenu }
-    })
-    console.log(this.state.showMenu)
+    this.setState({ showMenu: !this.state.showMenu })
+  }
+
+  toggleHover = () => {
+    this.setState({ navHover: !this.state.navHover })
   }
 
   render() {
@@ -24,25 +25,61 @@ class Nav extends React.Component {
         <Link to="/" className={styles.logo}>
           <Logo />
         </Link>
-        <div className={styles.hamburger + ' ' + (this.state.showMenu ? styles.opened : '')} onClick={this.toggleMenu}>
+        <div
+          className={
+            styles.hamburger + " " + (this.state.showMenu ? styles.opened : "")
+          }
+          onClick={this.toggleMenu}
+          onKeyPress={this.toggleMenu}
+          role="button"
+          tabIndex="0"
+        >
           <div>
             <span className={styles.lineOne} />
             <span className={styles.lineTwo} />
             <span className={styles.lineThree} />
           </div>
         </div>
-        <ul className={this.state.showMenu ? styles.opened : ''}>
+        <ul className={this.state.showMenu ? styles.opened : ""}>
           <li>
-            <Link to="/events">Evenemang</Link>
+            <Link
+              className={this.state.navHover ? styles.hovered : ""}
+              to="/events"
+              onMouseEnter={this.toggleHover}
+              onMouseLeave={this.toggleHover}
+            >
+              Evenemang
+            </Link>
           </li>
           <li>
-            <Link to="/sponsors">Sponsorer</Link>
+            <Link
+              className={this.state.navHover ? styles.hovered : ""}
+              to="/events"
+              onMouseEnter={this.toggleHover}
+              onMouseLeave={this.toggleHover}
+            >
+              Sponsorer
+            </Link>
           </li>
           <li>
-            <Link to="/about">Om oss</Link>
+            <Link
+              className={this.state.navHover ? styles.hovered : ""}
+              to="/events"
+              onMouseEnter={this.toggleHover}
+              onMouseLeave={this.toggleHover}
+            >
+              Om oss
+            </Link>
           </li>
           <li>
-            <Link to="/contact">Kontakta oss</Link>
+            <Link
+              className={this.state.navHover ? styles.hovered : ""}
+              to="/events"
+              onMouseEnter={this.toggleHover}
+              onMouseLeave={this.toggleHover}
+            >
+              Kontakta oss
+            </Link>
           </li>
         </ul>
       </nav>

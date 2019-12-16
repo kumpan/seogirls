@@ -1,7 +1,9 @@
 ---
 name: start-page
-title: Vi anordnar träffar för SEO-intresserade tjejer
-description: Evenemang och träffar för tjejer inom SEO-branschen.
+title: Ett nätverk för kvinnor som jobbar med SEO och growth hacking
+description: >-
+  Lär känna andra i branschen, skapa nya kontakter, utvecklas och dela med dig
+  av din kunskap.
 hero:
   headingone: Ett nätverk för kvinnor som jobbar med SEO och growth hacking
   subtitle: >-

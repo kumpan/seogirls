@@ -31,7 +31,7 @@
   margin-top: 264px;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1920px) {
   .aboutIllustration {
     display: none;
   }

@@ -8,7 +8,7 @@
 
 .container {
   max-width: 1152px;
-  padding-bottom: 168px;
+  padding-bottom: 96px;
 }
 
 @keyframes fade-up {
@@ -103,7 +103,7 @@
     stars-1-pulse 3s ease-in-out 1.4s infinite forwards;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1920px) {
   .container {
     max-width: 840px;
   }

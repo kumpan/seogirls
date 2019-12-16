@@ -140,7 +140,7 @@ button:focus,
   opacity: 1;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1920px) {
   body {
     font-size: 18px;
     line-height: 32px;

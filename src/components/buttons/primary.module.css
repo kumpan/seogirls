@@ -45,7 +45,7 @@
   margin-left: 8px;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1920px) {
   .button {
     min-height: 56px;
   }

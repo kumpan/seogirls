@@ -14,10 +14,20 @@ about:
     Vi ordnar mindre träffar och större evenemang för kvinnor som sysslar med
     SEO eller growth hacking
   ingress: >-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet
-    pulvinar nibh, eu commodo diam. Integer non varius ex. Ut ullamcorper
-    convallis dolor ac placerat. Ut finibus mollis dui vitae blandit. Nunc
-    accumsan porta leo, eu ornare quam. Proin nibh nisi finibus ut.
+    SEO-branschen är idag väldigt mansdominerad, vilket vi vill ändra på. Alla
+    mår bättre av en balanserad bransch! Syftet med att ha ett nätverk för bara
+    kvinnor inom SEO är främst för att lära känna varandra, skapa kontakter och
+    känna oss mindre ensamma i våra positioner, men också för att utveckla oss
+    och dela med oss av kunskap i gruppen.
+
+
+    En gång i månaden träffas vi på ett SEOGIRLS-mingel för att umgås, nätverka
+    och dela med oss av våra kunskaper.
+
+
+    Om du är en SEO-tjej och vill gå med i SEOGIRLS, gå med i vår
+    [LinkedIn-grupp](https://www.linkedin.com/groups/12241414/) och
+    [Slack-kanal](https://seogirls.slack.se/)! Där annonserar vi nästa event.
   ingresslinkdestination: /
   ingresslinktext: Läs mer om oss
   smalltitle: Vad gör vi?

@@ -105,19 +105,22 @@
 
 @media screen and (max-width: 1920px) {
   .container {
-    max-width: 840px;
+    max-width: 752px;
   }
 
   .container p {
     margin: -8px 0 24px;
+    max-width: 600px;
+  }
+
+  .stars {
+    width: 320px;
   }
 }
 
 @media screen and (max-width: 1200px) {
   .stars {
     right: calc(50% - 400px);
-    bottom: 64px;
-    width: 320px;
   }
 }
 

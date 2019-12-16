@@ -32,13 +32,20 @@
 }
 
 @media screen and (max-width: 1920px) {
-  .aboutIllustration {
-    display: none;
+  .about {
+    margin: 144px 0;
+    max-width: 752px;
   }
 
-  .about {
-    margin: 200px 0;
-    max-width: 752px;
+  .aboutIllustration {
+    width: 400px;
+    margin-top: 184px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .aboutIllustration {
+    display: none;
   }
 }
 

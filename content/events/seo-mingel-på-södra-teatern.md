@@ -10,6 +10,7 @@ ingress: >-
   lorem leo, non ullamcorper velit ultricies viverra. Proin pretium nisi id est
   vestibulum ullamcorper. Class aptent taciti sociosqu ad litora torquent per
   conubia nostra, per inceptos himenaeos.
+featuredimage: /assets/jennydrakenlind_20190926_0100_web-1-.jpg
 ---
 ## Lorem ipsum dolor sit amet
 

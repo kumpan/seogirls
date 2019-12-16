@@ -6,6 +6,9 @@ hero:
   headingone: Utvecklas och umgås med andra tjejer inom SEO och growth hacking
   subtitlelinkdestination: /
   subtitlelinktext: Se kommande evenemang
+events:
+  nexteventtitle: Nästa evenemang
+  pasteventtitle: Tidigare händelser
 about:
   headingtwo: >-
     Vi ordnar mindre träffar och större evenemang för kvinnor som sysslar med

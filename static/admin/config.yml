@@ -47,7 +47,7 @@ collections:
       - { name: body, label: Body, widget: markdown }
 
   - name: start-page
-    label: Start Page
+    label: Start Page Blocks
     folder: content/start-page
     create: true
     identifier_field: name
@@ -60,7 +60,8 @@ collections:
         widget: object
         fields:
           - { name: headingone, label: H1, widget: text }
-          - { name: subtitlelinktext, label: Subtitle Link Text, widget: text }
+          - { name: subtitle, label: Subtitle, widget: text }
+          - { name: subtitlelinktext, label: Link Text, widget: text }
           - {
               name: subtitlelinkdestination,
               label: Subtitle Link Destination,
@@ -86,7 +87,7 @@ collections:
         fields:
           - { name: smalltitle, label: Small Title, widget: string }
           - { name: headingtwo, label: H2, widget: text }
-          - { name: ingress, label: Ingress, widget: text }
+          - { name: ingress, label: Ingress, widget: markdown }
           - { name: ingresslinktext, label: Ingress Link Text, widget: string }
           - {
               name: ingresslinkdestination,

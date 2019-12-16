@@ -1,11 +1,19 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Link } from "gatsby"
+import remark from "remark"
+import recommended from "remark-preset-lint-recommended"
+import remarkHtml from "remark-html"
+
+import AboutLineIllustration from "../../content/assets/about-line-illustration.svg"
+
+// Icons to import
+import { CalendarBlankIcon, ArrowRightIcon } from "@icons/material"
 
 import Layout from "../components/layout"
-import Hero from "../components/hero.js"
+import Hero from "../components/hero"
 import SEO from "../components/seo"
 import EventBox from "../components/eventbox/event-box"
+import PrimaryButton from "../components/buttons/primary"
 
 import styles from "./index.module.css"
 
@@ -13,7 +21,7 @@ class IndexPage extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
-    const content = data.allMdx.edges[0].node.frontmatter
+    const pageContent = data.allMdx.edges[0].node.frontmatter
     const events = data.events.edges
 
     const allFeaturedFuture = events.filter(event => {
@@ -23,22 +31,35 @@ class IndexPage extends React.Component {
       return event.node.frontmatter.featuredpast
     })
 
+    // Icons to use
+    const calendarIcon = <CalendarBlankIcon />
+    const arrowRightIcon = <ArrowRightIcon />
+
+    // Remark MD-content outside of body
+    const aboutIngress = remark()
+      .use(recommended)
+      .use(remarkHtml)
+      .processSync(pageContent.about.ingress)
+      .toString()
+
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
-          title={content.title}
-          description={content.description}
+          title={pageContent.title}
+          description={pageContent.description}
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
         <Hero
-          title={content.hero.headingone}
-          subtitle={content.hero.subtitlelinktext}
-          link={content.hero.subtitlelinkdestination}
+          title={pageContent.hero.headingone}
+          subtitle={pageContent.hero.subtitle}
+          text={pageContent.hero.subtitlelinktext}
+          link={pageContent.hero.subtitlelinkdestination}
+          icon={calendarIcon}
         />
         <div className={styles.events}>
           <EventBox
             dated
-            smallTitle={content.events.nexteventtitle}
+            smallTitle={pageContent.events.nexteventtitle}
             title={allFeaturedFuture[0].node.frontmatter.title}
             date={allFeaturedFuture[0].node.frontmatter.date}
             ingress={allFeaturedFuture[0].node.frontmatter.ingress}
@@ -48,7 +69,7 @@ class IndexPage extends React.Component {
             }
           />
           <EventBox
-            smallTitle={content.events.pasteventtitle}
+            smallTitle={pageContent.events.pasteventtitle}
             title={allFeaturedPast[0].node.frontmatter.title}
             date={allFeaturedPast[0].node.frontmatter.date}
             ingress={allFeaturedPast[0].node.frontmatter.ingress}
@@ -58,13 +79,19 @@ class IndexPage extends React.Component {
             }
           />
         </div>
-        <div className={styles.about}>
-          <div className="small-title">{content.about.smalltitle}</div>
-          <h2>{content.about.headingtwo}</h2>
-          <p>{content.about.ingress}</p>
-          <Link to={content.about.ingresslinkdestination}>
-            {content.about.ingresslinktext}
-          </Link>
+        <div className={styles.aboutContainer}>
+          <div className={styles.about}>
+            <div className="small-title">{pageContent.about.smalltitle}</div>
+            <h2>{pageContent.about.headingtwo}</h2>
+            <div dangerouslySetInnerHTML={{ __html: aboutIngress }} />
+            <PrimaryButton
+              className={styles.aboutButton}
+              text={pageContent.about.ingresslinktext}
+              iconAfter={arrowRightIcon}
+              link={pageContent.about.ingresslinkdestination}
+            />
+          </div>
+          <AboutLineIllustration className={styles.aboutIllustration} />
         </div>
       </Layout>
     )
@@ -88,6 +115,7 @@ export const pageQuery = graphql`
             description
             hero {
               headingone
+              subtitle
               subtitlelinkdestination
               subtitlelinktext
             }

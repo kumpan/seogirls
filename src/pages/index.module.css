@@ -5,17 +5,41 @@
   align-items: flex-start;
 }
 
-.about {
-  margin: 240px 0;
-  max-width: 960px;
+.aboutContainer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 
-.about a {
-  margin: 16px 0 0 0;
+.about {
+  margin: 240px 0 0;
+  max-width: 960px;
+  position: relative;
+}
+
+.about a[role="button"] {
+  margin: 48px 0 0 0;
 }
 
 .about h2 {
   margin-top: 8px;
+}
+
+.aboutIllustration {
+  width: 584px;
+  height: auto;
+  margin-top: 264px;
+}
+
+@media screen and (max-width: 1400px) {
+  .aboutIllustration {
+    display: none;
+  }
+
+  .about {
+    margin: 200px 0;
+    max-width: 752px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -23,10 +47,22 @@
     flex-direction: column;
     margin: -80px 0 0;
   }
+
+  .about {
+    margin: 144px 0;
+  }
+
+  .about a[role="button"] {
+    margin: 32px 0 0 0;
+  }
 }
 
 @media screen and (max-width: 650px) {
   .about {
     margin: 120px 0;
+  }
+
+  .about a[role="button"] {
+    margin: 24px 0 0 0;
   }
 }

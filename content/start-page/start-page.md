@@ -3,7 +3,10 @@ name: start-page
 title: Vi anordnar träffar för SEO-intresserade tjejer
 description: Evenemang och träffar för tjejer inom SEO-branschen.
 hero:
-  headingone: Utvecklas och umgås med andra tjejer inom SEO och growth hacking
+  headingone: Ett nätverk för kvinnor som jobbar med SEO och growth hacking
+  subtitle: >-
+    Lär känna andra i branschen, skapa nya kontakter, utvecklas och dela med dig
+    av din kunskap.
   subtitlelinkdestination: /
   subtitlelinktext: Se kommande evenemang
 events:

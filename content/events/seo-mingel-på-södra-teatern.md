@@ -4,7 +4,7 @@ date: 2020-02-04T07:40:05.105Z
 featuredfuture: true
 featuredpast: false
 title: SEO-mingel på Södra Teatern
-description: Minge på Södra Teatern på Södermalm för SEO-intresserande tjejer
+description: Mingel på Södra Teatern på Södermalm för SEO-intresserande tjejer
 ingress: >-
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vulputate
   lorem leo, non ullamcorper velit ultricies viverra. Proin pretium nisi id est

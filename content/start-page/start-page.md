@@ -28,7 +28,7 @@ about:
     Om du är en SEO-tjej och vill gå med i SEOGIRLS, gå med i vår
     [LinkedIn-grupp](https://www.linkedin.com/groups/12241414/) och
     [Slack-kanal](https://seogirls.slack.se/)! Där annonserar vi nästa event.
-  ingresslinkdestination: /
+  ingresslinkdestination: /about
   ingresslinktext: Läs mer om oss
   smalltitle: Vad gör vi?
 ---

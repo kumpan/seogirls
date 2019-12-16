@@ -10,6 +10,7 @@ ingress: >-
   amet dui. Donec varius a ipsum id commodo. Duis mattis, nibh non auctor
   semper, mauris massa porttitor quam, sit amet efficitur quam sem ut dui.
   Vivamus tincidunt, est sit amet varius varius.
+featuredimage: /assets/jennydrakenlind_20190926_0043_web.jpg
 ---
 ## Lorem ipsum dolor sit amet
 

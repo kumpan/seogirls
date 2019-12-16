@@ -1,5 +1,5 @@
 ---
-name: start-page
+name: start-page-hero-and-events
 title: Vi anordnar träffar för SEO-intresserade tjejer
 description: Evenemang och träffar för tjejer inom SEO-branschen.
 hero:

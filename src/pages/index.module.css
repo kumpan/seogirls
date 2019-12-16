@@ -2,10 +2,11 @@
   display: flex;
   justify-content: space-between;
   margin: -120px 0 0;
+  align-items: flex-start;
 }
 
 .about {
-  margin: 184px 0;
+  margin: 240px 0;
   max-width: 960px;
 }
 

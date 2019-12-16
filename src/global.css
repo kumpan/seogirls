@@ -40,8 +40,8 @@ h2 {
 h3 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
-  font-size: 24px;
-  line-height: 30px;
+  font-size: 32px;
+  line-height: 38px;
 }
 
 p {
@@ -154,6 +154,11 @@ button:focus,
   h2 {
     font-size: 40px;
     line-height: 52px;
+  }
+
+  h3 {
+    font-size: 24px;
+    line-height: 32px;
   }
 }
 

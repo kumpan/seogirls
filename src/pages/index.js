@@ -14,8 +14,14 @@ class IndexPage extends React.Component {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
     const content = data.allMdx.edges[0].node.frontmatter
-    const description =
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae pretium turpis, sed ullamcorper diam. Vivamus leo erat, faucibus a enim eu, egestas ornare eros. Sed quis faucibus dolor, id commodo nulla. Sed consectetur cursus magna ut sodales. Nec semper orci aliquet quis."
+    const events = data.events.edges
+
+    const allFeaturedFuture = events.filter(event => {
+      return event.node.frontmatter.featuredfuture
+    })
+    const allFeaturedPast = events.filter(event => {
+      return event.node.frontmatter.featuredpast
+    })
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -32,20 +38,24 @@ class IndexPage extends React.Component {
         <div className={styles.events}>
           <EventBox
             dated
-            smallTitle="Nästa evenemang"
-            title="SEO-mingel på Södra Teatern"
-            day="4"
-            month="Feb"
-            description={description}
-            backgroundImage={data.coverOne.childImageSharp.fluid}
+            smallTitle={content.events.nexteventtitle}
+            title={allFeaturedFuture[0].node.frontmatter.title}
+            date={allFeaturedFuture[0].node.frontmatter.date}
+            ingress={allFeaturedFuture[0].node.frontmatter.ingress}
+            backgroundImage={
+              allFeaturedFuture[0].node.frontmatter.featuredimage
+                .childImageSharp.fluid
+            }
           />
           <EventBox
-            smallTitle="Tidigare händelser"
-            title="Seminarie: Growth Hacking"
-            day="12"
-            month="Dec"
-            description={description}
-            backgroundImage={data.coverTwo.childImageSharp.fluid}
+            smallTitle={content.events.pasteventtitle}
+            title={allFeaturedPast[0].node.frontmatter.title}
+            date={allFeaturedPast[0].node.frontmatter.date}
+            ingress={allFeaturedPast[0].node.frontmatter.ingress}
+            backgroundImage={
+              allFeaturedPast[0].node.frontmatter.featuredimage.childImageSharp
+                .fluid
+            }
           />
         </div>
         <div className={styles.about}>
@@ -81,6 +91,10 @@ export const pageQuery = graphql`
               subtitlelinkdestination
               subtitlelinktext
             }
+            events {
+              nexteventtitle
+              pasteventtitle
+            }
             about {
               smalltitle
               headingtwo
@@ -89,6 +103,31 @@ export const pageQuery = graphql`
               ingresslinkdestination
             }
           }
+        }
+      }
+    }
+    events: allMdx(
+      filter: { fileAbsolutePath: { regex: "/(events)/" } }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            description
+            date(formatString: "DD MMM YYYY", locale: "sv-SV")
+            featuredfuture
+            featuredpast
+            ingress
+            featuredimage {
+              childImageSharp {
+                fluid(maxWidth: 800) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+          body
         }
       }
     }

@@ -4,13 +4,23 @@ import styles from "./date-box.module.css"
 
 class DateBox extends React.Component {
   render() {
-    const { day, month } = this.props
+    const { date } = this.props
+
+    const dateDayFormatted = () => {
+      if (date.substr(0, 1) === "0") {
+        return date.slice(1, 2)
+      } else {
+        return date.slice(0, 2)
+      }
+    }
+
+    const dateMonth = date.slice(3, 6)
 
     return (
       <div className={styles.datebox}>
         <div>
-          <span className={styles.day}>{day || "1"}</span>
-          <span className={styles.month}>{month || "Jan"}</span>
+          <span className={styles.day}>{dateDayFormatted() || "1"}</span>
+          <span className={styles.month}>{dateMonth || "Jan"}</span>
         </div>
       </div>
     )

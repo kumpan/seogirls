@@ -21,6 +21,7 @@
 
 .eventbox:nth-child(2) {
   animation: fade-up 0.6s ease-out 2.2s both;
+  margin-top: 88px;
 }
 
 .eventbox::after {
@@ -35,7 +36,11 @@
 }
 
 .eventtext {
-  margin-top: -10px;
+  margin-top: -12px;
+}
+
+.eventtext h3 {
+  margin-top: -4px;
 }
 
 .eventdescription {
@@ -70,6 +75,10 @@
     justify-content: space-between;
     display: flex;
     flex-direction: column;
+  }
+
+  .eventbox:nth-child(2) {
+    margin-top: 0;
   }
 
   .eventbox:last-of-type {

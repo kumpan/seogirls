@@ -4,29 +4,12 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const blogPost = path.resolve(`./src/templates/blog-post.js`)
   const eventPost = path.resolve(`./src/templates/event-post.js`)
   const subPage = path.resolve(`./src/templates/subpage-template.js`)
 
   return graphql(
     `
       {
-        blog: allMdx(
-          filter: { fileAbsolutePath: { regex: "/(blog)/" } }
-          sort: { fields: [frontmatter___date], order: DESC }
-          limit: 1000
-        ) {
-          edges {
-            node {
-              fields {
-                slug
-              }
-              frontmatter {
-                title
-              }
-            }
-          }
-        }
         events: allMdx(
           filter: { fileAbsolutePath: { regex: "/(events)/" } }
           sort: { fields: [frontmatter___date], order: DESC }
@@ -66,26 +49,8 @@ exports.createPages = ({ graphql, actions }) => {
       throw result.errors
     }
 
-    const blogPosts = result.data.blog.edges
     const eventPosts = result.data.events.edges
     const infoPages = result.data.infopages.edges
-
-    // Create blog posts pages.
-    blogPosts.forEach((post, index) => {
-      const previous =
-        index === blogPosts.length - 1 ? null : blogPosts[index + 1].node
-      const next = index === 0 ? null : blogPosts[index - 1].node
-
-      createPage({
-        path: `blog${post.node.fields.slug}`,
-        component: blogPost,
-        context: {
-          slug: post.node.fields.slug,
-          previous,
-          next,
-        },
-      })
-    })
 
     // Create event posts pages.
     eventPosts.forEach((post, index) => {
@@ -125,8 +90,11 @@ exports.createPages = ({ graphql, actions }) => {
   })
 }
 
+const { fmImagesToRelative } = require("gatsby-remark-relative-images")
+
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
+  fmImagesToRelative(node)
 
   if (node.internal.type === `Mdx`) {
     const value = createFilePath({ node, getNode })

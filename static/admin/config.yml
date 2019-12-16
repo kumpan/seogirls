@@ -13,19 +13,27 @@ collections:
     fields:
       - { name: path, label: Path }
       - { name: date, label: Date, widget: date }
+      - {
+          name: featuredfuture,
+          label: Feature (Coming up),
+          widget: boolean,
+          default: false,
+        }
+      - {
+          name: featuredpast,
+          label: Feature (Past),
+          widget: boolean,
+          default: false,
+        }
       - { name: title, label: Title }
       - { name: description, label: Description }
-      - { name: body, label: Body, widget: markdown }
-
-  - name: blog
-    label: Blog
-    folder: content/blog
-    create: true
-    fields:
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: date }
-      - { name: title, label: Title }
-      - { name: description, label: Description }
+      - { name: ingress, label: Ingress, widget: text }
+      - {
+          name: featuredimage,
+          label: Featured Image,
+          widget: image,
+          allow_multiple: false,
+        }
       - { name: body, label: Body, widget: markdown }
 
   - name: info-pages
@@ -56,6 +64,20 @@ collections:
           - {
               name: subtitlelinkdestination,
               label: Subtitle Link Destination,
+              widget: string,
+            }
+      - name: events
+        label: Events
+        widget: object
+        fields:
+          - {
+              name: nexteventtitle,
+              label: Title for featured upcoming event,
+              widget: string,
+            }
+          - {
+              name: pasteventtitle,
+              label: Title for featured past event,
               widget: string,
             }
       - name: about

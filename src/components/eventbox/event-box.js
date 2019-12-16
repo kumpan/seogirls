@@ -12,15 +12,23 @@ class EventBox extends React.Component {
       smallTitle,
       title,
       dated,
-      day,
-      month,
-      description,
+      date,
+      ingress,
     } = this.props
+
+    const maxLengthIngress = 265
+    const ingressSliced = () => {
+      if (ingress.length >= maxLengthIngress) {
+        return ingress.substr(0, maxLengthIngress).trim() + "..."
+      } else {
+        return ingress
+      }
+    }
 
     return (
       <div className={"event-box " + styles.eventbox}>
         <div className={styles.eventtitle}>
-          {dated && <DateBox day={day} month={month} />}
+          {dated && <DateBox date={date} />}
           <div className={styles.eventtext}>
             <span className="small-title">
               {smallTitle || "Write smallTitle"}
@@ -28,7 +36,7 @@ class EventBox extends React.Component {
             <h3 className="white-type">{title || "Write title"}</h3>
           </div>
         </div>
-        <div className={styles.eventdescription}>{description}</div>
+        <div className={styles.eventdescription}>{ingressSliced()}</div>
         <Image
           style={{ position: "absolute" }}
           className={"bg-image gradient"}

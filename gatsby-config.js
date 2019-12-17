@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     // edit below
-    title: `SEO Girls`,
+    title: `SEOGIRLS`,
     author: `Per Riekkola`,
     description: `A cool website for cool SEO girls.`,
     siteUrl: `https://seogirls.netlify.com/`,
@@ -122,8 +122,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `SEO Girls`,
-        short_name: `SEO Girls`,
+        name: `SEOGIRLS`,
+        short_name: `SEOGIRLS`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#f16565`,

@@ -47,7 +47,7 @@ collections:
       - { name: body, label: Body, widget: markdown }
 
   - name: start-page
-    label: Start Page Blocks
+    label: Start Page
     folder: content/start-page
     create: true
     identifier_field: name

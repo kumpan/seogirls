@@ -5,7 +5,7 @@ description: >-
   Lär känna andra i branschen, skapa nya kontakter, utvecklas och dela med dig
   av din kunskap.
 hero:
-  headingone: Ett nätverk för kvinnor som jobbar med SEO och growth hacking
+  headingone: Ett nätverk för kvinnor som jobbar med SEO
   subtitle: >-
     Lär känna andra i branschen, skapa nya kontakter, utvecklas och dela med dig
     av din kunskap.

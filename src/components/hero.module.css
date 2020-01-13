@@ -7,8 +7,12 @@
 }
 
 .container {
-  max-width: 1152px;
+  max-width: 864px;
   padding-bottom: 96px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 @keyframes fade-up {
@@ -22,41 +26,26 @@
   }
 }
 
-.container h1 {
-  animation: fade-up 1s ease-out 0.4s both;
-}
-
-.container p {
-  margin-bottom: 32px;
-  max-width: 752px;
-  animation: fade-up 1s ease-out 0.6s both;
-}
-
 .container a {
   animation: fade-up 1s ease-out 0.8s both;
 }
 
 .stars {
   position: absolute;
-  right: 190px;
-  bottom: 64px;
-  width: 480px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 
 @keyframes stars-in {
   0% {
-    transform: translateY(200px);
+    transform: translateY(120px);
     opacity: 0;
-  }
-  40% {
-    transform: translateY(-60px);
-    opacity: 1;
-  }
-  70% {
-    transform: translateY(20px);
   }
   100% {
     transform: translateY(0);
+    opacity: 1;
   }
 }
 
@@ -65,7 +54,7 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-40px);
+    transform: translateY(-24px);
   }
   100% {
     transform: translateY(0);
@@ -73,7 +62,7 @@
 }
 
 .stars svg {
-  width: 100%;
+  width: 304px;
   height: auto;
 }
 
@@ -83,45 +72,17 @@
 }
 
 .stars svg:nth-child(1) {
-  left: 30px;
-  top: -90px;
+  left: -256px;
+  top: -64px;
   animation: stars-in 1s ease-in-out both,
-    stars-1-pulse 3s ease-in-out 1s infinite forwards;
+    stars-1-pulse 5s ease-in-out 1s infinite forwards;
 }
 
 .stars svg:nth-child(2) {
-  left: 140px;
-  top: 60px;
   animation: stars-in 1s ease-in-out 0.2s both,
-    stars-1-pulse 3s ease-in-out 1.2s infinite forwards;
-}
-
-.stars svg:nth-child(3) {
-  left: 0;
-  top: 0;
-  animation: stars-in 1s ease-in-out 0.4s both,
-    stars-1-pulse 3s ease-in-out 1.4s infinite forwards;
-}
-
-@media screen and (max-width: 1920px) {
-  .container {
-    max-width: 752px;
-  }
-
-  .container p {
-    margin: -8px 0 24px;
-    max-width: 600px;
-  }
-
-  .stars {
-    width: 320px;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  .stars {
-    right: calc(50% - 400px);
-  }
+    stars-1-pulse 5s ease-in-out 1.2s infinite forwards;
+  right: -208px;
+  bottom: 32px;
 }
 
 @media screen and (max-width: 650px) {
@@ -131,24 +92,5 @@
 
   .container {
     padding-bottom: 80px;
-  }
-
-  .stars {
-    right: calc(50% - 16px);
-    bottom: 16px;
-    width: 184px;
-  }
-
-  .stars svg:nth-child(1) {
-    display: none;
-  }
-
-  .stars svg:nth-child(2) {
-    left: 125px;
-    top: 60px;
-  }
-
-  .container p {
-    margin: -12px 0 16px;
   }
 }

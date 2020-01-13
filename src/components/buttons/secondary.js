@@ -1,9 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import styles from "./primary.module.css"
+import styles from "./secondary.module.css"
 
-class PrimaryButton extends React.Component {
+class SecondaryButton extends React.Component {
   render() {
     const { text, link, iconAfter, iconBefore } = this.props
 
@@ -38,4 +38,4 @@ class PrimaryButton extends React.Component {
   }
 }
 
-export default PrimaryButton
+export default SecondaryButton

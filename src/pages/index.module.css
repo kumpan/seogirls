@@ -1,8 +1,24 @@
 .events {
   display: flex;
+  flex-direction: column;
+  margin: -184px auto 0;
+  max-width: 864px;
+}
+
+.event .gatsby-image-outer-wrapper,
+.events .gatsby-image-wrapper {
+  height: 100%;
+}
+
+.eventsTitle {
+  display: flex;
   justify-content: space-between;
-  margin: -120px 0 0;
-  align-items: flex-start;
+  align-items: center;
+  margin: 0 0 32px;
+}
+
+.pastEvents {
+  margin: 96px 0 0 0;
 }
 
 .aboutContainer {

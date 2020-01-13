@@ -6,14 +6,11 @@ description: >-
   av din kunskap.
 hero:
   headingone: Ett nätverk för kvinnor som jobbar med SEO
-  subtitle: >-
-    Lär känna andra i branschen, skapa nya kontakter, utvecklas och dela med dig
-    av din kunskap.
   subtitlelinkdestination: /
   subtitlelinktext: Se kommande evenemang
 events:
-  nexteventtitle: Nästa evenemang
-  pasteventtitle: Tidigare händelser
+  nexteventtitle: Kommande events
+  pasteventtitle: Tidigare SEOGIRLS-events
 about:
   headingtwo: >-
     Vi ordnar mindre träffar och större evenemang för kvinnor som sysslar med

@@ -9,7 +9,11 @@ hero:
   subtitlelinkdestination: /
   subtitlelinktext: Se kommande evenemang
 events:
+  nexteventbuttondestination: /
+  nexteventbuttontext: Se alla kommande events
   nexteventtitle: Kommande events
+  pasteventbuttondestination: /
+  pasteventbuttontext: Se alla tidigare events
   pasteventtitle: Tidigare SEOGIRLS-events
 about:
   headingtwo: >-

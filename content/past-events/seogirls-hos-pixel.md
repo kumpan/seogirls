@@ -1,6 +1,6 @@
 ---
 path: seogirls-hos-pixel
-date: 2020-01-13T11:32:08.784Z
+date: 2019-05-02T10:32:08.784Z
 title: SEOGIRLS hos PIXEL
 ingress: >-
   I tisdags var det premiär för SEOGIRLS första nätverksträff. Pixel Nordic

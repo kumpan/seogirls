@@ -4,8 +4,6 @@ import remark from "remark"
 import recommended from "remark-preset-lint-recommended"
 import remarkHtml from "remark-html"
 
-import AboutLineIllustration from "../../content/assets/about-line-illustration.svg"
-
 // Icons to import
 import { CalendarBlankIcon, ArrowRightIcon } from "@icons/material"
 
@@ -14,7 +12,6 @@ import Hero from "../components/hero"
 import SEO from "../components/seo"
 import ComingEventsLink from "../components/events/coming-events-link"
 import PastEventsLink from "../components/events/past-events-link"
-import PrimaryButton from "../components/buttons/primary"
 import SecondaryButton from "../components/buttons/secondary"
 
 import styles from "./index.module.css"
@@ -32,10 +29,22 @@ class IndexPage extends React.Component {
     const arrowRightIcon = <ArrowRightIcon />
 
     // Remark MD-content outside of body
-    const aboutIngress = remark()
+    const s = remark()
       .use(recommended)
       .use(remarkHtml)
-      .processSync(pageContent.about.ingress)
+      .processSync(pageContent.about.s)
+      .toString()
+
+    const e = remark()
+      .use(recommended)
+      .use(remarkHtml)
+      .processSync(pageContent.about.e)
+      .toString()
+
+    const o = remark()
+      .use(recommended)
+      .use(remarkHtml)
+      .processSync(pageContent.about.o)
       .toString()
 
     return (
@@ -97,20 +106,9 @@ class IndexPage extends React.Component {
         </div>
         <div className={styles.about}>
           <h2>{pageContent.about.headingtwo}</h2>
-        </div>
-        <div className={styles.aboutContainer}>
-          <div className={styles.about}>
-            <div className="small-title">{pageContent.about.smalltitle}</div>
-            <h2>{pageContent.about.headingtwo}</h2>
-            <div dangerouslySetInnerHTML={{ __html: aboutIngress }} />
-            <PrimaryButton
-              className={styles.aboutButton}
-              text={pageContent.about.ingresslinktext}
-              iconAfter={arrowRightIcon}
-              link={pageContent.about.ingresslinkdestination}
-            />
-          </div>
-          <AboutLineIllustration className={styles.aboutIllustration} />
+          <div dangerouslySetInnerHTML={{ __html: s }} />
+          <div dangerouslySetInnerHTML={{ __html: e }} />
+          <div dangerouslySetInnerHTML={{ __html: o }} />
         </div>
       </Layout>
     )

@@ -1,7 +1,7 @@
 .eventLink {
   font-weight: 400;
   display: flex;
-  background: linear-gradient(158.43deg, #eef3f5 0.46%, #e2eaee 100%);
+  background: var(--card-gradient);
   box-shadow: -12px -8px 20px rgba(255, 255, 255, 0.7),
     8px 8px 20px rgba(0, 0, 0, 0.12);
   border-radius: 24px;
@@ -24,7 +24,7 @@
 .date {
   width: 104px;
   flex-shrink: 0;
-  background: linear-gradient(289.41deg, #f83478 16.33%, #ee4e38 83.76%);
+  background: var(--brand-gradient);
   border-radius: 24px 0px 0px 24px;
   color: #fff;
   display: flex;

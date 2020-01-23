@@ -10,7 +10,7 @@ body {
 }
 
 body::after {
-  background: linear-gradient(180deg, #ffffff 10.42%, #f0f6f8 100%);
+  background: var(--soft-gradient);
   display: block;
   content: "";
   width: 100vw;
@@ -91,7 +91,7 @@ a::after {
   display: block;
   width: 100%;
   height: 1px;
-  background: linear-gradient(295.7deg, #ad2f82 16.33%, #f95555 83.76%);
+  background: var(--brand-gradient);
   position: absolute;
   left: 0;
   bottom: 0;

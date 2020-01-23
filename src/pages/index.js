@@ -28,23 +28,27 @@ class IndexPage extends React.Component {
     const calendarIcon = <CalendarBlankIcon />
     const arrowRightIcon = <ArrowRightIcon />
 
+    const sDropCap = pageContent.about.s.substr(0, 1)
+    const eDropCap = pageContent.about.e.substr(0, 1)
+    const oDropCap = pageContent.about.o.substr(0, 1)
+
     // Remark MD-content outside of body
     const s = remark()
       .use(recommended)
       .use(remarkHtml)
-      .processSync(pageContent.about.s)
+      .processSync(pageContent.about.s.substr(1))
       .toString()
 
     const e = remark()
       .use(recommended)
       .use(remarkHtml)
-      .processSync(pageContent.about.e)
+      .processSync(pageContent.about.e.substr(1))
       .toString()
 
     const o = remark()
       .use(recommended)
       .use(remarkHtml)
-      .processSync(pageContent.about.o)
+      .processSync(pageContent.about.o.substr(1))
       .toString()
 
     return (
@@ -106,9 +110,20 @@ class IndexPage extends React.Component {
         </div>
         <div className={styles.about}>
           <h2>{pageContent.about.headingtwo}</h2>
-          <div dangerouslySetInnerHTML={{ __html: s }} />
-          <div dangerouslySetInnerHTML={{ __html: e }} />
-          <div dangerouslySetInnerHTML={{ __html: o }} />
+          <div className={styles.aboutItems}>
+            <div className={styles.aboutItem}>
+              <span className={styles.dropCap}>{sDropCap}</span>
+              <div dangerouslySetInnerHTML={{ __html: s }} />
+            </div>
+            <div className={styles.aboutItem}>
+              <span className={styles.dropCap}>{eDropCap}</span>
+              <div dangerouslySetInnerHTML={{ __html: e }} />
+            </div>
+            <div className={styles.aboutItem}>
+              <span className={styles.dropCap}>{oDropCap}</span>
+              <div dangerouslySetInnerHTML={{ __html: o }} />
+            </div>
+          </div>
         </div>
       </Layout>
     )

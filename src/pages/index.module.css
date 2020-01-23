@@ -27,9 +27,41 @@
   position: relative;
 }
 
-@media screen and (max-width: 1024px) {
-  .events {
-    flex-direction: column;
-    margin: -80px 0 0;
-  }
+.aboutItems {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 56px 0 0 0;
+}
+
+.aboutItem {
+  max-width: 640px;
+  display: inline-flex;
+  margin: 0 0 64px 0;
+}
+
+.dropCap {
+  background: var(--brand-gradient);
+  margin: 0 16px 0 0;
+  float: left;
+  border-radius: 24px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 96px;
+  box-shadow: -12px -8px 20px rgba(255, 255, 255, 0.6),
+    8px 8px 20px rgba(0, 0, 0, 0.12);
+  width: 120px;
+  height: 120px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.aboutItem:nth-child(2) {
+  align-self: center;
+}
+
+.aboutItem:nth-child(3) {
+  align-self: flex-end;
 }

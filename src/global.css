@@ -44,10 +44,11 @@ h1 {
 }
 
 h2 {
+  font-weight: 600;
   font-size: 64px;
-  line-height: 80px;
-  letter-spacing: -0.02em;
-  margin: 0 0 24px 0;
+  line-height: 72px;
+  letter-spacing: -0.04em;
+  margin-bottom: 24px;
 }
 
 h3 {
@@ -127,32 +128,4 @@ button:focus,
 .gatsby-image-outer-wrapper,
 .gatsby-image-wrapper {
   height: 100%;
-}
-
-@media screen and (max-width: 650px) {
-  body {
-    font-size: 16px;
-    line-height: 26px;
-  }
-
-  h1 {
-    font-size: 32px;
-    line-height: 40px;
-  }
-
-  h2 {
-    font-size: 28px;
-    line-height: 36px;
-  }
-
-  h3 {
-    font-size: 20px;
-    line-height: 24px;
-  }
-
-  .small-title {
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 0.1em;
-  }
 }

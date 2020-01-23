@@ -1,0 +1,10 @@
+:root {
+  --soft-gradient: linear-gradient(180deg, #ffffff 10.42%, #f0f6f8 100%);
+  --card-gradient: linear-gradient(158.43deg, #eef3f5 0.46%, #e2eaee 100%);
+  --brand-gradient: linear-gradient(327.12deg, #f83478 16.33%, #ee4e38 83.76%);
+  --button-hover-gradient: linear-gradient(
+    163.08deg,
+    #991c6f 0%,
+    #b52323 95.94%
+  );
+}

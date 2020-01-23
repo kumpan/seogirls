@@ -1,0 +1,60 @@
+.eventLink {
+  font-weight: 400;
+  display: flex;
+  background: var(--card-gradient);
+  box-shadow: -12px -8px 20px rgba(255, 255, 255, 0.7),
+    8px 8px 20px rgba(0, 0, 0, 0.12);
+  border-radius: 24px;
+  margin: 0 0 24px 0;
+}
+
+.eventLink:last-of-type {
+  margin: 0;
+}
+
+.eventLink::after {
+  display: none;
+}
+
+.eventLink:hover {
+  box-shadow: -12px -8px 20px rgba(255, 255, 255, 0.7),
+    12px 12px 40px rgba(0, 0, 0, 0.28);
+}
+
+.date {
+  width: 104px;
+  flex-shrink: 0;
+  background: var(--brand-gradient);
+  border-radius: 24px 0px 0px 24px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-weight: 600;
+  text-align: center;
+  padding: 8px;
+  margin: 0 24px 0 0;
+}
+
+.day {
+  font-size: 40px;
+  line-height: 48px;
+}
+
+.month {
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.content {
+  padding: 24px 0;
+}
+
+.arrowButton {
+  padding: 24px 24px 24px 32px;
+  display: flex;
+  align-items: center;
+}

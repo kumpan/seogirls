@@ -1,23 +1,13 @@
 .container {
-  max-width: 1800px;
-  padding: 0 32px;
+  max-width: 1120px;
+  padding: 0 16px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .footer {
   text-align: center;
   margin: 24px;
   display: none;
-}
-
-@media screen and (max-width: 1920px) {
-  .container {
-    max-width: 1400px;
-  }
-}
-
-@media screen and (max-width: 650px) {
-  .container {
-    padding: 0 16px;
-  }
 }

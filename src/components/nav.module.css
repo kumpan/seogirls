@@ -3,13 +3,21 @@
   height: 80px;
   display: flex;
   align-items: center;
-  background: rgba(255, 255, 255, 0.6);
-  padding: 8px 32px;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.8);
   position: fixed;
   z-index: 2;
   top: 0;
   left: 0;
   backdrop-filter: blur(8px);
+}
+
+.container {
+  width: 1120px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo {
@@ -69,9 +77,10 @@
 .nav a {
   font-weight: 400;
   color: #364441;
-  font-size: 18px;
+  font-weight: 600;
   display: inline-flex;
   height: 100%;
+  text-transform: uppercase;
 }
 
 .hovered {

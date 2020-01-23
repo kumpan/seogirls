@@ -1,5 +1,8 @@
-<svg width="341" height="118" viewBox="0 0 341 118" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="339" cy="116" r="2" fill="#EC9BDA"/>
-<circle cx="3" cy="87" r="3" fill="#FFDD63"/>
-<circle cx="151" cy="4" r="4" fill="#6070FF"/>
+<svg width="284" height="261" viewBox="0 0 284 261" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="187" cy="6" r="5" stroke="#F16565" stroke-width="2"/>
+<circle cx="10" cy="144" r="9" stroke="#F16565" stroke-width="2"/>
+<circle cx="209" cy="122" r="15" stroke="#6070FF" stroke-width="2"/>
+<circle cx="128" cy="229" r="31" stroke="#4FD2B3" stroke-width="2"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M282.245 186.5L279.647 185L277.397 188.897L273.5 186.647L272 189.245L275.897 191.495L273.647 195.392L276.245 196.892L278.495 192.995L282.392 195.245L283.892 192.647L279.995 190.397L282.245 186.5Z" fill="#F16565"/>
+<path d="M74.8062 53L70.867 53.6946L71.9088 59.6035L66 60.6453L66.6946 64.5846L72.6034 63.5427L73.6453 69.4515L77.5846 68.7569L76.5427 62.8481L82.4515 61.8062L81.7569 57.867L75.8481 58.9089L74.8062 53Z" fill="#EC9BDA"/>
 </svg>

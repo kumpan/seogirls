@@ -1,0 +1,45 @@
+.button {
+  background: var(--card-gradient);
+  box-shadow: -12px -8px 20px rgba(255, 255, 255, 0.7),
+    8px 8px 20px rgba(0, 0, 0, 0.12);
+  border-radius: 24px;
+  color: #364441;
+  display: inline-flex;
+  min-height: 48px;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 24px;
+  position: relative;
+  transition: 0.3s box-shadow ease;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.simpleButton {
+  padding: 8px 12px;
+}
+
+.button:hover {
+  box-shadow: -12px -12px 24px rgba(255, 255, 255, 1),
+    8px 8px 24px rgba(0, 0, 0, 0.24);
+}
+
+.button::after {
+  display: none;
+}
+
+.button div {
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+
+.button span {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button span + span {
+  margin-left: 8px;
+}

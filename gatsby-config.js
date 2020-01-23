@@ -41,8 +41,15 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/events`,
-        name: `events`,
+        path: `${__dirname}/content/coming-events`,
+        name: `comingevents`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/past-events`,
+        name: `comingevents`,
       },
     },
     {

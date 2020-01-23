@@ -10,8 +10,24 @@ exports.createPages = ({ graphql, actions }) => {
   return graphql(
     `
       {
-        events: allMdx(
-          filter: { fileAbsolutePath: { regex: "/(events)/" } }
+        comingEvents: allMdx(
+          filter: { fileAbsolutePath: { regex: "/(coming-events)/" } }
+          sort: { fields: [frontmatter___date], order: DESC }
+          limit: 1000
+        ) {
+          edges {
+            node {
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+              }
+            }
+          }
+        }
+        pastEvents: allMdx(
+          filter: { fileAbsolutePath: { regex: "/(past-events)/" } }
           sort: { fields: [frontmatter___date], order: DESC }
           limit: 1000
         ) {
@@ -49,17 +65,38 @@ exports.createPages = ({ graphql, actions }) => {
       throw result.errors
     }
 
-    const eventPosts = result.data.events.edges
+    const comingEventPosts = result.data.comingEvents.edges
+    const pastEventPosts = result.data.pastEvents.edges
     const infoPages = result.data.infopages.edges
 
     // Create event posts pages.
-    eventPosts.forEach((post, index) => {
+    comingEventPosts.forEach((post, index) => {
       const previous =
-        index === eventPosts.length - 1 ? null : eventPosts[index + 1].node
-      const next = index === 0 ? null : eventPosts[index - 1].node
+        index === comingEventPosts.length - 1
+          ? null
+          : comingEventPosts[index + 1].node
+      const next = index === 0 ? null : comingEventPosts[index - 1].node
 
       createPage({
-        path: `events${post.node.fields.slug}`,
+        path: `coming-events${post.node.fields.slug}`,
+        component: eventPost,
+        context: {
+          slug: post.node.fields.slug,
+          previous,
+          next,
+        },
+      })
+    })
+
+    pastEventPosts.forEach((post, index) => {
+      const previous =
+        index === pastEventPosts.length - 1
+          ? null
+          : pastEventPosts[index + 1].node
+      const next = index === 0 ? null : pastEventPosts[index - 1].node
+
+      createPage({
+        path: `past-events${post.node.fields.slug}`,
         component: eventPost,
         context: {
           slug: post.node.fields.slug,

@@ -4,16 +4,15 @@ import remark from "remark"
 import recommended from "remark-preset-lint-recommended"
 import remarkHtml from "remark-html"
 
-import AboutLineIllustration from "../../content/assets/about-line-illustration.svg"
-
 // Icons to import
 import { CalendarBlankIcon, ArrowRightIcon } from "@icons/material"
 
 import Layout from "../components/layout"
 import Hero from "../components/hero"
 import SEO from "../components/seo"
-import EventBox from "../components/eventbox/event-box"
-import PrimaryButton from "../components/buttons/primary"
+import ComingEventsLink from "../components/events/coming-events-link"
+import PastEventsLink from "../components/events/past-events-link"
+import SecondaryButton from "../components/buttons/secondary"
 
 import styles from "./index.module.css"
 
@@ -22,24 +21,30 @@ class IndexPage extends React.Component {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
     const pageContent = data.allMdx.edges[0].node.frontmatter
-    const events = data.events.edges
-
-    const allFeaturedFuture = events.filter(event => {
-      return event.node.frontmatter.featuredfuture
-    })
-    const allFeaturedPast = events.filter(event => {
-      return event.node.frontmatter.featuredpast
-    })
+    const comingEvents = data.comingEvents.edges
+    const pastEvents = data.pastEvents.edges
 
     // Icons to use
     const calendarIcon = <CalendarBlankIcon />
     const arrowRightIcon = <ArrowRightIcon />
 
     // Remark MD-content outside of body
-    const aboutIngress = remark()
+    const s = remark()
       .use(recommended)
       .use(remarkHtml)
-      .processSync(pageContent.about.ingress)
+      .processSync(pageContent.about.s)
+      .toString()
+
+    const e = remark()
+      .use(recommended)
+      .use(remarkHtml)
+      .processSync(pageContent.about.e)
+      .toString()
+
+    const o = remark()
+      .use(recommended)
+      .use(remarkHtml)
+      .processSync(pageContent.about.o)
       .toString()
 
     return (
@@ -51,47 +56,59 @@ class IndexPage extends React.Component {
         />
         <Hero
           title={pageContent.hero.headingone}
-          subtitle={pageContent.hero.subtitle}
           text={pageContent.hero.subtitlelinktext}
           link={pageContent.hero.subtitlelinkdestination}
           icon={calendarIcon}
         />
         <div className={styles.events}>
-          <EventBox
-            dated
-            smallTitle={pageContent.events.nexteventtitle}
-            title={allFeaturedFuture[0].node.frontmatter.title}
-            date={allFeaturedFuture[0].node.frontmatter.date}
-            ingress={allFeaturedFuture[0].node.frontmatter.ingress}
-            backgroundImage={
-              allFeaturedFuture[0].node.frontmatter.featuredimage
-                .childImageSharp.fluid
-            }
-          />
-          <EventBox
-            smallTitle={pageContent.events.pasteventtitle}
-            title={allFeaturedPast[0].node.frontmatter.title}
-            date={allFeaturedPast[0].node.frontmatter.date}
-            ingress={allFeaturedPast[0].node.frontmatter.ingress}
-            backgroundImage={
-              allFeaturedPast[0].node.frontmatter.featuredimage.childImageSharp
-                .fluid
-            }
-          />
-        </div>
-        <div className={styles.aboutContainer}>
-          <div className={styles.about}>
-            <div className="small-title">{pageContent.about.smalltitle}</div>
-            <h2>{pageContent.about.headingtwo}</h2>
-            <div dangerouslySetInnerHTML={{ __html: aboutIngress }} />
-            <PrimaryButton
-              className={styles.aboutButton}
-              text={pageContent.about.ingresslinktext}
-              iconAfter={arrowRightIcon}
-              link={pageContent.about.ingresslinkdestination}
-            />
+          <div className={styles.comingEvents}>
+            <div className={styles.eventsTitle}>
+              <h3>{pageContent.events.nexteventtitle}</h3>
+              <SecondaryButton
+                iconAfter={arrowRightIcon}
+                text={pageContent.events.nexteventbuttontext}
+                link={pageContent.events.nexteventbuttondestination}
+              />
+            </div>
+            {comingEvents.map(({ node }) => {
+              return (
+                <ComingEventsLink
+                  key={node.frontmatter.path}
+                  path={node.frontmatter.path}
+                  date={node.frontmatter.date}
+                  title={node.frontmatter.title}
+                  ingress={node.frontmatter.ingress}
+                />
+              )
+            })}
           </div>
-          <AboutLineIllustration className={styles.aboutIllustration} />
+          <div className={styles.pastEvents}>
+            <div className={styles.eventsTitle}>
+              <h3>{pageContent.events.pasteventtitle}</h3>
+              <SecondaryButton
+                iconAfter={arrowRightIcon}
+                text={pageContent.events.pasteventbuttontext}
+                link={pageContent.events.pasteventbuttondestination}
+              />
+            </div>
+            {pastEvents.map(({ node }) => {
+              return (
+                <PastEventsLink
+                  key={node.frontmatter.path}
+                  path={node.frontmatter.path}
+                  title={node.frontmatter.title}
+                  ingress={node.frontmatter.ingress}
+                  thumb={node.frontmatter.featuredimage.childImageSharp.fluid}
+                />
+              )
+            })}
+          </div>
+        </div>
+        <div className={styles.about}>
+          <h2>{pageContent.about.headingtwo}</h2>
+          <div dangerouslySetInnerHTML={{ __html: s }} />
+          <div dangerouslySetInnerHTML={{ __html: e }} />
+          <div dangerouslySetInnerHTML={{ __html: o }} />
         </div>
       </Layout>
     )
@@ -115,47 +132,63 @@ export const pageQuery = graphql`
             description
             hero {
               headingone
-              subtitle
               subtitlelinkdestination
               subtitlelinktext
             }
             events {
               nexteventtitle
+              nexteventbuttontext
+              nexteventbuttondestination
               pasteventtitle
+              pasteventbuttontext
+              pasteventbuttondestination
             }
             about {
-              smalltitle
               headingtwo
-              ingress
-              ingresslinktext
-              ingresslinkdestination
+              s
+              e
+              o
             }
           }
         }
       }
     }
-    events: allMdx(
-      filter: { fileAbsolutePath: { regex: "/(events)/" } }
+    comingEvents: allMdx(
+      limit: 3
+      filter: { fileAbsolutePath: { regex: "/(coming-events)/" } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {
         node {
           frontmatter {
+            path
             title
-            description
             date(formatString: "DD MMM YYYY", locale: "sv-SV")
-            featuredfuture
-            featuredpast
+            ingress
+          }
+        }
+      }
+    }
+    pastEvents: allMdx(
+      limit: 3
+      filter: { fileAbsolutePath: { regex: "/(past-events)/" } }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            path
+            title
+            date(formatString: "DD MMM YYYY", locale: "sv-SV")
             ingress
             featuredimage {
               childImageSharp {
-                fluid(maxWidth: 800) {
+                fluid(maxWidth: 560) {
                   ...GatsbyImageSharpFluid
                 }
               }
             }
           }
-          body
         }
       }
     }

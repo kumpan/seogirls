@@ -10,12 +10,13 @@ module.exports = {
     },
   },
   plugins: [
-    `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-feed-mdx`,
+    `gatsby-plugin-scroll-reveal`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -49,7 +50,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/past-events`,
-        name: `comingevents`,
+        name: `pastevents`,
       },
     },
     {
@@ -57,6 +58,20 @@ module.exports = {
       options: {
         path: `${__dirname}/content/info-pages`,
         name: `infopages`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/sponsors`,
+        name: `sponsors`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/footer`,
+        name: `footer`,
       },
     },
     {

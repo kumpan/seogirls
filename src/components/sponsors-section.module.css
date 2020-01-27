@@ -1,0 +1,80 @@
+.sponsors {
+  width: 100%;
+  display: flex;
+  background: var(--brand-gradient);
+  color: var(--white);
+  padding: 80px 0;
+}
+
+.container {
+  width: 1088px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.heading {
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  display: block;
+  margin: 0 0 48px;
+}
+
+.sponsors ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.sponsors li {
+  display: flex;
+  margin: 0 40px;
+  width: 15%;
+  height: 40px;
+}
+
+.sponsors a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+
+.sponsors a::after {
+  display: none;
+}
+
+@media screen and (max-width: 992px) {
+  .sponsors {
+    padding: 56px 0 32px;
+  }
+
+  .sponsors ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .sponsors li {
+    width: 20%;
+    flex-shrink: 0;
+    margin: 0 32px 32px;
+    height: 32px;
+  }
+
+  .heading {
+    margin: 0 0 32px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .sponsors li {
+    width: 28%;
+    margin: 0 16px 24px;
+  }
+}

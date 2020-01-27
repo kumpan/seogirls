@@ -58,6 +58,22 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         }
+        sponsors: allMdx(
+          filter: { fileAbsolutePath: { regex: "/(sponsors)/" } }
+          sort: { fields: [frontmatter___date], order: DESC }
+          limit: 1000
+        ) {
+          edges {
+            node {
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+              }
+            }
+          }
+        }
       }
     `
   ).then(result => {

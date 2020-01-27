@@ -13,6 +13,9 @@ import SEO from "../components/seo"
 import ComingEventsLink from "../components/events/coming-events-link"
 import PastEventsLink from "../components/events/past-events-link"
 import SecondaryButton from "../components/buttons/secondary"
+import AboutSection from "../components/about-section"
+import SponsorsSection from "../components/sponsors-section"
+import Footer from "../components/footer"
 
 import styles from "./index.module.css"
 
@@ -52,80 +55,76 @@ class IndexPage extends React.Component {
       .toString()
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO
-          title={pageContent.title}
-          description={pageContent.description}
-          keywords={[`blog`, `gatsby`, `javascript`, `react`]}
-        />
-        <Hero
-          title={pageContent.hero.headingone}
-          text={pageContent.hero.subtitlelinktext}
-          link={pageContent.hero.subtitlelinkdestination}
-          icon={calendarIcon}
-        />
-        <div className={styles.events}>
-          <div className={styles.comingEvents}>
-            <div className={styles.eventsTitle}>
-              <h3>{pageContent.events.nexteventtitle}</h3>
-              <SecondaryButton
-                iconAfter={arrowRightIcon}
-                text={pageContent.events.nexteventbuttontext}
-                link={pageContent.events.nexteventbuttondestination}
-              />
-            </div>
-            {comingEvents.map(({ node }) => {
-              return (
-                <ComingEventsLink
-                  key={node.frontmatter.path}
-                  path={node.frontmatter.path}
-                  date={node.frontmatter.date}
-                  title={node.frontmatter.title}
-                  ingress={node.frontmatter.ingress}
+      <React.Fragment>
+        <Layout location={this.props.location} title={siteTitle}>
+          <SEO
+            title={pageContent.title}
+            description={pageContent.description}
+            keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+          />
+          <Hero
+            title={pageContent.hero.headingone}
+            text={pageContent.hero.subtitlelinktext}
+            link={pageContent.hero.subtitlelinkdestination}
+            icon={calendarIcon}
+          />
+          <div className={styles.events}>
+            <div className={styles.comingEvents}>
+              <div className={styles.eventsTitle}>
+                <h3>{pageContent.events.nexteventtitle}</h3>
+                <SecondaryButton
+                  iconAfter={arrowRightIcon}
+                  text={pageContent.events.nexteventbuttontext}
+                  link={pageContent.events.nexteventbuttondestination}
                 />
-              )
-            })}
-          </div>
-          <div className={styles.pastEvents}>
-            <div className={styles.eventsTitle}>
-              <h3>{pageContent.events.pasteventtitle}</h3>
-              <SecondaryButton
-                iconAfter={arrowRightIcon}
-                text={pageContent.events.pasteventbuttontext}
-                link={pageContent.events.pasteventbuttondestination}
-              />
+              </div>
+              {comingEvents.map(({ node }) => {
+                return (
+                  <ComingEventsLink
+                    key={node.frontmatter.path}
+                    path={node.frontmatter.path}
+                    date={node.frontmatter.date}
+                    title={node.frontmatter.title}
+                    ingress={node.frontmatter.ingress}
+                  />
+                )
+              })}
             </div>
-            {pastEvents.map(({ node }) => {
-              return (
-                <PastEventsLink
-                  key={node.frontmatter.path}
-                  path={node.frontmatter.path}
-                  title={node.frontmatter.title}
-                  ingress={node.frontmatter.ingress}
-                  thumb={node.frontmatter.featuredimage.childImageSharp.fluid}
+            <div className={styles.pastEvents + " past-events"}>
+              <div className={styles.eventsTitle}>
+                <h3>{pageContent.events.pasteventtitle}</h3>
+                <SecondaryButton
+                  iconAfter={arrowRightIcon}
+                  text={pageContent.events.pasteventbuttontext}
+                  link={pageContent.events.pasteventbuttondestination}
                 />
-              )
-            })}
-          </div>
-        </div>
-        <div className={styles.about}>
-          <h2>{pageContent.about.headingtwo}</h2>
-          <div className={styles.aboutItems}>
-            <div className={styles.aboutItem}>
-              <span className={styles.dropCap}>{sDropCap}</span>
-              <div dangerouslySetInnerHTML={{ __html: s }} />
-            </div>
-            <div className={styles.aboutItem}>
-              <span className={styles.dropCap}>{eDropCap}</span>
-              <div dangerouslySetInnerHTML={{ __html: e }} />
-            </div>
-            <div className={styles.aboutItem}>
-              <span className={styles.dropCap}>{oDropCap}</span>
-              <div dangerouslySetInnerHTML={{ __html: o }} />
+              </div>
+              {pastEvents.map(({ node }) => {
+                return (
+                  <PastEventsLink
+                    key={node.frontmatter.path}
+                    path={node.frontmatter.path}
+                    title={node.frontmatter.title}
+                    ingress={node.frontmatter.ingress}
+                    thumb={node.frontmatter.featuredimage.childImageSharp.fluid}
+                  />
+                )
+              })}
             </div>
           </div>
-        </div>
-      </Layout>
+          <AboutSection
+            headingtwo={pageContent.about.headingtwo}
+            s={s}
+            e={e}
+            o={o}
+            sDropCap={sDropCap}
+            eDropCap={eDropCap}
+            oDropCap={oDropCap}
+          />
+        </Layout>
+        <SponsorsSection sponsors={data.sponsors.edges} />
+        <Footer />
+      </React.Fragment>
     )
   }
 }
@@ -207,17 +206,24 @@ export const pageQuery = graphql`
         }
       }
     }
-    coverOne: file(relativePath: { eq: "seo-mingle-cover.JPG" }) {
-      childImageSharp {
-        fluid(maxWidth: 800, maxHeight: 800) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    coverTwo: file(relativePath: { eq: "growth-hacking-cover.JPG" }) {
-      childImageSharp {
-        fluid(maxWidth: 800, maxHeight: 800) {
-          ...GatsbyImageSharpFluid
+    sponsors: allMdx(
+      filter: { fileAbsolutePath: { regex: "/(sponsors)/" } }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            path
+            title
+            url
+            logo {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
         }
       }
     }

@@ -86,12 +86,33 @@
   bottom: 32px;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 992px) {
+  .stars svg {
+    width: 200px;
+  }
+
+  .stars svg:nth-child(1) {
+    left: 0;
+    top: -216px;
+  }
+
+  .stars svg:nth-child(2) {
+    right: 0;
+    bottom: -96px;
+  }
+}
+
+@media screen and (max-width: 640px) {
   .hero {
     min-height: 90vh;
   }
 
   .container {
-    padding-bottom: 80px;
+    padding-bottom: 40px;
+  }
+
+  .stars svg {
+    width: 96px;
+    display: none;
   }
 }

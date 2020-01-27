@@ -4,7 +4,7 @@ body {
   margin: 0;
   font-size: 16x;
   line-height: 28px;
-  color: #364441;
+  color: var(--text-body);
   overflow-x: hidden;
   background: #f0f6f8;
 }
@@ -25,7 +25,7 @@ h1,
 h2,
 h3,
 b {
-  color: #011310;
+  color: var(--text-title);
 }
 
 h1,
@@ -78,7 +78,7 @@ p:last-of-type {
 
 a {
   text-decoration: none;
-  color: #011310;
+  color: var(--text-title);
   position: relative;
   z-index: 1;
   font-weight: 600;
@@ -112,20 +112,51 @@ button:focus,
   outline: none;
 }
 
-.white-type {
-  color: #fff;
-}
-
-.small-title {
-  font-size: 16px;
-  line-height: 24px;
-  color: #f16565;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-}
-
 .gatsby-image-outer-wrapper,
 .gatsby-image-wrapper {
   height: 100%;
+  width: 100%;
+}
+
+@media screen and (max-width: 992px) {
+  h1 {
+    font-size: 64px;
+    line-height: 80px;
+    margin: 0 0 24px;
+  }
+
+  h2 {
+    font-size: 48px;
+    line-height: 60px;
+    margin: 0 0 16px;
+  }
+
+  h3 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  h1 {
+    font-size: 40px;
+    line-height: 48px;
+    margin: 0 0 16px;
+  }
+
+  h2 {
+    font-size: 28px;
+    line-height: 36px;
+    margin: 0 0 8px;
+  }
+
+  h3 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  h4 {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }

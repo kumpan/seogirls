@@ -7,4 +7,8 @@
     #991c6f 0%,
     #b52323 95.94%
   );
+  --text-title: #011310;
+  --text-body: #364441;
+  --text-faded: #718089;
+  --white: #fff;
 }

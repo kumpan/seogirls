@@ -6,6 +6,28 @@ media_folder: static/assets
 public_folder: assets
 
 collections:
+  - name: footer
+    label: Footer
+    folder: content/footer
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - { name: title, label: Footer Title }
+      - { name: copyright, label: Copyright/Cookie Policy, widget: markdown }
+      - { name: linkscenter, label: Links Column, widget: markdown }
+      - { name: linksright, label: Links Column, widget: markdown }
+
+  - name: sponsors
+    label: Sponsors
+    folder: content/sponsors
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - { name: title, label: Title }
+      - { name: logo, label: Logo, widget: image, allow_multiple: false }
+      - { name: url, label: URL }
+      - { name: body, label: Body, widget: markdown }
+
   - name: coming-events
     label: Coming Events
     folder: content/coming-events

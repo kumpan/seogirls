@@ -3,7 +3,7 @@
   box-shadow: -12px -8px 20px rgba(255, 255, 255, 0.7),
     8px 8px 20px rgba(0, 0, 0, 0.12);
   border-radius: 24px;
-  color: #364441;
+  color: var(--text-body);
   display: inline-flex;
   min-height: 48px;
   justify-content: center;

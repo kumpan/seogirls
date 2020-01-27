@@ -76,7 +76,7 @@
 
 .nav a {
   font-weight: 400;
-  color: #364441;
+  color: var(--text-body);
   font-weight: 600;
   display: inline-flex;
   height: 100%;
@@ -88,7 +88,7 @@
 }
 
 .nav ul a:hover {
-  color: #011310;
+  color: var(--text-title);
   opacity: 1;
 }
 
@@ -237,7 +237,7 @@
 
 @media screen and (max-width: 650px) {
   .nav {
-    padding: 8px 16px;
+    padding: 8px 0;
     height: 64px;
   }
 

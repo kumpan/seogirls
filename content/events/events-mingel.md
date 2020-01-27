@@ -1,6 +1,6 @@
 ---
 path: events
-title: Events & mingel
+title: Events & mingel ✨
 description: 'Se våra kommande events och mingel, samt läs om de som redan har varit.'
 hero:
   headingone: Mingel & events

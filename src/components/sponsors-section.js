@@ -12,9 +12,15 @@ class SponsorsSection extends React.Component {
         <div className={styles.container}>
           <span className={styles.heading}>Våra sponsorer</span>
           <ul>
-            {sponsors.map(({ node }) => {
+            {sponsors.map(({ node }, index) => {
               return (
-                <li key={node.frontmatter.path} className={styles.sponsor}>
+                <li
+                  key={node.frontmatter.path}
+                  className={styles.sponsor}
+                  data-sal="slide-up"
+                  data-sal-duration="2000"
+                  data-sal-delay={index + "00"}
+                >
                   <a
                     href={node.frontmatter.url}
                     target="_blank"

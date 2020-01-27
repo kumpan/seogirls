@@ -38,8 +38,16 @@ class AboutSection extends React.Component {
             <div dangerouslySetInnerHTML={{ __html: o }} />
           </div>
           <div className={styles.stars}>
-            <StarsOne data-sal="slide-up" data-sal-duration="1000" />
-            <StarsTwo data-sal="slide-up" data-sal-duration="1000" />
+            <StarsOne
+              data-sal="slide-up"
+              data-sal-duration="2000"
+              data-sal-delay="400"
+            />
+            <StarsTwo
+              data-sal="slide-up"
+              data-sal-duration="2000"
+              data-sal-delay="400"
+            />
           </div>
         </div>
       </div>

@@ -2,6 +2,9 @@ import React from "react"
 import { Link } from "gatsby"
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock"
 
+// Icons to import
+import { ArrowRightIcon } from "@icons/material"
+
 import styles from "./nav.module.css"
 
 import Logo from "../../content/assets/seogirls-logo.svg"
@@ -61,6 +64,7 @@ class Nav extends React.Component {
                 onMouseLeave={this.toggleHover}
               >
                 Events
+                <ArrowRightIcon />
               </Link>
             </li>
             <li>
@@ -71,6 +75,7 @@ class Nav extends React.Component {
                 onMouseLeave={this.toggleHover}
               >
                 Sponsorer
+                <ArrowRightIcon />
               </Link>
             </li>
             <li>
@@ -81,6 +86,7 @@ class Nav extends React.Component {
                 onMouseLeave={this.toggleHover}
               >
                 Om oss
+                <ArrowRightIcon />
               </Link>
             </li>
             <li>
@@ -91,6 +97,7 @@ class Nav extends React.Component {
                 onMouseLeave={this.toggleHover}
               >
                 Kontakta oss
+                <ArrowRightIcon />
               </Link>
             </li>
           </ul>

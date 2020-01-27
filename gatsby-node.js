@@ -42,22 +42,6 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         }
-        sponsors: allMdx(
-          filter: { fileAbsolutePath: { regex: "/(sponsors)/" } }
-          sort: { fields: [frontmatter___date], order: DESC }
-          limit: 1000
-        ) {
-          edges {
-            node {
-              fields {
-                slug
-              }
-              frontmatter {
-                title
-              }
-            }
-          }
-        }
       }
     `
   ).then(result => {
@@ -67,7 +51,6 @@ exports.createPages = ({ graphql, actions }) => {
 
     const comingEventPosts = result.data.comingEvents.edges
     const pastEventPosts = result.data.pastEvents.edges
-    const infoPages = result.data.infopages.edges
 
     // Create event posts pages.
     comingEventPosts.forEach((post, index) => {
@@ -98,23 +81,6 @@ exports.createPages = ({ graphql, actions }) => {
       createPage({
         path: `past-events${post.node.fields.slug}`,
         component: eventPost,
-        context: {
-          slug: post.node.fields.slug,
-          previous,
-          next,
-        },
-      })
-    })
-
-    // Create infopages.
-    infoPages.forEach((post, index) => {
-      const previous =
-        index === infoPages.length - 1 ? null : infoPages[index + 1].node
-      const next = index === 0 ? null : infoPages[index - 1].node
-
-      createPage({
-        path: `${post.node.fields.slug}`,
-        component: subPage,
         context: {
           slug: post.node.fields.slug,
           previous,

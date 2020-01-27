@@ -1,6 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
-import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock"
+import {
+  disableBodyScroll,
+  enableBodyScroll,
+  clearAllBodyScrollLocks,
+} from "body-scroll-lock"
 
 // Icons to import
 import { ArrowRightIcon } from "@icons/material"
@@ -25,6 +29,10 @@ class Nav extends React.Component {
     } else {
       enableBodyScroll(this.targetElement)
     }
+  }
+
+  componentWillUnmount() {
+    clearAllBodyScrollLocks()
   }
 
   render() {

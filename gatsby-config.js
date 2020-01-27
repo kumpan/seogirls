@@ -56,13 +56,6 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/info-pages`,
-        name: `infopages`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
         path: `${__dirname}/content/sponsors`,
         name: `sponsors`,
       },
@@ -72,6 +65,13 @@ module.exports = {
       options: {
         path: `${__dirname}/content/footer`,
         name: `footer`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/events`,
+        name: `events`,
       },
     },
     {

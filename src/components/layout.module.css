@@ -2,12 +2,5 @@
   max-width: 1120px;
   padding: 0 16px;
   margin: 0 auto;
-  position: relative;
   z-index: 1;
-}
-
-.footer {
-  text-align: center;
-  margin: 24px;
-  display: none;
 }

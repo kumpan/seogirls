@@ -66,12 +66,14 @@
   display: inline-flex;
   flex-direction: row;
   justify-content: center;
+  transition: 0.3s all ease;
 }
 
 .nav ul li {
   list-style: none;
   display: inline-block;
   margin-left: 32px;
+  transition: 0.3s all ease;
 }
 
 .nav a {
@@ -87,12 +89,11 @@
   display: none;
 }
 
-.hovered {
-  opacity: 0.3;
+.nav ul:hover > li {
+  opacity: 0.5;
 }
 
-.nav ul a:hover {
-  color: var(--text-title);
+.nav ul:hover > li:hover {
   opacity: 1;
 }
 

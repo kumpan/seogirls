@@ -1,13 +1,13 @@
 import React from "react"
 
-import Nav from "./nav"
-import StarsOne from "../../content/assets/stars-1.svg"
-import StarsTwo from "../../content/assets/stars-2.svg"
-import PrimaryButton from "./buttons/primary"
+import Nav from "../nav"
+import StarsOne from "../../../content/assets/stars-1.svg"
+import StarsTwo from "../../../content/assets/stars-2.svg"
+import PrimaryButton from "../buttons/primary"
 
-import styles from "./hero.module.css"
+import styles from "./landing-hero.module.css"
 
-class Hero extends React.Component {
+class LandingHero extends React.Component {
   render() {
     const { title, text, link, icon } = this.props
 
@@ -27,4 +27,4 @@ class Hero extends React.Component {
   }
 }
 
-export default Hero
+export default LandingHero

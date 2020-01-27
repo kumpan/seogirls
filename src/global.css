@@ -9,18 +9,6 @@ body {
   background: #f0f6f8;
 }
 
-body::after {
-  background: var(--soft-gradient);
-  display: block;
-  content: "";
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-}
-
 h1,
 h2,
 h3,

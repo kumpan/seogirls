@@ -6,6 +6,21 @@ media_folder: static/assets
 public_folder: assets
 
 collections:
+  - name: events
+    label: Events Page
+    folder: content/events
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - { name: title, label: SEO Title }
+      - { name: description, label: SEO Description }
+      - name: hero
+        label: Hero
+        widget: object
+        fields:
+          - { name: headingone, label: H1, widget: text }
+          - { name: subheading, label: Subheading, widget: text }
+
   - name: footer
     label: Footer
     folder: content/footer
@@ -62,16 +77,6 @@ collections:
         }
       - { name: body, label: Body, widget: markdown }
 
-  - name: info-pages
-    label: Info Pages
-    folder: content/info-pages
-    create: true
-    fields:
-      - { name: path, label: Path }
-      - { name: title, label: Title }
-      - { name: description, label: Description }
-      - { name: body, label: Body, widget: markdown }
-
   - name: start-page
     label: Start Page
     folder: content/start-page
@@ -79,8 +84,8 @@ collections:
     identifier_field: name
     fields:
       - { name: name, label: Identifier }
-      - { name: title, label: Title }
-      - { name: description, label: Description }
+      - { name: title, label: SEO Title }
+      - { name: description, label: SEO Description }
       - name: hero
         label: Hero
         widget: object

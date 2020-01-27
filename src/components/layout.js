@@ -1,5 +1,7 @@
 import React from "react"
-import { Link } from "gatsby"
+
+import SponsorsSection from "./sponsors-section"
+import Footer from "./footer"
 
 import styles from "./layout.module.css"
 
@@ -12,9 +14,8 @@ class Layout extends React.Component {
         <div className={styles.container}>
           <main>{children}</main>
         </div>
-        <footer className={styles.footer}>
-          © {new Date().getFullYear()}, <Link to="/">SEOGIRLS.SE</Link>
-        </footer>
+        <SponsorsSection />
+        <Footer />
       </div>
     )
   }

@@ -12,7 +12,7 @@ import Logo from "../../content/assets/seogirls-logo.svg"
 class Nav extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { showMenu: false, navHover: false }
+    this.state = { showMenu: false }
   }
 
   toggleMenu = () => {
@@ -25,10 +25,6 @@ class Nav extends React.Component {
     } else {
       enableBodyScroll(this.targetElement)
     }
-  }
-
-  toggleHover = () => {
-    this.setState({ navHover: !this.state.navHover })
   }
 
   render() {
@@ -57,45 +53,25 @@ class Nav extends React.Component {
           </div>
           <ul className={this.state.showMenu ? styles.opened : ""}>
             <li>
-              <Link
-                className={this.state.navHover ? styles.hovered : ""}
-                to="/events"
-                onMouseEnter={this.toggleHover}
-                onMouseLeave={this.toggleHover}
-              >
+              <Link to="/events">
                 Events
                 <ArrowRightIcon />
               </Link>
             </li>
             <li>
-              <Link
-                className={this.state.navHover ? styles.hovered : ""}
-                to="/events"
-                onMouseEnter={this.toggleHover}
-                onMouseLeave={this.toggleHover}
-              >
+              <Link to="/events">
                 Sponsorer
                 <ArrowRightIcon />
               </Link>
             </li>
             <li>
-              <Link
-                className={this.state.navHover ? styles.hovered : ""}
-                to="/events"
-                onMouseEnter={this.toggleHover}
-                onMouseLeave={this.toggleHover}
-              >
+              <Link to="/events">
                 Om oss
                 <ArrowRightIcon />
               </Link>
             </li>
             <li>
-              <Link
-                className={this.state.navHover ? styles.hovered : ""}
-                to="/events"
-                onMouseEnter={this.toggleHover}
-                onMouseLeave={this.toggleHover}
-              >
+              <Link to="/events">
                 Kontakta oss
                 <ArrowRightIcon />
               </Link>

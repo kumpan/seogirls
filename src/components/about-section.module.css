@@ -1,5 +1,5 @@
 .about {
-  margin: 160px auto;
+  margin: 0 auto 160px;
   max-width: 864px;
   position: relative;
 }
@@ -78,7 +78,7 @@
 
 @media screen and (max-width: 992px) {
   .about {
-    margin: 96px auto;
+    margin: 0 auto 96px;
   }
 
   .stars {
@@ -101,7 +101,7 @@
 
 @media screen and (max-width: 640px) {
   .about {
-    margin: 64px auto;
+    margin: 0 auto 64px;
   }
 
   .aboutItems {

@@ -3,8 +3,19 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  position: relative;
   margin: 0 -16px;
+}
+
+.hero::after {
+  background: var(--soft-gradient);
+  display: block;
+  content: "";
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 .container {

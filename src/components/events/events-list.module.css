@@ -1,7 +1,7 @@
 .events {
   display: flex;
   flex-direction: column;
-  margin: -184px auto 0;
+  margin: -184px auto 160px;
   max-width: 864px;
 }
 
@@ -27,13 +27,13 @@
 
 @media screen and (max-width: 992px) {
   .events {
-    margin: -96px auto 0;
+    margin: -96px auto 96px;
   }
 }
 
 @media screen and (max-width: 640px) {
   .events {
-    margin: -64px auto 0;
+    margin: -64px auto 64px;
   }
 
   .pastEvents {

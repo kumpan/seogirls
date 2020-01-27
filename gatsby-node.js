@@ -42,22 +42,6 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         }
-        infopages: allMdx(
-          filter: { fileAbsolutePath: { regex: "/(info-pages)/" } }
-          sort: { fields: [frontmatter___date], order: DESC }
-          limit: 1000
-        ) {
-          edges {
-            node {
-              fields {
-                slug
-              }
-              frontmatter {
-                title
-              }
-            }
-          }
-        }
         sponsors: allMdx(
           filter: { fileAbsolutePath: { regex: "/(sponsors)/" } }
           sort: { fields: [frontmatter___date], order: DESC }

@@ -89,6 +89,13 @@ class IndexPage extends React.Component {
                   />
                 )
               })}
+              <div className={styles.mobileLink}>
+                <SecondaryButton
+                  iconAfter={arrowRightIcon}
+                  text={pageContent.events.nexteventbuttontext}
+                  link={pageContent.events.nexteventbuttondestination}
+                />
+              </div>
             </div>
             <div className={styles.pastEvents + " past-events"}>
               <div className={styles.eventsTitle}>
@@ -110,6 +117,13 @@ class IndexPage extends React.Component {
                   />
                 )
               })}
+              <div className={styles.mobileLink}>
+                <SecondaryButton
+                  iconAfter={arrowRightIcon}
+                  text={pageContent.events.pasteventbuttontext}
+                  link={pageContent.events.pasteventbuttondestination}
+                />
+              </div>
             </div>
           </div>
           <AboutSection

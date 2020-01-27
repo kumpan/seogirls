@@ -5,6 +5,10 @@
   max-width: 864px;
 }
 
+.mobileLink {
+  display: none;
+}
+
 .event .gatsby-image-outer-wrapper,
 .events .gatsby-image-wrapper {
   height: 100%;
@@ -32,12 +36,34 @@
     margin: -64px auto 0;
   }
 
+  .pastEvents {
+    margin: 64px 0 0 0;
+  }
+
   .eventsTitle {
+    margin: 0 0 12px;
     flex-direction: column;
-    margin: 0 0 40px;
+  }
+
+  .eventsTitle div {
+    display: none;
   }
 
   .eventsTitle h3 {
     margin: 0 0 8px;
+  }
+
+  .mobileLink {
+    margin: 24px 0 0 0;
+    display: flex;
+  }
+
+  .mobileLink div {
+    width: 100%;
+  }
+
+  .mobileLink a {
+    display: flex;
+    width: 100%;
   }
 }

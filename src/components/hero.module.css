@@ -104,11 +104,11 @@
 
 @media screen and (max-width: 640px) {
   .hero {
-    min-height: 90vh;
+    min-height: 85vh;
   }
 
   .container {
-    padding-bottom: 40px;
+    padding-bottom: 24px;
   }
 
   .stars svg {

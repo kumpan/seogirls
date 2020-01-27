@@ -43,6 +43,7 @@
 
 .footer a {
   color: var(--white);
+  z-index: 0;
 }
 
 .footer a:hover {

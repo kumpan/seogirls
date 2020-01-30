@@ -6,6 +6,11 @@
   margin: 0 -16px;
 }
 
+.hero h1 {
+  font-size: 80px;
+  line-height: 88px;
+}
+
 .hero::after {
   background: var(--soft-gradient);
   display: block;

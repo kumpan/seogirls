@@ -16,7 +16,7 @@ const Events = () => {
           }
         }
         allMdx(
-          filter: { fileAbsolutePath: { regex: "/(/events/events-mingel)/" } }
+          filter: { fileAbsolutePath: { regex: "/(/events/tidigare)/" } }
         ) {
           edges {
             node {
@@ -41,7 +41,7 @@ const Events = () => {
         title={pageData.hero.headingone}
         subheading={pageData.hero.subheading}
       />
-      <EventsList coming past linked />
+      <EventsList past />
     </Layout>
   )
 }

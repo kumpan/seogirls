@@ -11,7 +11,7 @@ import PastEventsLink from "./past-events-link"
 // Icons to import
 import { ArrowRightIcon } from "@icons/material"
 
-const EventsList = () => {
+const EventsList = ({ coming, past, linked }) => {
   const data = useStaticQuery(
     graphql`
       query {
@@ -97,80 +97,92 @@ const EventsList = () => {
 
   return (
     <div className={styles.events}>
-      <div className={styles.comingEvents}>
-        <div className={styles.eventsTitle}>
-          <h3>
-            <span className={styles.emoji}>
-              <Img
-                fixed={data.emojiWave.childImageSharp.fixed}
-                alt="Emoji Wave"
-                objectFit="contain"
-                objectPosition="50% 50%"
+      {coming && (
+        <div className={styles.comingEvents}>
+          <div className={styles.eventsTitle}>
+            <h3>
+              <span className={styles.emoji}>
+                <Img
+                  fixed={data.emojiWave.childImageSharp.fixed}
+                  alt="Emoji Wave"
+                  objectFit="contain"
+                  objectPosition="50% 50%"
+                />
+              </span>
+              {pageContent.nexteventtitle}
+            </h3>
+            {linked && (
+              <SecondaryButton
+                iconAfter={arrowRightIcon}
+                text={pageContent.nexteventbuttontext}
+                link={pageContent.nexteventbuttondestination}
               />
-            </span>
-            {pageContent.nexteventtitle}
-          </h3>
-          <SecondaryButton
-            iconAfter={arrowRightIcon}
-            text={pageContent.nexteventbuttontext}
-            link={pageContent.nexteventbuttondestination}
-          />
-        </div>
-        {comingEvents.map(({ node }) => {
-          return (
-            <ComingEventsLink
-              key={node.frontmatter.path}
-              path={node.frontmatter.path}
-              date={node.frontmatter.date}
-              title={node.frontmatter.title}
-              ingress={node.frontmatter.ingress}
-            />
-          )
-        })}
-        <div className={styles.mobileLink}>
-          <SecondaryButton
-            iconAfter={arrowRightIcon}
-            text={pageContent.nexteventbuttontext}
-            link={pageContent.nexteventbuttondestination}
-          />
-        </div>
-      </div>
-      <div className={styles.pastEvents + " past-events"}>
-        <div className={styles.eventsTitle}>
-          <h3>
-            <span className={styles.emoji}>
-              <Img
-                fixed={data.emojiVictory.childImageSharp.fixed}
-                alt="Emoji Victory"
+            )}
+          </div>
+          {comingEvents.map(({ node }) => {
+            return (
+              <ComingEventsLink
+                key={node.frontmatter.path}
+                path={node.frontmatter.path}
+                date={node.frontmatter.date}
+                title={node.frontmatter.title}
+                ingress={node.frontmatter.ingress}
               />
-            </span>
-            {pageContent.pasteventtitle}
-          </h3>
-          <SecondaryButton
-            iconAfter={arrowRightIcon}
-            text={pageContent.pasteventbuttontext}
-            link={pageContent.pasteventbuttondestination}
-          />
+            )
+          })}
+          {linked && (
+            <div className={styles.mobileLink}>
+              <SecondaryButton
+                iconAfter={arrowRightIcon}
+                text={pageContent.nexteventbuttontext}
+                link={pageContent.nexteventbuttondestination}
+              />
+            </div>
+          )}
         </div>
-        {pastEvents.map(({ node }) => {
-          return (
-            <PastEventsLink
-              key={node.frontmatter.path}
-              path={node.frontmatter.path}
-              title={node.frontmatter.title}
-              ingress={node.frontmatter.ingress}
-              thumb={node.frontmatter.featuredimage.childImageSharp.fluid}
-            />
-          )
-        })}
-        <div className={styles.mobileLink}>
-          <SecondaryButton
-            iconAfter={arrowRightIcon}
-            text={pageContent.pasteventbuttontext}
-            link={pageContent.pasteventbuttondestination}
-          />
+      )}
+      {past && (
+        <div className={styles.pastEvents + " past-events"}>
+          <div className={styles.eventsTitle}>
+            <h3>
+              <span className={styles.emoji}>
+                <Img
+                  fixed={data.emojiVictory.childImageSharp.fixed}
+                  alt="Emoji Victory"
+                />
+              </span>
+              {pageContent.pasteventtitle}
+            </h3>
+            {linked && (
+              <SecondaryButton
+                iconAfter={arrowRightIcon}
+                text={pageContent.pasteventbuttontext}
+                link={pageContent.pasteventbuttondestination}
+              />
+            )}
+          </div>
+          {pastEvents.map(({ node }) => {
+            return (
+              <PastEventsLink
+                key={node.frontmatter.path}
+                path={node.frontmatter.path}
+                title={node.frontmatter.title}
+                ingress={node.frontmatter.ingress}
+                thumb={node.frontmatter.featuredimage.childImageSharp.fluid}
+              />
+            )
+          })}
+          {linked && (
+            <div className={styles.mobileLink}>
+              <SecondaryButton
+                iconAfter={arrowRightIcon}
+                text={pageContent.pasteventbuttontext}
+                link={pageContent.pasteventbuttondestination}
+              />
+            </div>
+          )}
         </div>
-      </div>
+      )}
     </div>
   )
 }

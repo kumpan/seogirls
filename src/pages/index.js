@@ -58,7 +58,7 @@ class IndexPage extends React.Component {
           link={pageContent.hero.subtitlelinkdestination}
           icon={calendarIcon}
         />
-        <EventsList />
+        <EventsList coming past linked />
         <AboutSection
           headingtwo={pageContent.about.headingtwo}
           s={s}

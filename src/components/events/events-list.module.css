@@ -26,7 +26,7 @@
   display: inline-block;
 }
 
-.pastEvents {
+.comingEvents + .pastEvents {
   margin: 96px 0 0 0;
 }
 

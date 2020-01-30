@@ -105,8 +105,6 @@ const EventsList = ({ coming, past, linked }) => {
                 <Img
                   fixed={data.emojiWave.childImageSharp.fixed}
                   alt="Emoji Wave"
-                  objectFit="contain"
-                  objectPosition="50% 50%"
                 />
               </span>
               {pageContent.nexteventtitle}

@@ -32,7 +32,6 @@ const Events = () => {
           }
         }
         comingEvents: allMdx(
-          limit: 3
           filter: { fileAbsolutePath: { regex: "/(coming-events)/" } }
           sort: { fields: [frontmatter___date], order: DESC }
         ) {

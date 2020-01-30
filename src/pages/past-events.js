@@ -32,7 +32,6 @@ const Events = () => {
           }
         }
         pastEvents: allMdx(
-          limit: 3
           filter: { fileAbsolutePath: { regex: "/(past-events)/" } }
           sort: { fields: [frontmatter___date], order: DESC }
         ) {

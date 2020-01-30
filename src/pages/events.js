@@ -21,6 +21,7 @@ const Events = () => {
           edges {
             node {
               frontmatter {
+                shorttitle
                 title
                 hero {
                   headingone
@@ -30,18 +31,67 @@ const Events = () => {
             }
           }
         }
+        comingEvents: allMdx(
+          limit: 3
+          filter: { fileAbsolutePath: { regex: "/(coming-events)/" } }
+          sort: { fields: [frontmatter___date], order: DESC }
+        ) {
+          edges {
+            node {
+              frontmatter {
+                path
+                title
+                date(formatString: "DD MMM YYYY", locale: "sv-SV")
+                ingress
+              }
+            }
+          }
+        }
+        pastEvents: allMdx(
+          limit: 3
+          filter: { fileAbsolutePath: { regex: "/(past-events)/" } }
+          sort: { fields: [frontmatter___date], order: DESC }
+        ) {
+          edges {
+            node {
+              frontmatter {
+                path
+                title
+                date(formatString: "DD MMM YYYY", locale: "sv-SV")
+                ingress
+                featuredimage {
+                  childImageSharp {
+                    fluid(maxWidth: 560) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     `
   )
   const pageData = data.allMdx.edges[0].node.frontmatter
+  const comingEvents = data.comingEvents.edges
+  const pastEvents = data.pastEvents.edges
+
   return (
     <Layout title={data.site.siteMetadata.title}>
       <SEO title={pageData.title} />
       <PageHero
+        shortTitle={pageData.shorttitle}
         title={pageData.hero.headingone}
         subheading={pageData.hero.subheading}
       />
-      <EventsList coming past linked />
+      <EventsList
+        coming
+        past
+        linked
+        pastEvents={pastEvents}
+        comingEvents={comingEvents}
+      />
     </Layout>
   )
 }

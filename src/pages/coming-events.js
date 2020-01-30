@@ -22,6 +22,7 @@ const Events = () => {
             node {
               frontmatter {
                 title
+                shorttitle
                 hero {
                   headingone
                   subheading
@@ -30,18 +31,38 @@ const Events = () => {
             }
           }
         }
+        comingEvents: allMdx(
+          limit: 3
+          filter: { fileAbsolutePath: { regex: "/(coming-events)/" } }
+          sort: { fields: [frontmatter___date], order: DESC }
+        ) {
+          edges {
+            node {
+              frontmatter {
+                path
+                title
+                date(formatString: "DD MMM YYYY", locale: "sv-SV")
+                ingress
+              }
+            }
+          }
+        }
       }
     `
   )
   const pageData = data.allMdx.edges[0].node.frontmatter
+  const comingEvents = data.comingEvents.edges
+
   return (
     <Layout title={data.site.siteMetadata.title}>
       <SEO title={pageData.title} />
       <PageHero
+        shortTitle={pageData.shorttitle}
         title={pageData.hero.headingone}
         subheading={pageData.hero.subheading}
+        eventSub
       />
-      <EventsList coming />
+      <EventsList coming comingEvents={comingEvents} />
     </Layout>
   )
 }

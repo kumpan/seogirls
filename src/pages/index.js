@@ -18,6 +18,8 @@ class IndexPage extends React.Component {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
     const pageContent = data.allMdx.edges[0].node.frontmatter
+    const comingEvents = data.comingEvents.edges
+    const pastEvents = data.pastEvents.edges
 
     // Icons to use
     const calendarIcon = <CalendarBlankIcon />
@@ -58,7 +60,13 @@ class IndexPage extends React.Component {
           link={pageContent.hero.subtitlelinkdestination}
           icon={calendarIcon}
         />
-        <EventsList coming past linked />
+        <EventsList
+          coming
+          past
+          linked
+          pastEvents={pastEvents}
+          comingEvents={comingEvents}
+        />
         <AboutSection
           headingtwo={pageContent.about.headingtwo}
           s={s}
@@ -116,6 +124,45 @@ export const pageQuery = graphql`
             logo {
               childImageSharp {
                 fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    comingEvents: allMdx(
+      limit: 3
+      filter: { fileAbsolutePath: { regex: "/(coming-events)/" } }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            path
+            title
+            date(formatString: "DD MMM YYYY", locale: "sv-SV")
+            ingress
+          }
+        }
+      }
+    }
+    pastEvents: allMdx(
+      limit: 3
+      filter: { fileAbsolutePath: { regex: "/(past-events)/" } }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            path
+            title
+            date(formatString: "DD MMM YYYY", locale: "sv-SV")
+            ingress
+            featuredimage {
+              childImageSharp {
+                fluid(maxWidth: 560) {
                   ...GatsbyImageSharpFluid
                 }
               }

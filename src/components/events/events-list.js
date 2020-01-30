@@ -11,7 +11,7 @@ import PastEventsLink from "./past-events-link"
 // Icons to import
 import { ArrowRightIcon } from "@icons/material"
 
-const EventsList = ({ coming, past, linked }) => {
+const EventsList = ({ coming, past, linked, comingEvents, pastEvents }) => {
   const data = useStaticQuery(
     graphql`
       query {
@@ -26,45 +26,6 @@ const EventsList = ({ coming, past, linked }) => {
                   pasteventtitle
                   pasteventbuttontext
                   pasteventbuttondestination
-                }
-              }
-            }
-          }
-        }
-        comingEvents: allMdx(
-          limit: 3
-          filter: { fileAbsolutePath: { regex: "/(coming-events)/" } }
-          sort: { fields: [frontmatter___date], order: DESC }
-        ) {
-          edges {
-            node {
-              frontmatter {
-                path
-                title
-                date(formatString: "DD MMM YYYY", locale: "sv-SV")
-                ingress
-              }
-            }
-          }
-        }
-        pastEvents: allMdx(
-          limit: 3
-          filter: { fileAbsolutePath: { regex: "/(past-events)/" } }
-          sort: { fields: [frontmatter___date], order: DESC }
-        ) {
-          edges {
-            node {
-              frontmatter {
-                path
-                title
-                date(formatString: "DD MMM YYYY", locale: "sv-SV")
-                ingress
-                featuredimage {
-                  childImageSharp {
-                    fluid(maxWidth: 560) {
-                      ...GatsbyImageSharpFluid
-                    }
-                  }
                 }
               }
             }
@@ -92,8 +53,6 @@ const EventsList = ({ coming, past, linked }) => {
   const arrowRightIcon = <ArrowRightIcon />
 
   const pageContent = data.allMdx.edges[0].node.frontmatter.events
-  const comingEvents = data.comingEvents.edges
-  const pastEvents = data.pastEvents.edges
 
   return (
     <div className={styles.events}>

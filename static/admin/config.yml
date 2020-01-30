@@ -11,7 +11,7 @@ collections:
     folder: content/events
     create: true
     fields:
-      - { name: path, label: Path }
+      - { name: shorttitle, label: Short Title }
       - { name: title, label: SEO Title }
       - { name: description, label: SEO Description }
       - name: hero

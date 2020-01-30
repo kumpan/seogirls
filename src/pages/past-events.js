@@ -21,6 +21,7 @@ const Events = () => {
           edges {
             node {
               frontmatter {
+                shorttitle
                 title
                 hero {
                   headingone
@@ -30,18 +31,45 @@ const Events = () => {
             }
           }
         }
+        pastEvents: allMdx(
+          limit: 3
+          filter: { fileAbsolutePath: { regex: "/(past-events)/" } }
+          sort: { fields: [frontmatter___date], order: DESC }
+        ) {
+          edges {
+            node {
+              frontmatter {
+                path
+                title
+                date(formatString: "DD MMM YYYY", locale: "sv-SV")
+                ingress
+                featuredimage {
+                  childImageSharp {
+                    fluid(maxWidth: 560) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     `
   )
   const pageData = data.allMdx.edges[0].node.frontmatter
+  const pastEvents = data.pastEvents.edges
+
   return (
     <Layout title={data.site.siteMetadata.title}>
       <SEO title={pageData.title} />
       <PageHero
+        shortTitle={pageData.shorttitle}
         title={pageData.hero.headingone}
         subheading={pageData.hero.subheading}
+        eventSub
       />
-      <EventsList past />
+      <EventsList past pastEvents={pastEvents} />
     </Layout>
   )
 }

@@ -1,5 +1,5 @@
 ---
-path: events
+shorttitle: Events
 title: Events & mingel
 description: 'Se våra kommande events och mingel, samt läs om de som redan har varit.'
 hero:

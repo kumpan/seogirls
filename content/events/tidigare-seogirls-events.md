@@ -1,5 +1,5 @@
 ---
-path: past-events
+shorttitle: Tidigare events
 title: Tidigare SEOGIRLS-events
 description: Tidigare SEOGIRLS-events
 hero:

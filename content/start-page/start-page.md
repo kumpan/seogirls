@@ -9,10 +9,10 @@ hero:
 events:
   nexteventbuttondestination: /
   nexteventbuttontext: Se alla kommande events
-  nexteventtitle: "\U0001F44B Kommande events"
+  nexteventtitle: Kommande events
   pasteventbuttondestination: /
   pasteventbuttontext: Se alla tidigare events
-  pasteventtitle: ✌️ Tidigare SEOGIRLS-events
+  pasteventtitle: Tidigare SEOGIRLS-events
 about:
   e: >-
     En gång i månaden träffas vi på ett SEOGIRLS-mingel för att umgås, nätverka

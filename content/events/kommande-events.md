@@ -1,5 +1,5 @@
 ---
-path: coming-events
+shorttitle: Kommande events
 title: Kommande events
 description: Kommande events
 hero:

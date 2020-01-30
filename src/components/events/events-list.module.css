@@ -1,7 +1,7 @@
 .events {
   display: flex;
   flex-direction: column;
-  margin: -184px auto 160px;
+  margin: 0 auto 160px;
   max-width: 864px;
 }
 
@@ -19,6 +19,11 @@
   justify-content: space-between;
   align-items: center;
   margin: 0 0 32px;
+}
+
+.emoji {
+  margin: 0 8px 0 0;
+  display: inline-block;
 }
 
 .pastEvents {

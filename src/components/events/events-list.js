@@ -1,5 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 
 import styles from "./events-list.module.css"
 
@@ -69,6 +70,20 @@ const EventsList = () => {
             }
           }
         }
+        emojiWave: file(relativePath: { eq: "emoji-wave.png" }) {
+          childImageSharp {
+            fixed(width: 28, height: 28) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+        emojiVictory: file(relativePath: { eq: "emoji-victory.png" }) {
+          childImageSharp {
+            fixed(width: 28, height: 28) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
       }
     `
   )
@@ -84,7 +99,17 @@ const EventsList = () => {
     <div className={styles.events}>
       <div className={styles.comingEvents}>
         <div className={styles.eventsTitle}>
-          <h3>{pageContent.nexteventtitle}</h3>
+          <h3>
+            <span className={styles.emoji}>
+              <Img
+                fixed={data.emojiWave.childImageSharp.fixed}
+                alt="Emoji Wave"
+                objectFit="contain"
+                objectPosition="50% 50%"
+              />
+            </span>
+            {pageContent.nexteventtitle}
+          </h3>
           <SecondaryButton
             iconAfter={arrowRightIcon}
             text={pageContent.nexteventbuttontext}
@@ -112,7 +137,15 @@ const EventsList = () => {
       </div>
       <div className={styles.pastEvents + " past-events"}>
         <div className={styles.eventsTitle}>
-          <h3>{pageContent.pasteventtitle}</h3>
+          <h3>
+            <span className={styles.emoji}>
+              <Img
+                fixed={data.emojiVictory.childImageSharp.fixed}
+                alt="Emoji Victory"
+              />
+            </span>
+            {pageContent.pasteventtitle}
+          </h3>
           <SecondaryButton
             iconAfter={arrowRightIcon}
             text={pageContent.pasteventbuttontext}

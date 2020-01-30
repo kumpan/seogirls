@@ -1,9 +1,10 @@
 .hero {
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   margin: 0 -16px;
+  padding: 200px 0;
 }
 
 .hero::after {
@@ -24,7 +25,7 @@
   text-align: center;
   position: relative;
   z-index: 1;
-  padding: 0 16px 96px;
+  padding: 0 16px;
 }
 
 @keyframes fade-up {
@@ -75,7 +76,7 @@
 }
 
 .stars svg {
-  width: 304px;
+  width: 240px;
   height: auto;
 }
 
@@ -85,8 +86,8 @@
 }
 
 .stars svg:nth-child(1) {
-  left: -256px;
-  top: -64px;
+  left: -220px;
+  top: -40px;
   animation: stars-in 1s ease-in-out both,
     stars-1-pulse 5s ease-in-out 1s infinite forwards;
 }
@@ -94,8 +95,8 @@
 .stars svg:nth-child(2) {
   animation: stars-in 1s ease-in-out 0.2s both,
     stars-1-pulse 5s ease-in-out 1.2s infinite forwards;
-  right: -208px;
-  bottom: 32px;
+  right: -180px;
+  bottom: -40px;
 }
 
 @media screen and (max-width: 992px) {
@@ -118,6 +119,7 @@
   .hero {
     min-height: 85vh;
     overflow: hidden;
+    padding: 80px 0;
   }
 
   .container {

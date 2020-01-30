@@ -21,6 +21,11 @@
     12px 12px 40px rgba(0, 0, 0, 0.28);
 }
 
+.eventLink:hover div[role="button"] {
+  box-shadow: -12px -12px 24px rgba(255, 255, 255, 1),
+    8px 8px 24px rgba(0, 0, 0, 0.24);
+}
+
 .date {
   width: 104px;
   flex-shrink: 0;

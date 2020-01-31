@@ -1,5 +1,5 @@
 ---
-path: footer
+name: Footer
 title: Kom och mingla med oss!
 copyright: '© SEOGIRLS 2020 [Cookiepolicy](/cookies)'
 linkscenter: |-

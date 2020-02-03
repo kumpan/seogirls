@@ -24,7 +24,7 @@ class PastEventsLink extends React.Component {
     const arrowRightIcon = <ArrowRightIcon />
 
     return (
-      <a className={styles.eventLink} href={"past-events/" + path}>
+      <a className={styles.eventLink} href={"/past-events/" + path}>
         <div className={styles.thumb}>
           <Image fluid={thumb} />
         </div>

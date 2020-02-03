@@ -1,6 +1,8 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
+import styles from "./about.module.css"
+
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PageHero from "../components/hero/page-hero"
@@ -44,15 +46,7 @@ const Events = () => {
           title={pageData.frontmatter.hero.headingone}
           subheading={pageData.frontmatter.hero.subheading}
         />
-        <div
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            marginLeft: "auto",
-            marginRight: "auto",
-            maxWidth: "864px",
-          }}
-        >
+        <div className={styles.container}>
           <MDXRenderer>{pageData.body}</MDXRenderer>
         </div>
       </Layout>

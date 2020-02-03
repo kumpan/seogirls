@@ -31,7 +31,7 @@ class ComingEventsLink extends React.Component {
     const arrowRightIcon = <ArrowRightIcon />
 
     return (
-      <a className={styles.eventLink} href={"coming-events/" + path}>
+      <a className={styles.eventLink} href={"/coming-events/" + path}>
         <div className={styles.date}>
           <span className={styles.day}>{dateDayFormatted() || "1"}</span>
           <span className={styles.month}>{dateMonth || "Jan"}</span>

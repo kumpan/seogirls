@@ -10,8 +10,8 @@ module.exports = {
     },
   },
   plugins: [
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
@@ -20,15 +20,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/static/assets`,
-        name: `media`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
         path: `${__dirname}/content/assets`,
-        name: `assets`,
+        name: `media`,
       },
     },
     {
@@ -103,7 +96,8 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 800,
+              linkImagesToOriginal: false,
+              maxWidth: 864,
             },
           },
           {
@@ -122,7 +116,15 @@ module.exports = {
             resolve: `gatsby-remark-smartypants`,
           },
         ],
-        plugins: ["gatsby-remark-images"],
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              linkImagesToOriginal: false,
+              maxWidth: 864,
+            },
+          },
+        ],
       },
     },
     {
@@ -139,12 +141,11 @@ module.exports = {
         // Plugins configs
         plugins: [
           {
-            resolve: `gatsby-remark-relative-images`,
-          },
-          {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 864,
+              linkImagesToOrginal: false,
+              loading: `lazy`,
             },
           },
         ],

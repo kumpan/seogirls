@@ -52,6 +52,7 @@ h4 {
 
 p {
   margin: 0 0 16px 0;
+  width: 100%;
 }
 
 p:last-of-type {

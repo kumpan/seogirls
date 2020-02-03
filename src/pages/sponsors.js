@@ -84,6 +84,7 @@ const Events = () => {
                 color={node.frontmatter.color}
                 logo={node.frontmatter.logo.childImageSharp.fluid}
                 description={node.body}
+                url={node.frontmatter.url}
               />
             )
           })}

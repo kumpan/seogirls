@@ -16,6 +16,6 @@ SEO-branschen är idag väldigt mansdominerad, vilket vi vill ändra på. Alla m
 
 En gång i månaden träffas vi på ett SEOGIRLS-mingel för att umgås, nätverka och dela med oss av våra kunskaper. Det brukar vara minst ett föredrag om en specifik del av SEO på varje träff. Vill du dela med dig av dina kunskaper eller testa ett framförande inför en trevlig publik, hör av dig!
 
-![SEO-seminarie](/assets/jennydrakenlind_20190926_0043_web.jpg "SEO-seminarie med Ulrika från Unikorn")
+![SEO-seminarie på Södermalm](/assets/jon-flobrant-bk2nx6uejnc-unsplash.jpg "SEO-seminarie på Södermalm")
 
 Om du är en SEOtjej och vill gå med i SEOGIRLS, gå med i vår LinkedIn-grupp och Slack-kanal! Där annonserar vi nästa event. Eventen kommer också annonseras här på sajten i förväg och du kan signa upp dig på vårt mejlutskick så får du ett mejl nästa gång biljetterna släpps. Men passa på! Biljetterna brukar gå på bara några timmar.

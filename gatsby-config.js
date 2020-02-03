@@ -20,15 +20,15 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/assets`,
-        name: `assets`,
+        path: `${__dirname}/static/assets`,
+        name: `media`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/static/assets`,
-        name: `media`,
+        path: `${__dirname}/content/assets`,
+        name: `assets`,
       },
     },
     {
@@ -37,6 +37,13 @@ module.exports = {
         rule: {
           include: /assets/,
         },
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/about-page`,
+        name: `aboutpage`,
       },
     },
     {
@@ -96,7 +103,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
+              maxWidth: 800,
             },
           },
           {
@@ -115,6 +122,7 @@ module.exports = {
             resolve: `gatsby-remark-smartypants`,
           },
         ],
+        plugins: ["gatsby-remark-images"],
       },
     },
     {
@@ -130,12 +138,13 @@ module.exports = {
         gfm: true,
         // Plugins configs
         plugins: [
-          `gatsby-remark-relative-images`,
+          {
+            resolve: `gatsby-remark-relative-images`,
+          },
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 960,
-              pathFields: ["cover"],
+              maxWidth: 864,
             },
           },
         ],

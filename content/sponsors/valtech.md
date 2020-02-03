@@ -4,4 +4,4 @@ title: Valtech
 logo: /assets/valtech.png
 url: 'https://www.valtech.com/'
 ---
-Valtech
+Valtech tillhandahåller dig med alla de verktyg du behöver för att bli en ledare inom din bransch, allt från uppkopplade tjänster till handelsplattformar.

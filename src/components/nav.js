@@ -67,19 +67,19 @@ class Nav extends React.Component {
               </Link>
             </li>
             <li>
-              <Link to="/events">
+              <Link to="/sponsors">
                 Sponsorer
                 <ArrowRightIcon />
               </Link>
             </li>
             <li>
-              <Link to="/events">
+              <Link to="/about">
                 Om oss
                 <ArrowRightIcon />
               </Link>
             </li>
             <li>
-              <Link to="/events">
+              <Link to="/contact">
                 Kontakta oss
                 <ArrowRightIcon />
               </Link>

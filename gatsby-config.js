@@ -42,6 +42,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        path: `${__dirname}/content/sponsors-page`,
+        name: `sponsorspage`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         path: `${__dirname}/content/coming-events`,
         name: `comingevents`,
       },
@@ -128,6 +135,7 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 960,
+              pathFields: ["cover"],
             },
           },
         ],

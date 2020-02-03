@@ -6,6 +6,28 @@ media_folder: static/assets
 public_folder: assets
 
 collections:
+  - name: sponsorspage
+    label: Sponsors Page
+    folder: content/sponsors-page
+    create: true
+    fields:
+      - { name: shorttitle, label: Short Title }
+      - { name: title, label: SEO Title }
+      - { name: description, label: SEO Description }
+      - name: hero
+        label: Hero
+        widget: object
+        fields:
+          - { name: headingone, label: H1, widget: text }
+          - { name: subheading, label: Subheading, widget: text }
+      - name: becomesponsor
+        label: Become a Sponsor Section
+        widget: object
+        fields:
+          - { name: headingtwo, label: H2, widget: text }
+          - { name: description, label: Description, widget: text }
+          - { name: link, label: E-mail Address, widget: text }
+
   - name: events
     label: Events Pages
     folder: content/events
@@ -26,7 +48,7 @@ collections:
     folder: content/footer
     create: true
     fields:
-      - { name: path, label: Path }
+      - { name: name, label: Identifier }
       - { name: title, label: Footer Title }
       - { name: copyright, label: Copyright/Cookie Policy, widget: markdown }
       - { name: linkscenter, label: Links Column, widget: markdown }
@@ -41,6 +63,7 @@ collections:
       - { name: title, label: Title }
       - { name: logo, label: Logo, widget: image, allow_multiple: false }
       - { name: url, label: URL }
+      - { name: color, label: Card Color }
       - { name: body, label: Body, widget: markdown }
 
   - name: coming-events

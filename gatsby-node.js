@@ -5,7 +5,6 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
   const eventPost = path.resolve(`./src/templates/event-post.js`)
-  const subPage = path.resolve(`./src/templates/subpage-template.js`)
 
   return graphql(
     `

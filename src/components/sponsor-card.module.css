@@ -1,0 +1,84 @@
+.sponsorCard {
+  width: calc(50% - 32px);
+  margin: 0 16px 32px;
+  color: var(--white);
+  padding: 48px 40px 40px;
+  box-shadow: -12px -8px 20px rgba(255, 255, 255, 0.7),
+    8px 8px 20px rgba(0, 0, 0, 0.12);
+  border-radius: 24px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: 0.3s all ease;
+}
+
+.sponsorCard:hover {
+  transform: translateY(-4px);
+  box-shadow: -12px -8px 20px rgba(255, 255, 255, 0.7),
+    8px 12px 28px rgba(0, 0, 0, 0.4);
+}
+
+.sponsorCard a {
+  color: var(--white);
+}
+
+.sponsorCard a::after {
+  display: none;
+}
+
+.sponsorLogo {
+  display: block;
+  height: 40px;
+  width: auto;
+  margin: 0 0 32px;
+}
+
+.description {
+  margin: 0 0 72px;
+}
+
+.sponsorLink {
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  text-align: center;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sponsorLink svg {
+  margin: 0 0 0 6px;
+}
+
+.sponsorLink:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+@media screen and (max-width: 992px) {
+  .sponsorCard {
+    width: 100%;
+    margin: 0 0 16px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .sponsorCard {
+    padding: 40px 24px 32px;
+  }
+
+  .sponsorLogo {
+    height: 32px;
+    margin: 0 0 24px;
+  }
+
+  .description {
+    margin: 0 0 56px;
+  }
+
+  .sponsorLink {
+    bottom: 32px;
+  }
+}

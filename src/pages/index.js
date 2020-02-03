@@ -111,27 +111,6 @@ export const pageQuery = graphql`
         }
       }
     }
-    sponsors: allMdx(
-      filter: { fileAbsolutePath: { regex: "/(sponsors)/" } }
-      sort: { fields: [frontmatter___date], order: DESC }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            path
-            title
-            url
-            logo {
-              childImageSharp {
-                fluid {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-        }
-      }
-    }
     comingEvents: allMdx(
       limit: 3
       filter: { fileAbsolutePath: { regex: "/(coming-events)/" } }

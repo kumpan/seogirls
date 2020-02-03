@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import styles from "./primary.module.css"
 
@@ -10,8 +9,8 @@ class PrimaryButton extends React.Component {
     return (
       <div>
         {link ? (
-          <Link
-            to={link}
+          <a
+            href={link}
             className={styles.button + (!text ? " " + styles.simpleButton : "")}
             role="button"
           >
@@ -20,7 +19,7 @@ class PrimaryButton extends React.Component {
               {text && <span className={styles.text}>{text}</span>}
               {iconAfter && <span className={styles.icon}>{iconAfter}</span>}
             </div>
-          </Link>
+          </a>
         ) : (
           <div
             className={styles.button + (!text ? " " + styles.simpleButton : "")}

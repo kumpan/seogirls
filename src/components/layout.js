@@ -1,20 +1,21 @@
 import React from "react"
 
 import SponsorsSection from "./sponsors-section"
+import BecomeSponsor from "./become-sponsor"
 import Footer from "./footer"
 
 import styles from "./layout.module.css"
 
 class Layout extends React.Component {
   render() {
-    const { children } = this.props
+    const { children, becomeSponsor } = this.props
 
     return (
       <div>
         <div className={styles.container}>
           <main>{children}</main>
         </div>
-        <SponsorsSection />
+        {!becomeSponsor ? <SponsorsSection /> : <BecomeSponsor />}
         <Footer />
       </div>
     )

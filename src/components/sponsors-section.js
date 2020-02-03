@@ -9,7 +9,7 @@ const SponsorsSection = () => {
     graphql`
       query {
         sponsors: allMdx(
-          filter: { fileAbsolutePath: { regex: "/(sponsors)/" } }
+          filter: { fileAbsolutePath: { regex: "/(sponsors/)/" } }
           sort: { fields: [frontmatter___date], order: DESC }
         ) {
           edges {

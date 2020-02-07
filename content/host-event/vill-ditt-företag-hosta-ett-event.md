@@ -9,6 +9,6 @@ howmany:
   placeholder: 'Ex: 50'
 where:
   label: Var?
-  placeholder: 'Ex: Företag AB, Fiskargatan 8, 116 20 Stockholm'
+  placeholder: 'Ex: Fiskargatan 8, 116 20 Stockholm'
 ---
 

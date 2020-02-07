@@ -107,6 +107,50 @@ button:focus,
   width: 100%;
 }
 
+.react-date-picker__wrapper {
+  all: unset !important;
+  display: flex !important;
+  width: 100% !important;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce-inverted {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+svg.logo:hover .logo-animate:nth-child(1),
+svg.logo:hover .logo-animate:nth-child(3),
+svg.logo:hover .logo-animate:nth-child(5),
+svg.logo:hover .logo-animate:nth-child(7) {
+  animation: 0.8s ease-out infinite bounce;
+}
+
+svg.logo:hover .logo-animate:nth-child(2),
+svg.logo:hover .logo-animate:nth-child(4),
+svg.logo:hover .logo-animate:nth-child(6),
+svg.logo:hover .logo-animate:nth-child(8) {
+  animation: 0.8s ease-out infinite bounce-inverted;
+}
+
 @media screen and (max-width: 992px) {
   h1 {
     font-size: 64px;
@@ -123,6 +167,20 @@ button:focus,
   h3 {
     font-size: 24px;
     line-height: 32px;
+  }
+
+  svg.logo:hover .logo-animate:nth-child(1),
+  svg.logo:hover .logo-animate:nth-child(3),
+  svg.logo:hover .logo-animate:nth-child(5),
+  svg.logo:hover .logo-animate:nth-child(7) {
+    animation: none;
+  }
+
+  svg.logo:hover .logo-animate:nth-child(2),
+  svg.logo:hover .logo-animate:nth-child(4),
+  svg.logo:hover .logo-animate:nth-child(6),
+  svg.logo:hover .logo-animate:nth-child(8) {
+    animation: none;
   }
 }
 

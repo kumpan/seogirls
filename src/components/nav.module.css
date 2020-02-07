@@ -31,34 +31,6 @@
   overflow: visible;
 }
 
-.logo svg path:nth-child(1),
-.logo svg path:nth-child(2),
-.logo svg path:nth-child(3) {
-  transition: 0.3s all ease;
-}
-
-.logo:hover svg path:nth-child(1),
-.logo:hover svg path:nth-child(2),
-.logo:hover svg path:nth-child(3) {
-  transform: translateY(-4px);
-}
-
-.logo svg path:nth-child(4),
-.logo svg path:nth-child(5),
-.logo svg path:nth-child(6),
-.logo svg path:nth-child(7),
-.logo svg path:nth-child(8) {
-  transition: 0.3s all ease;
-}
-
-.logo:hover svg path:nth-child(4),
-.logo:hover svg path:nth-child(5),
-.logo:hover svg path:nth-child(6),
-.logo:hover svg path:nth-child(7),
-.logo:hover svg path:nth-child(8) {
-  transform: translateY(4px);
-}
-
 .nav ul {
   margin: 0;
   padding: 0;

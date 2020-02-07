@@ -3,7 +3,7 @@
   display: flex;
   background: var(--brand-gradient);
   color: var(--white);
-  padding: 80px 0;
+  padding: 144px 0 80px;
 }
 
 .container {
@@ -21,7 +21,11 @@
   width: 100%;
   text-align: center;
   display: block;
-  margin: 0 0 48px;
+  margin: 0 0 40px;
+}
+
+.heading:last-of-type {
+  margin-top: 88px;
 }
 
 .sponsors ul {
@@ -30,13 +34,14 @@
   padding: 0;
   margin: 0;
   width: 100%;
+  justify-content: center;
 }
 
 .sponsors li {
   display: flex;
   margin: 0 40px;
   width: 15%;
-  height: 40px;
+  height: 56px;
 }
 
 .sponsors a {
@@ -58,7 +63,14 @@
 
   .sponsors ul {
     flex-wrap: wrap;
-    justify-content: center;
+  }
+
+  .heading {
+    margin: 0 0 24px;
+  }
+
+  .heading:last-of-type {
+    margin-top: 48px;
   }
 
   .sponsors li {
@@ -66,10 +78,6 @@
     flex-shrink: 0;
     margin: 0 32px 32px;
     height: 32px;
-  }
-
-  .heading {
-    margin: 0 0 32px;
   }
 }
 

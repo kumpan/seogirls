@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -40px auto 160px;
+  max-width: 896px;
+}
+
+.container h3 {
+  width: 100%;
+  padding: 0 16px;
+}
+
+.container h3:last-of-type {
+  margin-top: 64px;
+}
+
+@media screen and (max-width: 640px) {
+  .container {
+    margin-bottom: 96px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .container h3:last-of-type {
+    margin-top: 40px;
+  }
+}

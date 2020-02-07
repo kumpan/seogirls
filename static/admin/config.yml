@@ -7,7 +7,7 @@ public_folder: assets
 
 collections:
   - name: aboutpage
-    label: About Page
+    label: Subpages / About Page
     folder: content/about-page
     create: true
     fields:
@@ -23,7 +23,7 @@ collections:
       - { name: body, label: Body, widget: markdown }
 
   - name: sponsorspage
-    label: Sponsors Page
+    label: Subpages / Sponsors Page
     folder: content/sponsors-page
     create: true
     fields:
@@ -36,6 +36,20 @@ collections:
         fields:
           - { name: headingone, label: H1, widget: text }
           - { name: subheading, label: Subheading, widget: text }
+      - name: sponsorcontent
+        label: Sponsor Content
+        widget: object
+        fields:
+          - {
+              name: mainsponsorstitle,
+              label: Main Sponsors Title,
+              widget: text,
+            }
+          - {
+              name: eventsponsorstitle,
+              label: Event Sponsors Title,
+              widget: text,
+            }
       - name: becomesponsor
         label: Become a Sponsor Section
         widget: object
@@ -45,7 +59,7 @@ collections:
           - { name: link, label: E-mail Address, widget: text }
 
   - name: events
-    label: Events Pages
+    label: Subpages / Events Pages
     folder: content/events
     create: true
     fields:
@@ -60,7 +74,7 @@ collections:
           - { name: subheading, label: Subheading, widget: text }
 
   - name: footer
-    label: Footer
+    label: Sections / Footer
     folder: content/footer
     create: true
     fields:
@@ -69,6 +83,32 @@ collections:
       - { name: copyright, label: Copyright/Cookie Policy, widget: markdown }
       - { name: linkscenter, label: Links Column, widget: markdown }
       - { name: linksright, label: Links Column, widget: markdown }
+
+  - name: hostevent
+    label: Sections / Host Event
+    folder: content/host-event
+    create: true
+    fields:
+      - { name: name, label: Identifier }
+      - { name: title, label: Form Title }
+      - name: when
+        label: When Input
+        widget: object
+        fields:
+          - { name: label, label: Label, widget: string }
+          - { name: placeholder, label: Placeholder, widget: string }
+      - name: howmany
+        label: How Many Input
+        widget: object
+        fields:
+          - { name: label, label: Label, widget: string }
+          - { name: placeholder, label: Placeholder, widget: string }
+      - name: where
+        label: Where Input
+        widget: object
+        fields:
+          - { name: label, label: Label, widget: string }
+          - { name: placeholder, label: Placeholder, widget: string }
 
   - name: sponsors
     label: Sponsors
@@ -81,9 +121,15 @@ collections:
       - { name: url, label: URL }
       - { name: color, label: Card Color }
       - { name: body, label: Body, widget: markdown }
+      - {
+          label: Sponsor Type,
+          name: sponsortype,
+          widget: select,
+          options: [main, event],
+        }
 
   - name: coming-events
-    label: Coming Events
+    label: Events / Coming Events
     folder: content/coming-events
     create: true
     fields:
@@ -100,7 +146,7 @@ collections:
       - { name: body, label: Body, widget: markdown }
 
   - name: past-events
-    label: Past Events
+    label: Events / Past Events
     folder: content/past-events
     create: true
     fields:
@@ -117,7 +163,7 @@ collections:
       - { name: body, label: Body, widget: markdown }
 
   - name: start-page
-    label: Start Page
+    label: Index / Start Page
     folder: content/start-page
     create: true
     identifier_field: name

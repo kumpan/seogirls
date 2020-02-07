@@ -7,6 +7,9 @@ hero:
   subheading: >-
     You're telling the enemy exactly what you're going to do. No wonder you've
     been fighting Lorem Ipsum your entire adult life.
+sponsorcontent:
+  eventsponsorstitle: Eventsponsorer
+  mainsponsorstitle: Huvudsponsorer
 becomesponsor:
   description: >-
     Alla som vill hjälpa oss att utveckla SEOGIRLS är såklart välkomna! Skicka

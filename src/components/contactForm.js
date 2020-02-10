@@ -27,6 +27,10 @@ const HostEventSection = () => {
                   label
                   placeholder
                 }
+                email {
+                  label
+                  placeholder
+                }
               }
             }
           }
@@ -84,6 +88,15 @@ const HostEventSection = () => {
               type="text"
               name="where"
               placeholder={pageData.where.placeholder}
+              required
+            />
+          </div>
+          <div className={styles.inputContainer}>
+            <label>{pageData.email.label} *</label>
+            <input
+              type="email"
+              name="email"
+              placeholder={pageData.email.placeholder}
               required
             />
           </div>

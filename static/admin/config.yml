@@ -109,6 +109,12 @@ collections:
         fields:
           - { name: label, label: Label, widget: string }
           - { name: placeholder, label: Placeholder, widget: string }
+      - name: email
+        label: Email Input
+        widget: object
+        fields:
+          - { name: label, label: Label, widget: string }
+          - { name: placeholder, label: Placeholder, widget: string }
       - name: thankyou
         label: Thank You Page
         widget: object

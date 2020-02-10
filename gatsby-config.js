@@ -49,6 +49,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        path: `${__dirname}/content/cookie-page`,
+        name: `cookiespage`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         path: `${__dirname}/content/sponsors-page`,
         name: `sponsorspage`,
       },

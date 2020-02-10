@@ -29,7 +29,7 @@
   text-align: center;
   position: relative;
   z-index: 1;
-  padding: 0 16px;
+  padding: 120px 16px;
 }
 
 .subheading {
@@ -92,7 +92,8 @@
   }
 
   .container {
-    padding-bottom: 0;
+    padding-top: 120px;
+    padding-bottom: 144px;
   }
 
   .subheading {

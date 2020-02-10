@@ -3,12 +3,28 @@ backend:
   repo: kumpan/seogirls
 
 media_folder: content/assets
-public_folder: assets
+public_folder: ../assets
 
 collections:
   - name: aboutpage
     label: Subpages / About Page
     folder: content/about-page
+    create: true
+    fields:
+      - { name: shorttitle, label: Short Title }
+      - { name: title, label: SEO Title }
+      - { name: description, label: SEO Description }
+      - name: hero
+        label: Hero
+        widget: object
+        fields:
+          - { name: headingone, label: H1, widget: text }
+          - { name: subheading, label: Subheading, widget: text }
+      - { name: body, label: Body, widget: markdown }
+
+  - name: cookiespage
+    label: Subpages / Cookie Page
+    folder: content/cookie-page
     create: true
     fields:
       - { name: shorttitle, label: Short Title }

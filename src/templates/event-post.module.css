@@ -1,0 +1,28 @@
+.container {
+  max-width: 864px;
+  margin: -32px auto 120px;
+}
+
+.container h3 {
+  margin: 24px 0 16px;
+}
+
+.container h3:first-of-type {
+  margin-top: 0;
+}
+
+.featuredImage {
+  margin-bottom: 32px;
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    margin-bottom: 80px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .container {
+    margin-bottom: 64px;
+  }
+}

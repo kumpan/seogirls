@@ -92,11 +92,12 @@ button[type="submit"] {
   font-size: 20px;
   line-height: 32px;
   transition: 0.6s box-shadow ease;
-  z-index: 1;
+  z-index: 0;
   overflow: hidden;
   margin: 24px 0 0;
   cursor: pointer;
   font-weight: 600;
+  -webkit-text-fill-color: var(--white);
 }
 
 button[type="submit"]::before {

@@ -43,10 +43,15 @@ const HostEventSection = () => {
     <div className={styles.contactForm}>
       <div className={styles.container}>
         <h2>{pageData.title}</h2>
-        <form name="Host Event Form" method="POST" data-netlify="true">
-          <input type="hidden" name="host-event" value="Host Event Form" />
+        <form
+          name="host-event"
+          method="POST"
+          data-netlify="true"
+          action="/thanks"
+        >
+          <input type="hidden" name="form-name" value="host-event" />
           <div className={styles.inputContainer}>
-            <label>{pageData.when.label}</label>
+            <label>{pageData.when.label} *</label>
             <DatePicker
               format="y/MM/dd"
               locale="sv"
@@ -65,7 +70,7 @@ const HostEventSection = () => {
             />
           </div>
           <div className={styles.inputContainer}>
-            <label>{pageData.howmany.label}</label>
+            <label>{pageData.howmany.label} *</label>
             <input
               type="number"
               name="how-many"
@@ -74,7 +79,7 @@ const HostEventSection = () => {
             />
           </div>
           <div className={styles.inputContainer}>
-            <label>{pageData.where.label}</label>
+            <label>{pageData.where.label} *</label>
             <input
               type="text"
               name="where"

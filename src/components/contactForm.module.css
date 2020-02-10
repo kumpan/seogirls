@@ -61,11 +61,17 @@ input {
   width: 100%;
   color: var(--text-title);
   box-sizing: border-box;
+  transition: 0.3s all ease;
 }
 
 input::placeholder {
   color: var(--text-faded);
   opacity: 0.6;
+}
+
+input:focus {
+  box-sizing: border-box;
+  box-shadow: inset 0 0 0 2px var(--deep-blue);
 }
 
 button[type="submit"] {
@@ -139,13 +145,29 @@ button[type="submit"]:hover {
     min-height: 56px;
     padding: 8px 24px;
   }
+
+  .contactForm h2 {
+    margin-bottom: 32px;
+  }
+
+  .contactForm {
+    margin-bottom: 0;
+  }
 }
 
 @media screen and (max-width: 640px) {
+  .contactForm {
+    padding: 64px 16px;
+  }
+
   button[type="submit"] {
     font-size: 16px;
     min-height: 48px;
     padding: 8px 16px;
+  }
+
+  .contactForm h2 {
+    margin-bottom: 24px;
   }
 }
 

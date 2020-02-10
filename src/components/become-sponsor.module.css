@@ -32,13 +32,6 @@
 
 @media screen and (max-width: 992px) {
   .becomeSponsor {
-    margin: 80px 0 0;
-    padding: 56px 0;
-  }
-}
-
-@media screen and (max-width: 640px) {
-  .becomeSponsor {
-    margin: 64px 0 0;
+    padding: 64px 0;
   }
 }

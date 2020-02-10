@@ -9,14 +9,14 @@ import styles from "./layout.module.css"
 
 class Layout extends React.Component {
   render() {
-    const { children, becomeSponsor } = this.props
+    const { children, becomeSponsor, noForm } = this.props
 
     return (
       <div>
         <div className={styles.container}>
           <main>{children}</main>
         </div>
-        <ContactForm />
+        {!noForm && <ContactForm />}
         {!becomeSponsor ? <SponsorsSection /> : <BecomeSponsor />}
         <Footer />
       </div>

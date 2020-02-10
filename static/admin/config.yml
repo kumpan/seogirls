@@ -109,6 +109,19 @@ collections:
         fields:
           - { name: label, label: Label, widget: string }
           - { name: placeholder, label: Placeholder, widget: string }
+      - name: thankyou
+        label: Thank You Page
+        widget: object
+        fields:
+          - { name: shorttitle, label: Short Title }
+          - { name: title, label: SEO Title }
+          - { name: description, label: SEO Description }
+          - name: hero
+            label: Hero
+            widget: object
+            fields:
+              - { name: headingone, label: H1, widget: text }
+              - { name: subheading, label: Subheading, widget: text }
 
   - name: sponsors
     label: Sponsors

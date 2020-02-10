@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: kumpan/seogirls
+  name: git-gateway
 
 media_folder: content/assets
 public_folder: ../assets

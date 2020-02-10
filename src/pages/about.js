@@ -38,19 +38,17 @@ const Events = () => {
   const pageData = data.allMdx.edges[0].node
 
   return (
-    <>
-      <Layout title={data.site.siteMetadata.title}>
-        <SEO title={pageData.frontmatter.title} />
-        <PageHero
-          shortTitle={pageData.frontmatter.shorttitle}
-          title={pageData.frontmatter.hero.headingone}
-          subheading={pageData.frontmatter.hero.subheading}
-        />
-        <div className={styles.container}>
-          <MDXRenderer>{pageData.body}</MDXRenderer>
-        </div>
-      </Layout>
-    </>
+    <Layout title={data.site.siteMetadata.title}>
+      <SEO title={pageData.frontmatter.title} />
+      <PageHero
+        shortTitle={pageData.frontmatter.shorttitle}
+        title={pageData.frontmatter.hero.headingone}
+        subheading={pageData.frontmatter.hero.subheading}
+      />
+      <div className={styles.container}>
+        <MDXRenderer>{pageData.body}</MDXRenderer>
+      </div>
+    </Layout>
   )
 }
 

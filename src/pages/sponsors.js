@@ -111,62 +111,60 @@ const Events = () => {
   const sponsorContent = data.allMdx.edges[0].node.frontmatter.sponsorcontent
 
   return (
-    <>
-      <Layout becomeSponsor title={data.site.siteMetadata.title}>
-        <SEO title={pageData.title} />
-        <PageHero
-          shortTitle={pageData.shorttitle}
-          title={pageData.hero.headingone}
-          subheading={pageData.hero.subheading}
-        />
-        <div className={styles.container}>
-          <h3>
-            <Img
-              fixed={data.emojiHeartRed.childImageSharp.fixed}
-              alt="Emoji Heart Red"
-              style={{
-                marginRight: "8px",
-              }}
+    <Layout becomeSponsor title={data.site.siteMetadata.title}>
+      <SEO title={pageData.title} />
+      <PageHero
+        shortTitle={pageData.shorttitle}
+        title={pageData.hero.headingone}
+        subheading={pageData.hero.subheading}
+      />
+      <div className={styles.container}>
+        <h3>
+          <Img
+            fixed={data.emojiHeartRed.childImageSharp.fixed}
+            alt="Emoji Heart Red"
+            style={{
+              marginRight: "8px",
+            }}
+          />
+          {sponsorContent.mainsponsorstitle}
+        </h3>
+        {mainSponsors.map(({ node }) => {
+          return (
+            <SponsorCard
+              key={node.frontmatter.path}
+              title={node.frontmatter.title}
+              color={node.frontmatter.color}
+              logo={node.frontmatter.logo.childImageSharp.fluid}
+              description={node.body}
+              url={node.frontmatter.url}
             />
-            {sponsorContent.mainsponsorstitle}
-          </h3>
-          {mainSponsors.map(({ node }) => {
-            return (
-              <SponsorCard
-                key={node.frontmatter.path}
-                title={node.frontmatter.title}
-                color={node.frontmatter.color}
-                logo={node.frontmatter.logo.childImageSharp.fluid}
-                description={node.body}
-                url={node.frontmatter.url}
-              />
-            )
-          })}
-          <h3>
-            <Img
-              fixed={data.emojiHeartYellow.childImageSharp.fixed}
-              alt="Emoji Heart Yellow"
-              style={{
-                marginRight: "8px",
-              }}
+          )
+        })}
+        <h3>
+          <Img
+            fixed={data.emojiHeartYellow.childImageSharp.fixed}
+            alt="Emoji Heart Yellow"
+            style={{
+              marginRight: "8px",
+            }}
+          />
+          {sponsorContent.eventsponsorstitle}
+        </h3>
+        {eventSponsors.map(({ node }) => {
+          return (
+            <SponsorCard
+              key={node.frontmatter.path}
+              title={node.frontmatter.title}
+              color={node.frontmatter.color}
+              logo={node.frontmatter.logo.childImageSharp.fluid}
+              description={node.body}
+              url={node.frontmatter.url}
             />
-            {sponsorContent.eventsponsorstitle}
-          </h3>
-          {eventSponsors.map(({ node }) => {
-            return (
-              <SponsorCard
-                key={node.frontmatter.path}
-                title={node.frontmatter.title}
-                color={node.frontmatter.color}
-                logo={node.frontmatter.logo.childImageSharp.fluid}
-                description={node.body}
-                url={node.frontmatter.url}
-              />
-            )
-          })}
-        </div>
-      </Layout>
-    </>
+          )
+        })}
+      </div>
+    </Layout>
   )
 }
 

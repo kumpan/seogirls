@@ -22,6 +22,39 @@ collections:
           - { name: subheading, label: Subheading, widget: text }
       - { name: body, label: Body, widget: markdown }
 
+  - name: contactpage
+    label: Subpages / Contact Page
+    folder: content/contact-page
+    create: true
+    fields:
+      - { name: shorttitle, label: Short Title }
+      - { name: title, label: SEO Title }
+      - { name: description, label: SEO Description }
+      - name: hero
+        label: Hero
+        widget: object
+        fields:
+          - { name: headingone, label: H1, widget: text }
+          - { name: subheading, label: Subheading, widget: text }
+      - name: contactoptions
+        label: Contact Options
+        widget: object
+        fields:
+          - name: call
+            label: Call
+            widget: object
+            fields:
+              - { name: heading, label: Heading, widget: text }
+              - { name: contactinfo, label: Contact Information, widget: text }
+              - { name: contactlink, label: Contact Link, widget: text }
+          - name: email
+            label: Email
+            widget: object
+            fields:
+              - { name: heading, label: Heading, widget: text }
+              - { name: contactinfo, label: Contact Information, widget: text }
+              - { name: contactlink, label: Contact Link, widget: text }
+
   - name: sponsorspage
     label: Subpages / Sponsors Page
     folder: content/sponsors-page

@@ -10,7 +10,9 @@ ingress: >-
   sagittis.
 featuredimage: /assets/jennydrakenlind_20190926_0043_web.jpg
 ---
-Den 23e januari välkomnar vi er till det 7e minglet för kvinnor som jobbar med SEO. Den här gången är vi sponsrade av det härliga gänget på 56K Digital som bjuder på bubbel, tilltugg och en presentation om SEO och ehandel i deras trevliga lokaler på Kungsholmen.
+### Den 23e januari välkomnar vi er till det 7e minglet för kvinnor som jobbar med SEO
+
+Den här gången är vi sponsrade av det härliga gänget på 56K Digital som bjuder på bubbel, tilltugg och en presentation om SEO och ehandel i deras trevliga lokaler på Kungsholmen.
 
 The popularity of e-commerce has been around for a while now. Even though it’s not something new businesses are still learning on how technologies impact their sales performance. SEO is strongly emerging as a requirement for high performing e-commerce businesses, but there are still improvements to be made when aligning SEO with the sales goals of an e-commerce.
 

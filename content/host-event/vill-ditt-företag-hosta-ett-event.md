@@ -17,7 +17,7 @@ thankyou:
   description: Tack för att du vill hosta SEOGIRLS!
   hero:
     headingone: Tack för att du vill hosta SEOGIRLS!
-    subheading: Vi hör av oss inom kort med mer information om hur v i kan gå vidare.
+    subheading: Vi hör av oss inom kort med mer information om hur vi kan gå vidare.
   shorttitle: Tack
   title: Tack för att du vill hosta SEOGIRLS!
 ---

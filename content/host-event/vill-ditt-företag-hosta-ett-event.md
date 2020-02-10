@@ -10,6 +10,9 @@ howmany:
 where:
   label: Var?
   placeholder: 'Ex: Fiskargatan 8, 116 20 Stockholm'
+email:
+  label: E-post
+  placeholder: epost@adress.se
 thankyou:
   description: Tack för att du vill hosta SEOGIRLS!
   hero:

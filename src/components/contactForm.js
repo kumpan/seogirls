@@ -57,7 +57,7 @@ const HostEventSection = () => {
           <div className={styles.inputContainer}>
             <label>{pageData.when.label} *</label>
             <DatePicker
-              format="y/MM/dd"
+              format="y/M/d"
               locale="sv"
               onChange={handleChange}
               value={date}

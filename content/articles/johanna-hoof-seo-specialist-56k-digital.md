@@ -1,5 +1,5 @@
 ---
-path: /portratt-johanna-hoof
+path: portratt-johanna-hoof
 date: 2020-02-13T09:29:02.649Z
 title: 'Johanna Hoof, SEO-specialist @ 56k Digital'
 ingress: >-

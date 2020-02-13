@@ -1,7 +1,7 @@
 ---
 shorttitle: Artiklar
 title: Artiklar
-description: Artiklar
+description: Artiklar & porträtt
 hero:
   headingone: Artiklar
   subheading: >-

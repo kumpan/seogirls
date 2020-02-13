@@ -1,6 +1,6 @@
 ---
 name: Start Page
-title: SEOGIRLS — Ett nätverk för kvinnor som jobbar med SEO
+title: Ett nätverk för kvinnor som jobbar med SEO
 description: 'Skapa nya kontakter, utvecklas och dela med dig av din kunskap.'
 hero:
   headingone: Ett nätverk för kvinnor som jobbar med SEO

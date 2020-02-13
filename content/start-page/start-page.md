@@ -7,10 +7,10 @@ hero:
   subtitlelinkdestination: /events/kommande
   subtitlelinktext: Se kommande events
 events:
-  nexteventbuttondestination: /coming-events
+  nexteventbuttondestination: /events/kommande
   nexteventbuttontext: Se alla kommande events
   nexteventtitle: Kommande events
-  pasteventbuttondestination: /past-events
+  pasteventbuttondestination: /events/tidigare
   pasteventbuttontext: Se alla tidigare events
   pasteventtitle: Tidigare SEOGIRLS-events
 about:

@@ -1,6 +1,6 @@
 ---
 shorttitle: Om SEOGIRLS
-title: SEOGIRLS - om oss och vår story
+title: Om oss och vår story
 description: >-
   SEOGIRLS är ett nätverk för kvinnor som jobbar inom SEO. Vi träffas
   regelbundet för att skapa en plattform där vi kan dela med oss av kunskap och

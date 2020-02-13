@@ -38,7 +38,7 @@ const Thanks = () => {
 
   return (
     <Layout noForm title={data.site.siteMetadata.title}>
-      <SEO title={pageData.title} />
+      <SEO title={pageData.title} description={pageData.description} />
       <PageHero
         shortTitle={pageData.shorttitle}
         title={pageData.hero.headingone}

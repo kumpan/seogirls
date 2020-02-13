@@ -37,6 +37,21 @@ collections:
           - { name: subheading, label: Subheading, widget: text }
       - { name: body, label: Body, widget: markdown }
 
+  - name: fourofour
+    label: Error 404
+    folder: content/fourofour
+    create: true
+    fields:
+      - { name: shorttitle, label: Short Title }
+      - { name: title, label: SEO Title }
+      - { name: description, label: SEO Description }
+      - name: hero
+        label: Hero
+        widget: object
+        fields:
+          - { name: headingone, label: H1, widget: text }
+          - { name: subheading, label: Subheading, widget: text }
+
   - name: contactpage
     label: Subpages / Contact Page
     folder: content/contact-page
@@ -109,6 +124,21 @@ collections:
   - name: events
     label: Subpages / Events Pages
     folder: content/events
+    create: true
+    fields:
+      - { name: shorttitle, label: Short Title }
+      - { name: title, label: SEO Title }
+      - { name: description, label: SEO Description }
+      - name: hero
+        label: Hero
+        widget: object
+        fields:
+          - { name: headingone, label: H1, widget: text }
+          - { name: subheading, label: Subheading, widget: text }
+
+  - name: articlespage
+    label: Subpages / Articles Page
+    folder: content/articlespage
     create: true
     fields:
       - { name: shorttitle, label: Short Title }
@@ -198,6 +228,23 @@ collections:
   - name: coming-events
     label: Events / Coming Events
     folder: content/coming-events
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - { name: date, label: Date, widget: date }
+      - { name: title, label: Title }
+      - { name: ingress, label: Ingress, widget: text }
+      - {
+          name: featuredimage,
+          label: Featured Image,
+          widget: image,
+          allow_multiple: false,
+        }
+      - { name: body, label: Body, widget: markdown }
+
+  - name: articles
+    label: Articles
+    folder: content/articles
     create: true
     fields:
       - { name: path, label: Path }

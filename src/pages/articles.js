@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 import PageHero from "../components/hero/page-hero"
 import EventsList from "../components/events/events-list"
 
-const Events = () => {
+const Articles = () => {
   const data = useStaticQuery(
     graphql`
       query {
@@ -15,14 +15,12 @@ const Events = () => {
             title
           }
         }
-        allMdx(
-          filter: { fileAbsolutePath: { regex: "/(/events/kommande)/" } }
-        ) {
+        allMdx(filter: { fileAbsolutePath: { regex: "/(/articlespage)/" } }) {
           edges {
             node {
               frontmatter {
-                title
                 shorttitle
+                title
                 hero {
                   headingone
                   subheading
@@ -31,8 +29,8 @@ const Events = () => {
             }
           }
         }
-        comingEvents: allMdx(
-          filter: { fileAbsolutePath: { regex: "/(coming-events)/" } }
+        articles: allMdx(
+          filter: { fileAbsolutePath: { regex: "/(/articles/)/" } }
           sort: { fields: [frontmatter___date], order: DESC }
         ) {
           edges {
@@ -42,6 +40,13 @@ const Events = () => {
                 title
                 date(formatString: "DD MMM YYYY", locale: "sv-SV")
                 ingress
+                featuredimage {
+                  childImageSharp {
+                    fluid(maxWidth: 560) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
               }
             }
           }
@@ -50,7 +55,7 @@ const Events = () => {
     `
   )
   const pageData = data.allMdx.edges[0].node.frontmatter
-  const comingEvents = data.comingEvents.edges
+  const articlePosts = data.articles.edges
 
   return (
     <Layout title={data.site.siteMetadata.title}>
@@ -59,11 +64,10 @@ const Events = () => {
         shortTitle={pageData.shorttitle}
         title={pageData.hero.headingone}
         subheading={pageData.hero.subheading}
-        eventSub
       />
-      <EventsList coming comingEvents={comingEvents} />
+      <EventsList articles articlePosts={articlePosts} />
     </Layout>
   )
 }
 
-export default Events
+export default Articles

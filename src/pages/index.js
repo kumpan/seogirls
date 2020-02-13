@@ -50,6 +50,7 @@ class IndexPage extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
+          indexPage
           title={pageContent.title}
           description={pageContent.description}
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}

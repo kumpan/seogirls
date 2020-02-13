@@ -39,7 +39,10 @@ const Events = () => {
 
   return (
     <Layout title={data.site.siteMetadata.title}>
-      <SEO title={pageData.frontmatter.title} />
+      <SEO
+        title={pageData.frontmatter.title}
+        description={pageData.frontmatter.description}
+      />
       <PageHero
         shortTitle={pageData.frontmatter.shorttitle}
         title={pageData.frontmatter.hero.headingone}

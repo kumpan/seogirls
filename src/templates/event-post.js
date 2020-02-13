@@ -20,6 +20,28 @@ class EventPostTemplate extends React.Component {
       shortTitle = post.frontmatter.title.substr(0, 10).trim() + "..."
     }
 
+    const date = post.frontmatter.date
+    const dateDayFormatted = () => {
+      if (date.substr(0, 1) === "0") {
+        return date.slice(1, 2)
+      } else {
+        return date.slice(0, 2)
+      }
+    }
+    const dateMonth = date.slice(3, 6)
+
+    let currentPageCat
+    if (
+      typeof window !== "undefined" &&
+      window.location.href.includes("articles")
+    ) {
+      currentPageCat = "articles"
+    } else {
+      currentPageCat = "events"
+    }
+
+    console.log(currentPageCat)
+
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
@@ -30,9 +52,13 @@ class EventPostTemplate extends React.Component {
           shortTitle={shortTitle}
           title={post.frontmatter.title}
           subheading={post.frontmatter.ingress}
-          eventSub
+          sub={currentPageCat}
         />
         <div className={styles.container}>
+          <div className={styles.date}>
+            <span className={styles.day}>{dateDayFormatted() || "1"}</span>
+            <span className={styles.month}>{dateMonth || "Jan"}</span>
+          </div>
           <div className={styles.featuredImage}>
             <Image
               fluid={post.frontmatter.featuredimage.childImageSharp.fluid}
@@ -61,7 +87,7 @@ export const pageQuery = graphql`
       body
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "DD MMM YYYY", locale: "sv-SV")
         ingress
         featuredimage {
           childImageSharp {

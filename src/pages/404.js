@@ -1,32 +1,49 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import PageHero from "../components/hero/page-hero"
 
-class NotFoundPage extends React.Component {
-  render() {
-    const { data } = this.props
-    const siteTitle = data.site.siteMetadata.title
+const FouroFour = () => {
+  const data = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+          }
+        }
+        allMdx(filter: { fileAbsolutePath: { regex: "/(/fourofour)/" } }) {
+          edges {
+            node {
+              frontmatter {
+                shorttitle
+                title
+                description
+                hero {
+                  headingone
+                  subheading
+                }
+              }
+            }
+          }
+        }
+      }
+    `
+  )
+  const pageData = data.allMdx.edges[0].node.frontmatter
 
-    return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="404: Not Found" />
-        <h1>Not Found</h1>
-        <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-      </Layout>
-    )
-  }
+  return (
+    <Layout title={data.site.siteMetadata.title}>
+      <SEO title={pageData.title} description={pageData.description} />
+      <PageHero
+        shortTitle={pageData.shorttitle}
+        title={pageData.hero.headingone}
+        subheading={pageData.hero.subheading}
+      />
+    </Layout>
+  )
 }
 
-export default NotFoundPage
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`
+export default FouroFour

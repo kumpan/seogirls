@@ -21,6 +21,7 @@ exports.createPages = ({ graphql, actions }) => {
               }
               frontmatter {
                 title
+                path
               }
             }
           }
@@ -37,6 +38,24 @@ exports.createPages = ({ graphql, actions }) => {
               }
               frontmatter {
                 title
+                path
+              }
+            }
+          }
+        }
+        articles: allMdx(
+          filter: { fileAbsolutePath: { regex: "/(articles)/" } }
+          sort: { fields: [frontmatter___date], order: DESC }
+          limit: 1000
+        ) {
+          edges {
+            node {
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+                path
               }
             }
           }
@@ -50,6 +69,7 @@ exports.createPages = ({ graphql, actions }) => {
 
     const comingEventPosts = result.data.comingEvents.edges
     const pastEventPosts = result.data.pastEvents.edges
+    const articlePosts = result.data.articles.edges
 
     // Create event posts pages.
     comingEventPosts.forEach((post, index) => {
@@ -60,7 +80,7 @@ exports.createPages = ({ graphql, actions }) => {
       const next = index === 0 ? null : comingEventPosts[index - 1].node
 
       createPage({
-        path: `coming-events${post.node.fields.slug}`,
+        path: `coming-events/${post.node.frontmatter.path}`,
         component: eventPost,
         context: {
           slug: post.node.fields.slug,
@@ -78,7 +98,23 @@ exports.createPages = ({ graphql, actions }) => {
       const next = index === 0 ? null : pastEventPosts[index - 1].node
 
       createPage({
-        path: `past-events${post.node.fields.slug}`,
+        path: `past-events/${post.node.frontmatter.path}`,
+        component: eventPost,
+        context: {
+          slug: post.node.fields.slug,
+          previous,
+          next,
+        },
+      })
+    })
+
+    articlePosts.forEach((post, index) => {
+      const previous =
+        index === articlePosts.length - 1 ? null : articlePosts[index + 1].node
+      const next = index === 0 ? null : articlePosts[index - 1].node
+
+      createPage({
+        path: `articles/${post.node.frontmatter.path}`,
         component: eventPost,
         context: {
           slug: post.node.fields.slug,

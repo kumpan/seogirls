@@ -1,25 +1,18 @@
 import React from "react"
+import Image from "gatsby-image"
 import { Link } from "gatsby"
 
-import styles from "./coming-events-link.module.css"
+import styles from "./article-link.module.css"
 import SecondaryButton from "../buttons/secondary"
 
 // Icons to import
 import { ArrowRightIcon } from "@icons/material"
 
-class ComingEventsLink extends React.Component {
+class ArticleLink extends React.Component {
   render() {
-    const { path, date, title, ingress } = this.props
+    const { path, title, ingress, thumb } = this.props
 
-    const dateDayFormatted = () => {
-      if (date.substr(0, 1) === "0") {
-        return date.slice(1, 2)
-      } else {
-        return date.slice(0, 2)
-      }
-    }
-    const dateMonth = date.slice(3, 6)
-    const maxLengthIngress = 140
+    const maxLengthIngress = 224
     const ingressSliced = () => {
       if (ingress.length >= maxLengthIngress) {
         return ingress.substr(0, maxLengthIngress).trim() + "..."
@@ -32,10 +25,9 @@ class ComingEventsLink extends React.Component {
     const arrowRightIcon = <ArrowRightIcon />
 
     return (
-      <Link className={styles.eventLink} to={"/coming-events/" + path}>
-        <div className={styles.date}>
-          <span className={styles.day}>{dateDayFormatted() || "1"}</span>
-          <span className={styles.month}>{dateMonth || "Jan"}</span>
+      <Link className={styles.eventLink} to={"/articles/" + path}>
+        <div className={styles.thumb}>
+          <Image fluid={thumb} />
         </div>
         <div className={styles.content}>
           <h4>{title}</h4>
@@ -49,4 +41,4 @@ class ComingEventsLink extends React.Component {
   }
 }
 
-export default ComingEventsLink
+export default ArticleLink

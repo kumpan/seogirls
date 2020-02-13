@@ -24,7 +24,7 @@
 }
 
 .container {
-  max-width: 864px;
+  max-width: 960px;
   margin: 0 auto;
   text-align: center;
   position: relative;
@@ -107,6 +107,11 @@
     font-size: 40px;
     line-height: 48px;
     margin: 0 0 16px;
+    text-align: left;
+  }
+
+  .subheading {
+    text-align: left;
   }
 
   .breadCrumbs {
@@ -114,5 +119,6 @@
     font-weight: 600;
     margin: 0 0 16px;
     font-size: 14px;
+    text-align: left;
   }
 }

@@ -62,7 +62,7 @@ input {
   width: 100%;
   color: var(--text-title);
   box-sizing: border-box;
-  transition: 0.3s all ease;
+  transition: 0.3s box-shadow ease;
 }
 
 input::placeholder {

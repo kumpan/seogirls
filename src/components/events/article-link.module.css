@@ -1,0 +1,68 @@
+.eventLink {
+  font-weight: 400;
+  display: flex;
+  background: var(--card-gradient);
+  box-shadow: -12px -8px 20px rgba(255, 255, 255, 0.7),
+    8px 8px 20px rgba(0, 0, 0, 0.12);
+  border-radius: 24px;
+  margin: 0 0 24px 0;
+  padding: 32px 24px 32px 32px;
+  align-items: center;
+}
+
+.eventLink:last-of-type {
+  margin: 0;
+}
+
+.eventLink::after {
+  display: none;
+}
+
+.eventLink:hover {
+  box-shadow: -12px -8px 20px rgba(255, 255, 255, 0.7),
+    12px 12px 40px rgba(0, 0, 0, 0.28);
+}
+
+.eventLink:hover div[role="button"] {
+  box-shadow: -12px -12px 24px rgba(255, 255, 255, 1),
+    8px 8px 24px rgba(0, 0, 0, 0.24);
+}
+
+.thumb {
+  width: 148px;
+  height: 148px;
+  flex-shrink: 0;
+  border-radius: 24px;
+  box-shadow: -12px -8px 20px rgba(255, 255, 255, 0.6),
+    8px 8px 20px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  margin: 0 32px 0 0;
+}
+
+.arrowButton {
+  padding: 0 0 0 32px;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 640px) {
+  .eventLink {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .arrowButton {
+    display: none;
+  }
+
+  .thumb {
+    width: 100%;
+    margin: 0 0 4px;
+    box-shadow: none;
+    border-radius: 24px 24px 0 0;
+  }
+
+  .content {
+    padding: 16px 24px;
+  }
+}

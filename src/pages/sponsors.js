@@ -112,7 +112,7 @@ const Events = () => {
 
   return (
     <Layout becomeSponsor title={data.site.siteMetadata.title}>
-      <SEO title={pageData.title} />
+      <SEO title={pageData.title} description={pageData.description} />
       <PageHero
         shortTitle={pageData.shorttitle}
         title={pageData.hero.headingone}

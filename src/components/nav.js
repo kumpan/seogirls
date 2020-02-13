@@ -67,6 +67,12 @@ class Nav extends React.Component {
               </Link>
             </li>
             <li>
+              <Link to="/articles">
+                Artiklar
+                <ArrowRightIcon />
+              </Link>
+            </li>
+            <li>
               <Link to="/sponsors">
                 Sponsorer
                 <ArrowRightIcon />

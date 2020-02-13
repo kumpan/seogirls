@@ -30,9 +30,17 @@
   margin: 96px 0 0 0;
 }
 
+.articles {
+  margin-top: -56px;
+}
+
 @media screen and (max-width: 992px) {
   .events {
     margin: -96px auto 96px;
+  }
+
+  .articles {
+    margin-top: -32px;
   }
 }
 

@@ -2,12 +2,9 @@ module.exports = {
   siteMetadata: {
     // edit below
     title: `SEOGIRLS`,
-    author: `Per Riekkola`,
-    description: `A cool website for cool SEO girls.`,
-    siteUrl: `https://seogirls.netlify.com/`,
-    social: {
-      twitter: `perriekkola`,
-    },
+    author: `SEOGIRLS`,
+    description: `Ett nätverk för kvinnor som jobbar med SEO`,
+    siteUrl: `https://seogirls.se/`,
   },
   plugins: [
     `gatsby-plugin-sharp`,
@@ -42,6 +39,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        path: `${__dirname}/content/fourofour`,
+        name: `fourofour`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         path: `${__dirname}/content/contact-page`,
         name: `contactpage`,
       },
@@ -65,6 +69,13 @@ module.exports = {
       options: {
         path: `${__dirname}/content/coming-events`,
         name: `comingevents`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/articles`,
+        name: `articles`,
       },
     },
     {
@@ -100,6 +111,13 @@ module.exports = {
       options: {
         path: `${__dirname}/content/events`,
         name: `events`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/articlespage`,
+        name: `articlespage`,
       },
     },
     {
@@ -187,7 +205,7 @@ module.exports = {
         short_name: `SEOGIRLS`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#f16565`,
+        theme_color: `#ee4e38`,
         display: `minimal-ui`,
         icon: `content/assets/favicon.png`,
       },

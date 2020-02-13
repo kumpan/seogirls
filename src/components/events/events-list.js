@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 
 import styles from "./events-list.module.css"
@@ -7,11 +7,20 @@ import styles from "./events-list.module.css"
 import SecondaryButton from "../buttons/secondary"
 import ComingEventsLink from "./coming-events-link"
 import PastEventsLink from "./past-events-link"
+import ArticleLink from "./article-link"
 
 // Icons to import
 import { ArrowRightIcon } from "@icons/material"
 
-const EventsList = ({ coming, past, linked, comingEvents, pastEvents }) => {
+const EventsList = ({
+  coming,
+  past,
+  linked,
+  comingEvents,
+  pastEvents,
+  articles,
+  articlePosts,
+}) => {
   const data = useStaticQuery(
     graphql`
       query {
@@ -76,17 +85,24 @@ const EventsList = ({ coming, past, linked, comingEvents, pastEvents }) => {
               />
             )}
           </div>
-          {comingEvents.map(({ node }) => {
-            return (
-              <ComingEventsLink
-                key={node.frontmatter.path}
-                path={node.frontmatter.path}
-                date={node.frontmatter.date}
-                title={node.frontmatter.title}
-                ingress={node.frontmatter.ingress}
-              />
-            )
-          })}
+          {comingEvents.length > 0 ? (
+            comingEvents.map(({ node }) => {
+              return (
+                <ComingEventsLink
+                  key={node.frontmatter.path}
+                  path={node.frontmatter.path}
+                  date={node.frontmatter.date}
+                  title={node.frontmatter.title}
+                  ingress={node.frontmatter.ingress}
+                />
+              )
+            })
+          ) : (
+            <p>
+              Det finns just nu inga kommande events.{" "}
+              <Link to="/contact">Hör av dig</Link> om du vill hosta ett event.
+            </p>
+          )}
           {linked && (
             <div className={styles.mobileLink}>
               <SecondaryButton
@@ -99,7 +115,7 @@ const EventsList = ({ coming, past, linked, comingEvents, pastEvents }) => {
         </div>
       )}
       {past && (
-        <div className={styles.pastEvents + " past-events"}>
+        <div className={styles.pastEvents}>
           <div className={styles.eventsTitle}>
             <h3>
               <span className={styles.emoji}>
@@ -118,17 +134,24 @@ const EventsList = ({ coming, past, linked, comingEvents, pastEvents }) => {
               />
             )}
           </div>
-          {pastEvents.map(({ node }) => {
-            return (
-              <PastEventsLink
-                key={node.frontmatter.path}
-                path={node.frontmatter.path}
-                title={node.frontmatter.title}
-                ingress={node.frontmatter.ingress}
-                thumb={node.frontmatter.featuredimage.childImageSharp.fluid}
-              />
-            )
-          })}
+          {pastEvents.length > 0 ? (
+            pastEvents.map(({ node }) => {
+              return (
+                <PastEventsLink
+                  key={node.frontmatter.path}
+                  path={node.frontmatter.path}
+                  title={node.frontmatter.title}
+                  ingress={node.frontmatter.ingress}
+                  thumb={node.frontmatter.featuredimage.childImageSharp.fluid}
+                />
+              )
+            })
+          ) : (
+            <p>
+              Det har inte varit några tidigare events.{" "}
+              <Link to="/contact">Hör av dig</Link> om du vill hosta ett event.
+            </p>
+          )}
           {linked && (
             <div className={styles.mobileLink}>
               <SecondaryButton
@@ -137,6 +160,25 @@ const EventsList = ({ coming, past, linked, comingEvents, pastEvents }) => {
                 link={pageContent.pasteventbuttondestination}
               />
             </div>
+          )}
+        </div>
+      )}
+      {articles && (
+        <div className={styles.articles}>
+          {articlePosts.length > 0 ? (
+            articlePosts.map(({ node }) => {
+              return (
+                <ArticleLink
+                  key={node.frontmatter.path}
+                  path={node.frontmatter.path}
+                  title={node.frontmatter.title}
+                  ingress={node.frontmatter.ingress}
+                  thumb={node.frontmatter.featuredimage.childImageSharp.fluid}
+                />
+              )
+            })
+          ) : (
+            <p>Det finns ännu inga artiklar här.</p>
           )}
         </div>
       )}

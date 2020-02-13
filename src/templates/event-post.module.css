@@ -1,6 +1,9 @@
 .container {
   max-width: 864px;
   margin: -32px auto 120px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .container h3 {
@@ -15,9 +18,60 @@
   margin-bottom: 32px;
 }
 
+.date {
+  width: 104px;
+  flex-shrink: 0;
+  background: var(--brand-gradient);
+  border-radius: 24px;
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-weight: 600;
+  text-align: center;
+  padding: 16px;
+  margin: 0 24px 0 0;
+  position: absolute;
+  z-index: 2;
+  left: 24px;
+  top: 24px;
+}
+
+.day {
+  font-size: 40px;
+  line-height: 48px;
+}
+
+.month {
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
 @media screen and (max-width: 992px) {
   .container {
     margin-bottom: 80px;
+    margin-top: -96px;
+  }
+
+  .date {
+    border-radius: 16px;
+    padding: 16px 8px;
+    width: 80px;
+    left: 16px;
+    top: 16px;
+  }
+
+  .day {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .month {
+    font-size: 14px;
+    line-height: 20px;
   }
 }
 

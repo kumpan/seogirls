@@ -4,8 +4,8 @@ title: SEOGIRLS — Ett nätverk för kvinnor som jobbar med SEO
 description: 'Skapa nya kontakter, utvecklas och dela med dig av din kunskap.'
 hero:
   headingone: Ett nätverk för kvinnor som jobbar med SEO
-  subtitlelinkdestination: /coming-events
-  subtitlelinktext: Se kommande evenemang
+  subtitlelinkdestination: /events/kommande
+  subtitlelinktext: Se kommande events
 events:
   nexteventbuttondestination: /coming-events
   nexteventbuttontext: Se alla kommande events

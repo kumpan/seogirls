@@ -1,6 +1,6 @@
 ---
 path: portratt-johanna-hoof
-date: 2020-02-13T09:29:02.649Z
+date: 2020-01-24T09:29:02.649Z
 title: 'Johanna Hoof, SEO-specialist @ 56k Digital'
 ingress: >-
   Johanna Hoof är SEO-specialist på marknadsföringsbyrån 56k Digital som hostar

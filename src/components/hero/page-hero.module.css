@@ -78,7 +78,7 @@
 
 @media screen and (max-width: 992px) {
   .hero {
-    min-height: 560px;
+    min-height: auto;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -92,8 +92,8 @@
   }
 
   .container {
-    padding-top: 120px;
-    padding-bottom: 144px;
+    padding-top: 96px;
+    padding-bottom: 64px;
   }
 
   .subheading {
@@ -104,8 +104,8 @@
 
 @media screen and (max-width: 640px) {
   .hero h1 {
-    font-size: 40px;
-    line-height: 48px;
+    font-size: 32px;
+    line-height: 38px;
     margin: 0 0 16px;
     text-align: left;
   }

@@ -9,7 +9,7 @@ class PrimaryButton extends React.Component {
 
     return (
       <div>
-        {link ? (
+        {link && !link.includes("mailto" || "call") ? (
           <Link
             to={link}
             className={styles.button + (!text ? " " + styles.simpleButton : "")}
@@ -21,6 +21,18 @@ class PrimaryButton extends React.Component {
               {iconAfter && <span className={styles.icon}>{iconAfter}</span>}
             </div>
           </Link>
+        ) : link && link.includes("mailto" || "call") ? (
+          <a
+            href={link}
+            className={styles.button + (!text ? " " + styles.simpleButton : "")}
+            role="button"
+          >
+            <div>
+              {iconBefore && <span className={styles.icon}>{iconBefore}</span>}
+              {text && <span className={styles.text}>{text}</span>}
+              {iconAfter && <span className={styles.icon}>{iconAfter}</span>}
+            </div>
+          </a>
         ) : (
           <div
             className={styles.button + (!text ? " " + styles.simpleButton : "")}

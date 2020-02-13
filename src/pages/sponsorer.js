@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 import PageHero from "../components/hero/page-hero"
 import SponsorCard from "../components/sponsor-card"
 
-import styles from "./sponsors.module.css"
+import styles from "./sponsorer.module.css"
 
 const Events = () => {
   const data = useStaticQuery(
@@ -117,6 +117,7 @@ const Events = () => {
         shortTitle={pageData.shorttitle}
         title={pageData.hero.headingone}
         subheading={pageData.hero.subheading}
+        location="/sponsorer"
       />
       <div className={styles.container}>
         <h3>

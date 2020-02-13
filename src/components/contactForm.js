@@ -51,7 +51,7 @@ const HostEventSection = () => {
           name="host-event"
           method="POST"
           data-netlify="true"
-          action="/thanks"
+          action="/tack"
         >
           <input type="hidden" name="form-name" value="host-event" />
           <div className={styles.inputContainer}>

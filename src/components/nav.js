@@ -60,33 +60,47 @@ class Nav extends React.Component {
             </div>
           </div>
           <ul className={this.state.showMenu ? styles.opened : ""}>
-            <li>
+            <li
+              className={this.props.location === "/events" ? styles.active : ""}
+            >
               <Link to="/events">
                 Events
                 <ArrowRightIcon />
               </Link>
             </li>
-            <li>
-              <Link to="/articles">
+            <li
+              className={
+                this.props.location === "/artiklar" ? styles.active : ""
+              }
+            >
+              <Link to="/artiklar">
                 Artiklar
                 <ArrowRightIcon />
               </Link>
             </li>
-            <li>
-              <Link to="/sponsors">
+            <li
+              className={
+                this.props.location === "/sponsorer" ? styles.active : ""
+              }
+            >
+              <Link to="/sponsorer">
                 Sponsorer
                 <ArrowRightIcon />
               </Link>
             </li>
-            <li>
-              <Link to="/about">
+            <li className={this.props.location === "/om" ? styles.active : ""}>
+              <Link to="/om">
                 Om oss
                 <ArrowRightIcon />
               </Link>
             </li>
-            <li>
-              <Link to="/contact">
-                Kontakta oss
+            <li
+              className={
+                this.props.location === "/kontakt" ? styles.active : ""
+              }
+            >
+              <Link to="/kontakt">
+                Kontakt
                 <ArrowRightIcon />
               </Link>
             </li>

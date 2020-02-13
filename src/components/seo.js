@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, keywords, title, indexPage }) {
+function SEO({ description, lang, meta, keywords, title }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -28,79 +28,40 @@ function SEO({ description, lang, meta, keywords, title, indexPage }) {
   const metaDescription = description || site.siteMetadata.description
 
   return (
-    <>
-      {indexPage ? (
-        <Helmet
-          htmlAttributes={{
-            lang,
-          }}
-          title={title}
-          titleTemplate={`%s`}
-          meta={[
-            {
-              name: `description`,
-              content: metaDescription,
-            },
-            {
-              property: `og:title`,
-              content: title,
-            },
-            {
-              property: `og:description`,
-              content: metaDescription,
-            },
-            {
-              property: `og:type`,
-              content: `website`,
-            },
-          ]
-            .concat(
-              keywords.length > 0
-                ? {
-                    name: `keywords`,
-                    content: keywords.join(`, `),
-                  }
-                : []
-            )
-            .concat(meta)}
-        />
-      ) : (
-        <Helmet
-          htmlAttributes={{
-            lang,
-          }}
-          title={title}
-          titleTemplate={`%s — ${site.siteMetadata.title}`}
-          meta={[
-            {
-              name: `description`,
-              content: metaDescription,
-            },
-            {
-              property: `og:title`,
-              content: title,
-            },
-            {
-              property: `og:description`,
-              content: metaDescription,
-            },
-            {
-              property: `og:type`,
-              content: `website`,
-            },
-          ]
-            .concat(
-              keywords.length > 0
-                ? {
-                    name: `keywords`,
-                    content: keywords.join(`, `),
-                  }
-                : []
-            )
-            .concat(meta)}
-        />
-      )}
-    </>
+    <Helmet
+      htmlAttributes={{
+        lang,
+      }}
+      title={title}
+      titleTemplate={`%s — ${site.siteMetadata.title}`}
+      meta={[
+        {
+          name: `description`,
+          content: metaDescription,
+        },
+        {
+          property: `og:title`,
+          content: title,
+        },
+        {
+          property: `og:description`,
+          content: metaDescription,
+        },
+        {
+          property: `og:type`,
+          content: `website`,
+        },
+      ]
+        .concat(
+          keywords.length > 0
+            ? {
+                name: `keywords`,
+                content: keywords.join(`, `),
+              }
+            : []
+        )
+        .concat(meta)}
+    />
   )
 }
 

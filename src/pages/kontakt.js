@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-import styles from "./contact.module.css"
+import styles from "./kontakt.module.css"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -60,6 +60,7 @@ const Events = () => {
         shortTitle={pageData.frontmatter.shorttitle}
         title={pageData.frontmatter.hero.headingone}
         subheading={pageData.frontmatter.hero.subheading}
+        location="/kontakt"
       />
       <div className={styles.container}>
         <a

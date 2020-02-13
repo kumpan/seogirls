@@ -25,7 +25,7 @@ class ArticleLink extends React.Component {
     const arrowRightIcon = <ArrowRightIcon />
 
     return (
-      <Link className={styles.eventLink} to={"/articles/" + path}>
+      <Link className={styles.eventLink} to={"/artiklar/" + path}>
         <div className={styles.thumb}>
           <Image fluid={thumb} />
         </div>

@@ -33,14 +33,12 @@ class EventPostTemplate extends React.Component {
     let currentPageCat
     if (
       typeof window !== "undefined" &&
-      window.location.href.includes("articles")
+      window.location.href.includes("artiklar")
     ) {
       currentPageCat = "articles"
     } else {
       currentPageCat = "events"
     }
-
-    console.log(currentPageCat)
 
     return (
       <Layout location={this.props.location} title={siteTitle}>

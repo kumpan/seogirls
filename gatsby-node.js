@@ -74,7 +74,7 @@ exports.createPages = ({ graphql, actions }) => {
     // Create event posts pages.
     comingEventPosts.forEach((post, index) => {
       createPage({
-        path: `coming-events/${post.node.frontmatter.path}`,
+        path: `events/kommande/${post.node.frontmatter.path}`,
         component: eventPost,
         context: {
           slug: post.node.fields.slug,
@@ -84,7 +84,7 @@ exports.createPages = ({ graphql, actions }) => {
 
     pastEventPosts.forEach((post, index) => {
       createPage({
-        path: `past-events/${post.node.frontmatter.path}`,
+        path: `events/tidigare/${post.node.frontmatter.path}`,
         component: eventPost,
         context: {
           slug: post.node.fields.slug,
@@ -94,7 +94,7 @@ exports.createPages = ({ graphql, actions }) => {
 
     articlePosts.forEach((post, index) => {
       createPage({
-        path: `articles/${post.node.frontmatter.path}`,
+        path: `artiklar/${post.node.frontmatter.path}`,
         component: eventPost,
         context: {
           slug: post.node.fields.slug,

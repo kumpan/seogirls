@@ -84,6 +84,7 @@ const Events = () => {
         shortTitle={pageData.shorttitle}
         title={pageData.hero.headingone}
         subheading={pageData.hero.subheading}
+        location="/events"
       />
       <EventsList
         coming

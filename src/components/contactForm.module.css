@@ -124,6 +124,7 @@ button[type="submit"]:hover {
   .contactForm {
     border-radius: 0;
     padding: 80px 16px;
+    max-width: none;
   }
 
   form {

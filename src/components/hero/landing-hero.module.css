@@ -117,9 +117,9 @@
 
 @media screen and (max-width: 640px) {
   .hero {
-    min-height: 85vh;
+    min-height: auto;
     overflow: hidden;
-    padding: 80px 0;
+    padding: 144px 0 96px;
   }
 
   .container {

@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-import styles from "./about.module.css"
+import styles from "./om.module.css"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -38,7 +38,7 @@ const Events = () => {
   const pageData = data.allMdx.edges[0].node
 
   return (
-    <Layout title={data.site.siteMetadata.title}>
+    <Layout location="/om" title={data.site.siteMetadata.title}>
       <SEO
         title={pageData.frontmatter.title}
         description={pageData.frontmatter.description}
@@ -47,6 +47,7 @@ const Events = () => {
         shortTitle={pageData.frontmatter.shorttitle}
         title={pageData.frontmatter.hero.headingone}
         subheading={pageData.frontmatter.hero.subheading}
+        location="/om"
       />
       <div className={styles.container}>
         <MDXRenderer>{pageData.body}</MDXRenderer>

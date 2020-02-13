@@ -34,9 +34,13 @@
   margin-top: -56px;
 }
 
+.eventsTitle h3 {
+  display: inline-flex;
+}
+
 @media screen and (max-width: 992px) {
   .events {
-    margin: -96px auto 96px;
+    margin: 0 auto 96px;
   }
 
   .articles {
@@ -46,10 +50,10 @@
 
 @media screen and (max-width: 640px) {
   .events {
-    margin: -64px auto 64px;
+    margin: 0 auto 64px;
   }
 
-  .pastEvents {
+  .comingEvents + .pastEvents {
     margin: 64px 0 0 0;
   }
 

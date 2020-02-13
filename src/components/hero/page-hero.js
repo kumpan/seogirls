@@ -7,11 +7,11 @@ import styles from "./page-hero.module.css"
 
 class PageHero extends React.Component {
   render() {
-    const { title, subheading, shortTitle, sub } = this.props
+    const { title, subheading, shortTitle, sub, location } = this.props
 
     return (
       <header className={styles.hero}>
-        <Nav />
+        <Nav location={location} />
         <div className={styles.container}>
           <div className={styles.breadCrumbs}>
             <Link to="/">Hem</Link>
@@ -24,7 +24,7 @@ class PageHero extends React.Component {
             {sub === "articles" && (
               <>
                 <span className={styles.parentPage}></span>
-                <Link to="/articles">Artiklar</Link>
+                <Link to="/artiklar">Artiklar</Link>
               </>
             )}
             <span className={styles.currentPage}>{shortTitle}</span>

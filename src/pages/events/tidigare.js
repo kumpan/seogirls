@@ -1,12 +1,12 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import PageHero from "../components/hero/page-hero"
-import EventsList from "../components/events/events-list"
+import Layout from "../../components/layout"
+import SEO from "../../components/seo"
+import PageHero from "../../components/hero/page-hero"
+import EventsList from "../../components/events/events-list"
 
-const Articles = () => {
+const Events = () => {
   const data = useStaticQuery(
     graphql`
       query {
@@ -15,7 +15,9 @@ const Articles = () => {
             title
           }
         }
-        allMdx(filter: { fileAbsolutePath: { regex: "/(/articlespage)/" } }) {
+        allMdx(
+          filter: { fileAbsolutePath: { regex: "/(/events/tidigare)/" } }
+        ) {
           edges {
             node {
               frontmatter {
@@ -29,8 +31,8 @@ const Articles = () => {
             }
           }
         }
-        articles: allMdx(
-          filter: { fileAbsolutePath: { regex: "/(/articles/)/" } }
+        pastEvents: allMdx(
+          filter: { fileAbsolutePath: { regex: "/(past-events)/" } }
           sort: { fields: [frontmatter___date], order: DESC }
         ) {
           edges {
@@ -55,7 +57,7 @@ const Articles = () => {
     `
   )
   const pageData = data.allMdx.edges[0].node.frontmatter
-  const articlePosts = data.articles.edges
+  const pastEvents = data.pastEvents.edges
 
   return (
     <Layout title={data.site.siteMetadata.title}>
@@ -64,10 +66,12 @@ const Articles = () => {
         shortTitle={pageData.shorttitle}
         title={pageData.hero.headingone}
         subheading={pageData.hero.subheading}
+        eventSub
+        location="/events"
       />
-      <EventsList articles articlePosts={articlePosts} />
+      <EventsList past pastEvents={pastEvents} />
     </Layout>
   )
 }
 
-export default Articles
+export default Events

@@ -44,7 +44,7 @@ exports.createPages = ({ graphql, actions }) => {
           }
         }
         articles: allMdx(
-          filter: { fileAbsolutePath: { regex: "/(articles)/" } }
+          filter: { fileAbsolutePath: { regex: "/(articles/)/" } }
           sort: { fields: [frontmatter___date], order: DESC }
           limit: 1000
         ) {
@@ -73,53 +73,31 @@ exports.createPages = ({ graphql, actions }) => {
 
     // Create event posts pages.
     comingEventPosts.forEach((post, index) => {
-      const previous =
-        index === comingEventPosts.length - 1
-          ? null
-          : comingEventPosts[index + 1].node
-      const next = index === 0 ? null : comingEventPosts[index - 1].node
-
       createPage({
         path: `coming-events/${post.node.frontmatter.path}`,
         component: eventPost,
         context: {
           slug: post.node.fields.slug,
-          previous,
-          next,
         },
       })
     })
 
     pastEventPosts.forEach((post, index) => {
-      const previous =
-        index === pastEventPosts.length - 1
-          ? null
-          : pastEventPosts[index + 1].node
-      const next = index === 0 ? null : pastEventPosts[index - 1].node
-
       createPage({
         path: `past-events/${post.node.frontmatter.path}`,
         component: eventPost,
         context: {
           slug: post.node.fields.slug,
-          previous,
-          next,
         },
       })
     })
 
     articlePosts.forEach((post, index) => {
-      const previous =
-        index === articlePosts.length - 1 ? null : articlePosts[index + 1].node
-      const next = index === 0 ? null : articlePosts[index - 1].node
-
       createPage({
         path: `articles/${post.node.frontmatter.path}`,
         component: eventPost,
         context: {
           slug: post.node.fields.slug,
-          previous,
-          next,
         },
       })
     })

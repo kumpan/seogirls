@@ -23,6 +23,7 @@ const Events = () => {
               frontmatter {
                 title
                 shorttitle
+                canonical
                 hero {
                   headingone
                   subheading
@@ -54,7 +55,11 @@ const Events = () => {
 
   return (
     <Layout title={data.site.siteMetadata.title}>
-      <SEO title={pageData.title} description={pageData.description} />
+      <SEO
+        title={pageData.title}
+        description={pageData.description}
+        canonical={pageData.canonical}
+      />
       <PageHero
         shortTitle={pageData.shorttitle}
         title={pageData.hero.headingone}

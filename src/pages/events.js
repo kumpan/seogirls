@@ -57,6 +57,7 @@ const Events = () => {
               frontmatter {
                 path
                 title
+                canonical
                 date(formatString: "DD MMM YYYY", locale: "sv-SV")
                 ingress
                 featuredimage {
@@ -79,7 +80,11 @@ const Events = () => {
 
   return (
     <Layout title={data.site.siteMetadata.title}>
-      <SEO title={pageData.title} description={pageData.description} />
+      <SEO
+        title={pageData.title}
+        description={pageData.description}
+        canonical={pageData.canonical}
+      />
       <PageHero
         shortTitle={pageData.shorttitle}
         title={pageData.hero.headingone}

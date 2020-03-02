@@ -24,6 +24,7 @@ const Events = () => {
               frontmatter {
                 shorttitle
                 title
+                canonical
                 hero {
                   headingone
                   subheading
@@ -42,6 +43,7 @@ const Events = () => {
       <SEO
         title={pageData.frontmatter.title}
         description={pageData.frontmatter.description}
+        canonical={pageData.canonical}
       />
       <PageHero
         shortTitle={pageData.frontmatter.shorttitle}

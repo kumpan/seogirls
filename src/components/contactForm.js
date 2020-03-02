@@ -55,7 +55,7 @@ const HostEventSection = () => {
         >
           <input type="hidden" name="form-name" value="host-event" />
           <div className={styles.inputContainer}>
-            <label for="date">{pageData.when.label} *</label>
+            <label htmlFor="date">{pageData.when.label} *</label>
             <DatePicker
               format="y/M/d"
               locale="sv"
@@ -75,7 +75,7 @@ const HostEventSection = () => {
             />
           </div>
           <div className={styles.inputContainer}>
-            <label for="how-many">{pageData.howmany.label} *</label>
+            <label htmlFor="how-many">{pageData.howmany.label} *</label>
             <input
               type="number"
               name="how-many"
@@ -85,7 +85,7 @@ const HostEventSection = () => {
             />
           </div>
           <div className={styles.inputContainer}>
-            <label for="where">{pageData.where.label} *</label>
+            <label htmlFor="where">{pageData.where.label} *</label>
             <input
               type="text"
               name="where"
@@ -95,7 +95,7 @@ const HostEventSection = () => {
             />
           </div>
           <div className={styles.inputContainer}>
-            <label for="email">{pageData.email.label} *</label>
+            <label htmlFor="email">{pageData.email.label} *</label>
             <input
               type="email"
               name="email"

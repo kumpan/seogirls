@@ -21,6 +21,7 @@ const FouroFour = () => {
                 shorttitle
                 title
                 description
+                canonical
                 hero {
                   headingone
                   subheading
@@ -36,7 +37,11 @@ const FouroFour = () => {
 
   return (
     <Layout title={data.site.siteMetadata.title}>
-      <SEO title={pageData.title} description={pageData.description} />
+      <SEO
+        title={pageData.title}
+        description={pageData.description}
+        canonical={pageData.canonical}
+      />
       <PageHero
         shortTitle={pageData.shorttitle}
         title={pageData.hero.headingone}

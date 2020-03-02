@@ -45,6 +45,7 @@ class EventPostTemplate extends React.Component {
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.ingress}
+          canonical={post.frontmatter.canonical}
         />
         <PageHero
           shortTitle={shortTitle}
@@ -85,6 +86,8 @@ export const pageQuery = graphql`
       body
       frontmatter {
         title
+        description
+        canonical
         date(formatString: "DD MMM YYYY", locale: "sv-SV")
         ingress
         featuredimage {

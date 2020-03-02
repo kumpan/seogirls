@@ -24,6 +24,7 @@ const Events = () => {
               frontmatter {
                 shorttitle
                 title
+                canonical
                 hero {
                   headingone
                   subheading
@@ -112,12 +113,17 @@ const Events = () => {
 
   return (
     <Layout becomeSponsor title={data.site.siteMetadata.title}>
-      <SEO title={pageData.title} description={pageData.description} />
+      <SEO
+        title={pageData.title}
+        description={pageData.description}
+        canonical={pageData.canonical}
+      />
       <PageHero
         shortTitle={pageData.shorttitle}
         title={pageData.hero.headingone}
         subheading={pageData.hero.subheading}
         location="/sponsorer"
+        canonical={pageData.canonical}
       />
       <div className={styles.container}>
         <h3>

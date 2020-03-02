@@ -52,7 +52,7 @@ class IndexPage extends React.Component {
         <SEO
           title={pageContent.title}
           description={pageContent.description}
-          keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+          canonical={pageContent.canonical}
         />
         <LandingHero
           title={pageContent.hero.headingone}
@@ -97,6 +97,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             description
+            canonical
             hero {
               headingone
               subtitlelinkdestination

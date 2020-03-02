@@ -55,7 +55,7 @@ const HostEventSection = () => {
         >
           <input type="hidden" name="form-name" value="host-event" />
           <div className={styles.inputContainer}>
-            <label>{pageData.when.label} *</label>
+            <label for="date">{pageData.when.label} *</label>
             <DatePicker
               format="y/M/d"
               locale="sv"
@@ -71,33 +71,37 @@ const HostEventSection = () => {
               placeholder={pageData.when.placeholder}
               value={date}
               readOnly
+              id="date"
             />
           </div>
           <div className={styles.inputContainer}>
-            <label>{pageData.howmany.label} *</label>
+            <label for="how-many">{pageData.howmany.label} *</label>
             <input
               type="number"
               name="how-many"
               placeholder={pageData.howmany.placeholder}
               required
+              id="how-many"
             />
           </div>
           <div className={styles.inputContainer}>
-            <label>{pageData.where.label} *</label>
+            <label for="where">{pageData.where.label} *</label>
             <input
               type="text"
               name="where"
               placeholder={pageData.where.placeholder}
               required
+              id="where"
             />
           </div>
           <div className={styles.inputContainer}>
-            <label>{pageData.email.label} *</label>
+            <label for="email">{pageData.email.label} *</label>
             <input
               type="email"
               name="email"
               placeholder={pageData.email.placeholder}
               required
+              id="email"
             />
           </div>
           <button type="submit">Skicka</button>

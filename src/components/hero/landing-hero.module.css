@@ -39,10 +39,6 @@
   }
 }
 
-.container a {
-  animation: fade-up 1s ease-out 0.8s both;
-}
-
 .stars {
   position: absolute;
   left: 0;

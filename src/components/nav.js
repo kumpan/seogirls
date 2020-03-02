@@ -39,7 +39,7 @@ class Nav extends React.Component {
     return (
       <nav className={styles.nav}>
         <div className={styles.container}>
-          <Link to="/" className={styles.logo}>
+          <Link to="/" aria-label="Home" className={styles.logo}>
             <Logo />
           </Link>
           <div
@@ -52,6 +52,7 @@ class Nav extends React.Component {
             onKeyPress={this.toggleMenu}
             role="button"
             tabIndex="0"
+            aria-label="Toggle Menu"
           >
             <div>
               <span className={styles.lineOne} />

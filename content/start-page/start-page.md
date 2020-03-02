@@ -1,5 +1,5 @@
 ---
-canonical: 'https://seogirls.se/'
+canonical: 'https://test.se/'
 title: Ett nätverk för kvinnor som jobbar med SEO
 description: 'Skapa nya kontakter, utvecklas och dela med dig av din kunskap.'
 hero:

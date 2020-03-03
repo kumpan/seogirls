@@ -2,11 +2,12 @@
 shorttitle: Kommande events
 title: Kommande events
 description: Kommande events
+canonical: /events/kommande
 hero:
   headingone: |
     Kommande events
   subheading: >-
-    I don't think anybody knows it was Russia that wrote Lorem Ipsum, but I
-    don't know, maybe it was. It could be Russia, but it could also be China.
+    Vi har i snitt ett SEOGIRLS-event i månaden. Håll dig uppdaterad om när vi
+    ses och var här i listan av event.
 ---
 

@@ -1,23 +1,29 @@
 ---
 path: seogirls-hos-iprospect
-date: 2020-03-03T09:23:22.591Z
 title: SEOGIRLS hos iProspect
+description: >-
+  Den 3 mars träffas vi igen för ett SEOGIRLS mingel. Den här gången är vi
+  välkomna till iProspect på Åsögatan, Södermalm i Stockholm.
+canonical: /events/kommande/seogirls-hos-iprospect
+date: 2020-03-03T09:23:22.591Z
 ingress: >-
-  56K Digital bjuder på bubbel, tilltugg och en presentation om SEO och e-handel
-  i deras trevliga lokaler på Kungsholmen. Lorem ipsum dolor sit amet,
-  consectetur adipiscing elit. Nulla bibendum scelerisque sem vitae sagittis.
-  Etiam sed ipsum vitae nulla dignissim imperdiet. Curabitur eleifend id augue a
-  sagittis.
+  iProspect bjuder in hos till deras lokaler på Åsögatan 108. Vi kommer bli
+  serverade pizza och bubbel, mingle och intressanta presentationer. Dessutom
+  kommer vi få en första sneak-peak på nya seogirls.se-sajten!
 featuredimage: /assets/jennydrakenlind_20190926_0043_web.jpg
 ---
-### Den 23e januari välkomnar vi er till det 7e minglet för kvinnor som jobbar med SEO
+### AGENDAN FÖR KVÄLLEN
 
-Den här gången är vi sponsrade av det härliga gänget på 56K Digital som bjuder på bubbel, tilltugg och en presentation om SEO och ehandel i deras trevliga lokaler på Kungsholmen.
+### 17:00  Hälsar vi välkomna till SEOGIRLS #9 och forsätter med en späckad agenda:
 
-The popularity of e-commerce has been around for a while now. Even though it’s not something new businesses are still learning on how technologies impact their sales performance. SEO is strongly emerging as a requirement for high performing e-commerce businesses, but there are still improvements to be made when aligning SEO with the sales goals of an e-commerce.
+### Introduktion av värdarna för kvällen – iProspect av Vincenza La Starza
 
-![Södermalm](/../assets/jon-flobrant-bk2nx6uejnc-unsplash.jpg "Södermalm")
+### Presentation nya seogirls.se – Per Riekkola från Kumpan (ca 30min)
 
-During SEOGIRLS first event of 2020, we will tackle the challenges we face, as SEO consultants, to meet our e-commerce clients needs of driving traffic and increase sales through SEO optimisation. But also the opportunities and success that can happen when a collaboration between a SEO consultant and an e-commerce business works well. Join us for a great evening with fantastic and smart women from the SEO industry and get inspired how to use SEO as part of an e-commerce strategy!
+### Paus – (ca 30min)
 
-Den här gången får vi plats med 50 mingelsugna SEOGIRLS, så signa upp er för en biljett på en gång! Förra minglet gick de 100 platserna redan första veckan.
+### Case Scandic – SEO utmaningar & möjligheter (globalt) – Ida Strandberg (ca 40min)
+
+### Sedan fortsätter vi mingla tills vi blir utslängda 🙂
+
+###

@@ -10,7 +10,7 @@ ingress: >-
   iProspect bjuder in hos till deras lokaler på Åsögatan 108. Vi kommer bli
   serverade pizza och bubbel, mingle och intressanta presentationer. Dessutom
   kommer vi få en första sneak-peak på nya seogirls.se-sajten!
-featuredimage: /assets/jennydrakenlind_20190926_0043_web.jpg
+featuredimage: /../assets/seogirls9.png
 ---
 ### AGENDAN FÖR KVÄLLEN
 

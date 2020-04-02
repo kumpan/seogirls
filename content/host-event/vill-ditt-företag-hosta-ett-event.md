@@ -1,6 +1,6 @@
 ---
 name: Host Event
-title: Vill ditt företag hosta ett SEOGIRLS event?
+title: Vill ditt företag hosta ett event?
 when:
   label: 'När skulle det passa er? '
   placeholder: Välj datum

@@ -1,7 +1,7 @@
 ---
 path: 56kdigital
 title: 56K Digtital
-logo: /../assets/56k-digital.png
+logo: /../assets/56kdigital.png
 url: 'https://56kdigital.com/'
 color: '#FFB500'
 sponsortype: event

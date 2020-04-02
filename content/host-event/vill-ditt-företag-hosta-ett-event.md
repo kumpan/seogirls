@@ -1,14 +1,14 @@
 ---
 name: Host Event
-title: Vill ditt företag hosta ett event?
+title: Vill ditt företag hosta ett SEOGIRLS event?
 when:
-  label: När?
+  label: 'När skulle det passa er? '
   placeholder: Välj datum
 howmany:
-  label: Hur många?
-  placeholder: 'Ex: 50'
+  label: Hur många personer får ni plats med?
+  placeholder: 'Ex: 100'
 where:
-  label: Var?
+  label: Var har ni era lokaler?
   placeholder: 'Ex: Fiskargatan 8, 116 20 Stockholm'
 email:
   label: E-post

@@ -1,6 +1,6 @@
 ---
 path: seogirls-hos-valtech
-title: SEOGIRLS hos VALTECH
+title: 'SEOGIRLS #4 hos VALTECH'
 description: 'SEOGIRLS #4 hostas av Valtech i deras superfina lokaler på Mynttorget'
 canonical: 'https://seogirls.se/events/seogirls-hos-valtech'
 date: 2019-10-23T10:31:12.730Z

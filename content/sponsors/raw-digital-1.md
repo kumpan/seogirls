@@ -1,9 +1,9 @@
 ---
-path: rawdigital
-title: Raw Digital
-logo: /../assets/rawdigital.png
-url: 'https://rawdigital.se/'
-color: '#fffff'
+path: iprospect
+title: iProspect
+logo: /../assets/ip-logo-white.svg
+url: 'https://www.iprospect.com/sv/se/'
+color: '#16161A'
 sponsortype: event
 ---
-Raw digital är specialister inom datadriven marknadsföring. Vi hjälper våra kunder att stärka sin närvaro på sökmotorerna och öka sin lönsamhet online.
+iProspect är specialiserade på Performance Activation, Experience Optimization och Platform Capabilities för att leverera integrerade lösningar till mer än 2000 av världens mest innovativa varumärken.

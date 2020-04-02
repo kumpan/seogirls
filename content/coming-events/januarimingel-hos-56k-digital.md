@@ -1,5 +1,5 @@
 ---
-path: seogirls-7
+path: seogirls-hos-56kdigital
 title: Januarimingel hos 56K Digital
 description: 'SEOGIRLS #7 hostas av 56K Digital '
 canonical: 'https://seogirls.se/events/seogirls-7'

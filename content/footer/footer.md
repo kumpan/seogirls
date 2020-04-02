@@ -9,7 +9,7 @@ linkscenter: |-
   * [Signa upp för mejlutskick](https://eepurl.com/gMgZTD)
 linksright: |-
   #### Kontakt
-  * [(+46) 08 440 12 00](call:+4684401200)
-  * [hej@seogirls.se](mailto:hej@seogirls.se)
+
+  * <mailto:info@seogirls.se>
 ---
 

@@ -1,7 +1,9 @@
 ---
 path: seogirls-hos-curamando
-date: 2019-12-04T11:29:42.230Z
-title: SEOGIRLS hos Curamando
+title: 'SEOGIRLS #6 hos Curamando'
+description: Dett sjätte SEOGIRLS eventet hålls hos Curamando
+canonical: 'https://seogirls.se/events/seogirls-hos-curamando'
+date: 2019-11-27T11:29:42.230Z
 ingress: >-
   I onsdags den 27 november var det dags för den 6:e upplagan av SEOGIRLS och
   kvällens värd var Curamando. Att vi slog vi rekord i antalet anmälda för

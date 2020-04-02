@@ -1,11 +1,14 @@
 ---
 shorttitle: Events
-title: Events & mingel
-description: 'Se våra kommande events och mingel, samt läs om de som redan har varit.'
+title: SEOGIRLS events & mingel
+description: >-
+  Se våra kommande nätverks-events och mingel, samt läs om de som redan har
+  varit.
+canonical: 'https://seogirls.se/events'
 hero:
-  headingone: Events & mingel
+  headingone: 'SEOGIRLS events, mingel och andra nätverksträffar'
   subheading: >-
-    You're telling the enemy exactly what you're going to do. No wonder you've
-    been fighting Lorem Ipsum your entire adult life.
+    Se när våra nästa event och nätverksträffar är. Kom ihåg att signa upp dig
+    på utskicket om du vill ha en påminnelse om biljettsläpp i inboxen!
 ---
 

@@ -2,19 +2,20 @@
 shorttitle: Kontakt
 title: Kontakta oss
 description: Kontakta oss
+canonical: /kontakt
 hero:
-  headingone: Kontakta oss
+  headingone: Kom i kontakt med SEOGIRLS
   subheading: >-
-    You're telling the enemy exactly what you're going to do. No wonder you've
-    been fighting Lorem Ipsum your entire adult life.
+    Mejla eller ring oss gärna om du vill fråga oss om något kring nätverket
+    eller att hosta ett event! 
 contactoptions:
   call:
-    contactinfo: (+46) 08 440 12 00
-    contactlink: '+4684401200'
+    contactinfo: (+46) 0709320123
+    contactlink: '+46709320123'
     heading: Ring oss
   email:
-    contactinfo: hej@seogirls.se
-    contactlink: hej@seogirls.se
+    contactinfo: info@seogirls.se
+    contactlink: info@seogirls.se
     heading: Mejla oss
 ---
 

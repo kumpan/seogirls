@@ -1,7 +1,9 @@
 ---
-path: januarimingel-hos-56k-digital
-date: 2020-01-23T09:20:02.739Z
+path: seogirls-7
 title: Januarimingel hos 56K Digital
+description: 'SEOGIRLS #7 hostas av 56K Digital '
+canonical: 'https://seogirls.se/events/seogirls-7'
+date: 2020-01-23T09:20:02.739Z
 ingress: >-
   56K Digital bjuder på bubbel, tilltugg och en presentation om SEO och e-handel
   i deras trevliga lokaler på Kungsholmen. Lorem ipsum dolor sit amet,

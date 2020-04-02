@@ -1,5 +1,5 @@
 ---
-path: /56kdigital
+path: 56kdigital
 title: 56K Digtital
 logo: /../assets/56k-digital.png
 url: 'https://56kdigital.com/'

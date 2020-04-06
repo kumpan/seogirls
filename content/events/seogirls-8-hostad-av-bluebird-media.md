@@ -3,7 +3,7 @@ path: seogirls-hos-bluebirdmedia
 title: 'SEOGIRLS #8 hostad av Bluebird Media'
 description: 'SEOGIRL #8 är den 4 februari. BILJETTERNA SLÄPPS DEN 10E FEBRUARI KL 11:00'
 canonical: 'https://seogirls.netlify.com/events/seogirls-hos-bluebirdmedia'
-date: 2020-04-02T14:34:12.776Z
+date: 2020-02-20T15:34:12.776Z
 ingress: >-
   DEN 20 FEBRUARI SAMLAS VI IGEN!
 

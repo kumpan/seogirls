@@ -1,7 +1,7 @@
 ---
 path: bluebirdmedia
 title: Bluebird Media
-logo: /../assets/logo-bluebird-white.svg
+logo: /../assets/logo-bluebird-white.png
 url: 'https://www.bluebirdmedia.se/'
 color: '#286AA5'
 sponsortype: event

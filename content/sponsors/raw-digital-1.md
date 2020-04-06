@@ -1,7 +1,7 @@
 ---
 path: iprospect
 title: iProspect
-logo: /../assets/ip-logo-white.svg
+logo: /../assets/ip-logo-white.png
 url: 'https://www.iprospect.com/sv/se/'
 color: '#16161A'
 sponsortype: event

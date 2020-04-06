@@ -16,7 +16,7 @@ const Events = () => {
           }
         }
         allMdx(
-          filter: { fileAbsolutePath: { regex: "/(/events/kommande)/" } }
+          filter: { fileAbsolutePath: { regex: "/(/events-pages/kommande)/" } }
         ) {
           edges {
             node {
@@ -32,8 +32,8 @@ const Events = () => {
             }
           }
         }
-        comingEvents: allMdx(
-          filter: { fileAbsolutePath: { regex: "/(coming-events)/" } }
+        events: allMdx(
+          filter: { fileAbsolutePath: { regex: "/(events/)/" } }
           sort: { fields: [frontmatter___date], order: DESC }
         ) {
           edges {
@@ -51,7 +51,20 @@ const Events = () => {
     `
   )
   const pageData = data.allMdx.edges[0].node.frontmatter
-  const comingEvents = data.comingEvents.edges
+  const events = data.events.edges
+  const isToday = ({
+    node: {
+      frontmatter: { date },
+    },
+  }) => {
+    const eventDate = new Date(date.replace("okt", "oct").replace("maj", "may"))
+    const todayDate = new Date()
+    todayDate.setHours(0, 0, 0, 0)
+
+    return eventDate.getTime() >= todayDate.getTime()
+  }
+
+  const comingEvents = events.filter(isToday)
 
   return (
     <Layout title={data.site.siteMetadata.title}>
@@ -65,6 +78,7 @@ const Events = () => {
         title={pageData.hero.headingone}
         subheading={pageData.hero.subheading}
         eventSub
+        sub="events"
         location="/events"
       />
       <EventsList coming comingEvents={comingEvents} />

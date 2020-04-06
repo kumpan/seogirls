@@ -16,7 +16,9 @@ const Events = () => {
           }
         }
         allMdx(
-          filter: { fileAbsolutePath: { regex: "/(/events/events-mingel)/" } }
+          filter: {
+            fileAbsolutePath: { regex: "/(/events-pages/events-mingel)/" }
+          }
         ) {
           edges {
             node {
@@ -31,25 +33,8 @@ const Events = () => {
             }
           }
         }
-        comingEvents: allMdx(
-          limit: 3
-          filter: { fileAbsolutePath: { regex: "/(coming-events)/" } }
-          sort: { fields: [frontmatter___date], order: DESC }
-        ) {
-          edges {
-            node {
-              frontmatter {
-                path
-                title
-                date(formatString: "DD MMM YYYY", locale: "sv-SV")
-                ingress
-              }
-            }
-          }
-        }
-        pastEvents: allMdx(
-          limit: 3
-          filter: { fileAbsolutePath: { regex: "/(past-events)/" } }
+        events: allMdx(
+          filter: { fileAbsolutePath: { regex: "/(events/)/" } }
           sort: { fields: [frontmatter___date], order: DESC }
         ) {
           edges {
@@ -75,8 +60,21 @@ const Events = () => {
     `
   )
   const pageData = data.allMdx.edges[0].node.frontmatter
-  const comingEvents = data.comingEvents.edges
-  const pastEvents = data.pastEvents.edges
+  const events = data.events.edges
+  const isToday = ({
+    node: {
+      frontmatter: { date },
+    },
+  }) => {
+    const eventDate = new Date(date.replace("okt", "oct").replace("maj", "may"))
+    const todayDate = new Date()
+    todayDate.setHours(0, 0, 0, 0)
+
+    return eventDate.getTime() >= todayDate.getTime()
+  }
+
+  const comingEvents = events.filter(isToday).slice(0, 3)
+  const pastEvents = events.filter(a => !isToday(a)).slice(0, 3)
 
   return (
     <Layout title={data.site.siteMetadata.title}>

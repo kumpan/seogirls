@@ -126,9 +126,9 @@ collections:
           - { name: description, label: Description, widget: text }
           - { name: link, label: E-mail Address, widget: text }
 
-  - name: events
+  - name: eventspages
     label: Subpages / Events Pages
-    folder: content/events
+    folder: content/events-pages
     create: true
     fields:
       - { name: shorttitle, label: Short Title }
@@ -232,26 +232,6 @@ collections:
           options: [main, event],
         }
 
-  - name: coming-events
-    label: Events / Coming Events
-    folder: content/coming-events
-    create: true
-    fields:
-      - { name: path, label: Path }
-      - { name: title, label: SEO Title }
-      - { name: description, label: SEO Description }
-      - { name: canonical, label: Canonical URL }
-      - { name: date, label: Date, widget: date }
-      - { name: title, label: Title }
-      - { name: ingress, label: Ingress, widget: text }
-      - {
-          name: featuredimage,
-          label: Featured Image,
-          widget: image,
-          allow_multiple: false,
-        }
-      - { name: body, label: Body, widget: markdown }
-
   - name: articles
     label: Articles
     folder: content/articles
@@ -272,9 +252,9 @@ collections:
         }
       - { name: body, label: Body, widget: markdown }
 
-  - name: past-events
-    label: Events / Past Events
-    folder: content/past-events
+  - name: events
+    label: Events
+    folder: content/events
     create: true
     fields:
       - { name: path, label: Path }
@@ -312,7 +292,7 @@ collections:
               label: Subtitle Link Destination,
               widget: string,
             }
-      - name: events
+      - name: eventspages
         label: Events
         widget: object
         fields:

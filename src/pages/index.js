@@ -18,8 +18,23 @@ class IndexPage extends React.Component {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
     const pageContent = data.allMdx.edges[0].node.frontmatter
-    const comingEvents = data.comingEvents.edges
-    const pastEvents = data.pastEvents.edges
+    const events = data.events.edges
+    const isToday = ({
+      node: {
+        frontmatter: { date },
+      },
+    }) => {
+      const eventDate = new Date(
+        date.replace("okt", "oct").replace("maj", "may")
+      )
+      const todayDate = new Date()
+      todayDate.setHours(0, 0, 0, 0)
+
+      return eventDate.getTime() >= todayDate.getTime()
+    }
+
+    const comingEvents = events.filter(isToday).slice(0, 3)
+    const pastEvents = events.filter(a => !isToday(a)).slice(0, 3)
 
     // Icons to use
     const calendarIcon = <CalendarBlankIcon />
@@ -65,8 +80,8 @@ class IndexPage extends React.Component {
           coming
           past
           linked
-          pastEvents={pastEvents}
           comingEvents={comingEvents}
+          pastEvents={pastEvents}
         />
         <AboutSection
           headingtwo={pageContent.about.headingtwo}
@@ -113,25 +128,8 @@ export const pageQuery = graphql`
         }
       }
     }
-    comingEvents: allMdx(
-      limit: 3
-      filter: { fileAbsolutePath: { regex: "/(coming-events)/" } }
-      sort: { fields: [frontmatter___date], order: DESC }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            path
-            title
-            date(formatString: "DD MMM YYYY", locale: "sv-SV")
-            ingress
-          }
-        }
-      }
-    }
-    pastEvents: allMdx(
-      limit: 3
-      filter: { fileAbsolutePath: { regex: "/(past-events)/" } }
+    events: allMdx(
+      filter: { fileAbsolutePath: { regex: "/(events/)/" } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {

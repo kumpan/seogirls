@@ -67,13 +67,6 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/coming-events`,
-        name: `comingevents`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
         path: `${__dirname}/content/articles`,
         name: `articles`,
       },
@@ -81,8 +74,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/past-events`,
-        name: `pastevents`,
+        path: `${__dirname}/content/events`,
+        name: `events`,
       },
     },
     {
@@ -109,8 +102,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/events`,
-        name: `events`,
+        path: `${__dirname}/content/events-pages`,
+        name: `eventspages`,
       },
     },
     {

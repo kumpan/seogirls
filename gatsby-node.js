@@ -10,7 +10,7 @@ exports.createPages = ({ graphql, actions }) => {
     `
       {
         comingEvents: allMdx(
-          filter: { fileAbsolutePath: { regex: "/(coming-events)/" } }
+          filter: { fileAbsolutePath: { regex: "/(events/)/" } }
           sort: { fields: [frontmatter___date], order: DESC }
           limit: 1000
         ) {
@@ -27,7 +27,7 @@ exports.createPages = ({ graphql, actions }) => {
           }
         }
         pastEvents: allMdx(
-          filter: { fileAbsolutePath: { regex: "/(past-events)/" } }
+          filter: { fileAbsolutePath: { regex: "/(events/)/" } }
           sort: { fields: [frontmatter___date], order: DESC }
           limit: 1000
         ) {

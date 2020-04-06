@@ -100,7 +100,7 @@ const EventsList = ({
           ) : (
             <p>
               Det finns just nu inga kommande events.{" "}
-              <Link to="/contact">Hör av dig</Link> om du vill hosta ett event.
+              <Link to="/kontakt">Hör av dig</Link> om du vill hosta ett event.
             </p>
           )}
           {linked && (
@@ -149,7 +149,7 @@ const EventsList = ({
           ) : (
             <p>
               Det har inte varit några tidigare events.{" "}
-              <Link to="/contact">Hör av dig</Link> om du vill hosta ett event.
+              <Link to="/kontakt">Hör av dig</Link> om du vill hosta ett event.
             </p>
           )}
           {linked && (

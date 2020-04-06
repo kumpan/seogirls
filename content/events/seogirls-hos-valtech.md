@@ -3,7 +3,7 @@ path: seogirls-hos-valtech
 title: "SEOGIRLS #4 hos VALTECH"
 description: "SEOGIRLS #4 hostas av Valtech i deras superfina lokaler på Mynttorget"
 canonical: "https://seogirls.se/events/seogirls-hos-valtech"
-date: 2019-10-23T10:31:12.730Z
+date: 2019-09-20T10:31:12.730Z
 ingress: >-
   SEOGIRLS inledde hösten med att transformera till ett nytt format, med att bli
   hostade av ett företag. Valtech ville vara det företag som först tog oss ut på

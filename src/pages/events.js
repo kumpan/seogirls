@@ -73,7 +73,10 @@ const Events = () => {
     return eventDate.getTime() >= todayDate.getTime()
   }
 
-  const comingEvents = events.filter(isToday).slice(0, 3)
+  const comingEvents = events
+    .filter(isToday)
+    .slice(0, 3)
+    .reverse()
   const pastEvents = events.filter(a => !isToday(a)).slice(0, 3)
 
   return (

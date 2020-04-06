@@ -64,7 +64,7 @@ const Events = () => {
     return eventDate.getTime() >= todayDate.getTime()
   }
 
-  const comingEvents = events.filter(isToday)
+  const comingEvents = events.filter(isToday).reverse()
 
   return (
     <Layout title={data.site.siteMetadata.title}>

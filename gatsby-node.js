@@ -9,24 +9,7 @@ exports.createPages = ({ graphql, actions }) => {
   return graphql(
     `
       {
-        comingEvents: allMdx(
-          filter: { fileAbsolutePath: { regex: "/(events/)/" } }
-          sort: { fields: [frontmatter___date], order: DESC }
-          limit: 1000
-        ) {
-          edges {
-            node {
-              fields {
-                slug
-              }
-              frontmatter {
-                title
-                path
-              }
-            }
-          }
-        }
-        pastEvents: allMdx(
+        events: allMdx(
           filter: { fileAbsolutePath: { regex: "/(events/)/" } }
           sort: { fields: [frontmatter___date], order: DESC }
           limit: 1000
@@ -67,24 +50,13 @@ exports.createPages = ({ graphql, actions }) => {
       throw result.errors
     }
 
-    const comingEventPosts = result.data.comingEvents.edges
-    const pastEventPosts = result.data.pastEvents.edges
+    const eventPosts = result.data.events.edges
     const articlePosts = result.data.articles.edges
 
     // Create event posts pages.
-    comingEventPosts.forEach((post, index) => {
+    eventPosts.forEach((post, index) => {
       createPage({
-        path: `events/kommande/${post.node.frontmatter.path}`,
-        component: eventPost,
-        context: {
-          slug: post.node.fields.slug,
-        },
-      })
-    })
-
-    pastEventPosts.forEach((post, index) => {
-      createPage({
-        path: `events/tidigare/${post.node.frontmatter.path}`,
+        path: `events/${post.node.frontmatter.path}`,
         component: eventPost,
         context: {
           slug: post.node.fields.slug,

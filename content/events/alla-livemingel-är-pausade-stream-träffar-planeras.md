@@ -4,7 +4,7 @@ title: 'Alla livemingel är pausade. Stream planeras '
 description: >-
   I och med att man för tillfället inte får träffas i större sällskap än 50
   personer, lägger vi våra träffar på is tills det är OK att ses igen. 
-canonical: 'https://events/seogirls-on-hold'
+canonical: 'https://seogirls.se/events/seogirls-on-hold'
 date: 2020-06-30T08:29:52.838Z
 ingress: >-
   Alla planerade mingel måste pausas. I och med att man för tillfället inte får

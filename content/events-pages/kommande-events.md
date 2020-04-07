@@ -6,10 +6,12 @@ description: >-
   dig uppdaterad om när, var och hur vi ses nästa gång!
 canonical: 'https://seogirls.se/events/kommande'
 hero:
-  headingone: |
-    Kommande events
+  headingone: >
+    Alla kommande SEOGIRLS-event och mingel på ett ställe. Vi håller dig
+    uppdaterad om var och när nästa planerade träff är. Vi ses där! 
   subheading: >-
-    Här listar vi alla planerade event och nätverksträffar! Håll dig uppdaterad
-    om när, var och hur vi ses nästa gång!
+    Här ser du alla våra planerade SEOGIRLS-event och mingel. Listan kommer
+    fyllas på vart efter vi planerar in fler träffar. Vill ditt företag hosta
+    ett event? Skicka in en förfrågan via formuläret nedanför.
 ---
 

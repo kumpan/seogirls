@@ -1,5 +1,5 @@
 ---
-path: /seogirls-on-hold
+path: seogirls-on-hold
 title: 'Alla livemingel är pausade. Stream planeras '
 description: >-
   I och med att man för tillfället inte får träffas i större sällskap än 50

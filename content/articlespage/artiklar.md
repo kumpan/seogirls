@@ -8,9 +8,8 @@ canonical: /artiklar
 hero:
   headingone: 'Artiklar om SEO och porträtt av kvinnor som jobbar med SEO '
   subheading: >-
-    Kunde du inte komma på vårt senaste event? Ingen fara, här sammanfattar vi
-    eventen, publicerar intervjuer och porträtt av kvinnorna bakom casen och
-    presentationerna. Dessutom hittar du även matnyttiga artiklar om
-    SEO-strategier och taktiker här!
+    Kunde du inte komma på vårt senaste event? Ingen fara, här publicerar vi
+    intervjuer och porträtt av kvinnorna bakom casen och presentationerna. Vi
+    lägger även ut matnyttiga artiklar om SEO-strategier och taktiker.
 ---
 

@@ -2,14 +2,13 @@
 shorttitle: Tidigare events
 title: Tidigare SEOGIRLS-träffar
 description: >-
-  Intervjuer och artiklar från föregående event. Läs mer om föredragen och våra
+  Bilder och summeringar av föregående event. Läs mer om föredragen och våra
   grymma SEO kvinnor som presenterar case och SEO-taktiker på träffarna
 canonical: 'https://seogirls.se/events/tidigare/'
 hero:
-  headingone: Artiklar och porträtt från tidigare SEOGIRLS-event
+  headingone: Bilder och summeringar av tidigare SEOGIRLS-event
   subheading: >-
-    Kunde du inte komma till det senaste SEOGIRLS? Eller vill du veta mer om
-    kvinnan som presenterad? Här hittar du porträtt och intervjuer från tidigare
-    träffar!
+    Kunde du inte komma till det senaste SEOGIRLS? Eller vill du bara titta på
+    mingelbilderna? Här hittar du bilder och summeringar från tidigare träffar!
 ---
 

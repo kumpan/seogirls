@@ -6,9 +6,10 @@ description: >-
   varit.
 canonical: 'https://seogirls.se/events'
 hero:
-  headingone: 'SEOGIRLS events, mingel och andra nätverksträffar'
+  headingone: SEOGIRLS events och nätverksträffar
   subheading: >-
-    Se när våra nästa event och nätverksträffar är. Kom ihåg att signa upp dig
-    på utskicket om du vill ha en påminnelse om biljettsläpp i inboxen!
+    Här ser du när och var våra nästa event, mingel och nätverksträffar är
+    planerade. Kom ihåg att signa upp dig för utskicket om du vill ha en
+    påminnelse om biljettsläpp i inboxen!
 ---
 

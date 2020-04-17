@@ -210,5 +210,13 @@ module.exports = {
         icon: `content/assets/favicon.png`,
       },
     },
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://www.seogirls.se",
+        sitemap: "https://www.seogirls.se/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
   ],
 }

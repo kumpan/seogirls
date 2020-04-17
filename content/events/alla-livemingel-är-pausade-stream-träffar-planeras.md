@@ -1,6 +1,6 @@
 ---
 path: seogirls-on-hold
-title: Alla livemingel är pausade.
+title: Alla livemingel är pausade
 description: >-
   I och med att man för tillfället inte får träffas i större sällskap än 50
   personer, lägger vi våra träffar på is tills det är OK att ses igen. 

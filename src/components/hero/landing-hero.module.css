@@ -132,27 +132,23 @@
     content: "";
     display: block;
     position: absolute;
-    width: 240px;
-    height: 240px;
+    width: 160px;
+    height: 160px;
     background: rgba(79, 210, 179, 0.3);
     border-radius: 50%;
     filter: blur(32px);
-    left: -184px;
+    left: -104px;
     top: -40px;
     z-index: -1;
-    animation: stars-in 1s ease-in-out both,
-      stars-1-pulse 5s ease-in-out 1s infinite forwards;
   }
 
   .container::after {
     background: rgba(236, 155, 218, 0.4);
     left: auto;
     top: auto;
-    bottom: -110px;
-    right: -140px;
+    bottom: -40px;
+    right: -160px;
     width: 240px;
     height: 240px;
-    animation: stars-in 1s ease-in-out 0.2s both,
-      stars-1-pulse 5s ease-in-out 1.2s infinite forwards;
   }
 }

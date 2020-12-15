@@ -2,6 +2,7 @@
 shorttitle: Cookiepolicy
 title: Cookiepolicy
 description: Cookiepolicy
+canonical: 'https://www.seogirls.se/'
 hero:
   headingone: Vår cookiepolicy
   subheading: >-

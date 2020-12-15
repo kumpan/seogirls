@@ -1,7 +1,7 @@
 ---
 path: 01unikorn
 title: Unikorn
-logo: /../assets/unikorn-logo-wh.svg
+logo: /../assets/unikorn-logo-wh.png
 url: 'https://www.unikorn.se/'
 color: '#F15C68'
 sponsortype: main

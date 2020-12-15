@@ -1,9 +1,9 @@
 ---
 path: 01unikorn
 title: Unikorn
-logo: /../assets/unikornlogo-fet-inverst.png
-url: 'https://unikorn.se/'
+logo: /../assets/unikorn-logo-wh.svg
+url: 'https://www.unikorn.se/'
 color: '#742B41'
 sponsortype: main
 ---
-Vi är din partner i din “go-to-market”-fas. När du måste börja om eller bara hitta vägen till en framgångsrik digital strategi. Vi hanterar alla aspekter av den digitala marknadsföringsmaskinen.
+Unikorn is a digital agency focusing on Digital Marketing Strategies, Growth Hacking and Advanced SEO. We’re your best friend when it comes to finding the best path to a your digital success.

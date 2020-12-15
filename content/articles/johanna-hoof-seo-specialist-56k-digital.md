@@ -1,7 +1,11 @@
 ---
 path: portratt-johanna-hoof
-date: 2020-01-24T09:29:02.649Z
 title: 'Johanna Hoof, SEO-specialist @ 56k Digital'
+description: >-
+  Läs mer om hur Johann Hoof började jobba med SEO och vad hon presenterade på
+  SEOGIRLS!
+canonical: 'https://www.seogirls.se/artiklar/portratt-johanna-hoof'
+date: 2020-01-24T09:29:02.649Z
 ingress: >-
   Johanna Hoof är SEO-specialist på marknadsföringsbyrån 56k Digital som hostar
   SEOGIRLS #8. Johanna är utbildad onlinemarknadsförare vid Medieinstitutet i

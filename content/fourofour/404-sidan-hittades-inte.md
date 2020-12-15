@@ -2,6 +2,7 @@
 shorttitle: 404 Sidan hittades inte
 title: 404 Sidan hittades inte
 description: 404 Sidan hittades inte
+canonical: 'https://www.seogirls.se/404'
 hero:
   headingone: Oj då! Sidan hittades inte
   subheading: >-

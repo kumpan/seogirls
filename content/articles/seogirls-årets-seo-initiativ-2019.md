@@ -1,7 +1,11 @@
 ---
 path: seogirls-arets-seo-initiativ-2019
-date: 2020-01-07T13:20:22.890Z
 title: SEOGIRLS årets SEO-initiativ 2019
+description: >-
+  SEOGIRLS utnämns till årets SEO-initiativ när Björn Bydén, Head of SEO på
+  Pineberry summerar SEO-året 2019!
+canonical: 'https://www.seogirls.se/artiklar/seogirls-arets-seo-initiativ-2019'
+date: 2020-01-07T13:20:22.890Z
 ingress: >-
   Det förra året är till ända och ett nytt decennium börjar. Då är det på sin
   plats att de ledande SEO-byråerna summerar året som har gått och gör en lista

@@ -1,18 +1,18 @@
 ---
-canonical: 'https://seogirls.se/'
+canonical: 'https://www.seogirls.se/'
 title: Ett nätverk för kvinnor som jobbar med SEO
 description: 'Skapa nya kontakter, utvecklas och dela med dig av din kunskap.'
 hero:
   headingone: Ett nätverk för kvinnor som jobbar med SEO
   subtitlelinkdestination: /events/kommande
   subtitlelinktext: Se kommande events
-events:
-  nexteventbuttondestination: /events/kommande
-  nexteventbuttontext: Se alla kommande events
-  nexteventtitle: Kommande events
-  pasteventbuttondestination: /events/tidigare
-  pasteventbuttontext: Se alla tidigare events
-  pasteventtitle: Tidigare SEOGIRLS-events
+eventspages:
+  nexteventbuttondestination: 'https://www.seogirls.se/events/kommande'
+  nexteventbuttontext: Se alla inplanerade mingel
+  nexteventtitle: Kommande mingel
+  pasteventbuttondestination: 'https://www.seogirls.se/events/tidigare'
+  pasteventbuttontext: Se alla tidigare mingel
+  pasteventtitle: Tidigare mingel
 about:
   e: >-
     En gång i månaden träffas vi på ett SEOGIRLS-mingel för att umgås, nätverka

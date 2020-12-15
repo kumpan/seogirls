@@ -1,8 +1,8 @@
 ---
 path: seogirls-hos-iprospect
-title: "SEOGIRLS #9 hostas av iProspect"
+title: 'SEOGIRLS #9 hostas av iProspect'
 description: Det nionde SEOGIRLS hålls hos iProspect på Åsögatan
-canonical: "https://seogirls.netlify.com/events"
+canonical: 'https://www.seogirls.se/events/seogirls-hos-iprospect'
 date: 2020-03-03T15:56:06.818Z
 ingress: >-
   NÄSTA VECKA ÄR DET MINGEL!

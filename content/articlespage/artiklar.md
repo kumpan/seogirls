@@ -4,7 +4,7 @@ title: Artiklar och porträtt från SEOGIRLS
 description: >-
   Artiklar om SEO & porträtt av kvinnor som jobbar med SEO. Läs mer om det som
   händer just nu i SEOvärlden och vilka vi kvinnor är som jobbar med SEO.
-canonical: /artiklar
+canonical: 'https://www.seogirls.se/artiklar'
 hero:
   headingone: 'Artiklar om SEO och porträtt av kvinnor som jobbar med SEO '
   subheading: >-

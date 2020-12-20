@@ -5,7 +5,7 @@ description: >-
   SEOGIRLS MÖTTES IGEN! Äntligen sågs vi igen, efter 9 långa månader. För vissa
   har det varit extra tungt, för andra har vardagen rullat på. Oavsett hur vi
   har tacklat pandemin, hade vi alla sett fram emot att ses igen!
-canonical: 'https://www.seogirls.se/artiklar/seogirls-10'
+canonical: 'https://www.seogirls.se/artiklar/seogirls-onlineevent'
 date: 2020-12-20T20:16:07.263Z
 ingress: >-
   SEOGIRLS MÖTTES IGEN! Äntligen sågs vi igen, efter 9 långa månader. För vissa

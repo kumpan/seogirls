@@ -1,5 +1,5 @@
 ---
-path: seogirls-10
+path: seogirls-onlineevent
 title: SEOGIRLS tionde event - online
 description: >-
   SEOGIRLS MÖTTES IGEN! Äntligen sågs vi igen, efter 9 långa månader. För vissa

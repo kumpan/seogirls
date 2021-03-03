@@ -23,10 +23,11 @@ about:
   o: >-
     Om du är en SEOtjej och vill gå med i SEOGIRLS, gå med i vår
     [LinkedIn-grupp](https://www.linkedin.com/groups/12241414/) och
-    [Slack-kanal](https://seogirls.slack.se/)! Där annonserar vi nästa event.
-    Eventen kommer också annonseras här på sajten i förväg och du kan [signa upp
-    dig på vårt mejlutskick](https://eepurl.com/gMgZTD) så får du ett mejl nästa
-    gång biljetterna släpps. Men passa på! Biljetterna brukar gå på bara några
+    [Slack-kanal](https://join.slack.com/t/seogirls/shared_invite/zt-n3dc84ja-QbFNN59apKLwlbvMAhrTpA)!
+    Där annonserar vi nästa event. Eventen kommer också annonseras här på sajten
+    i förväg och du kan [signa upp dig på vårt
+    mejlutskick](https://eepurl.com/gMgZTD) så får du ett mejl nästa gång
+    biljetterna släpps. Men passa på! Biljetterna brukar gå på bara några
     timmar.
   s: >-
     SEO-branschen är idag väldigt mansdominerad, vilket vi vill ändra på. Alla

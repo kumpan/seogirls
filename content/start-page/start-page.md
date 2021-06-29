@@ -21,14 +21,14 @@ about:
     eller testa ett framförande inför en trevlig publik, hör av dig!
   headingtwo: 'Skapa nya kontakter, utvecklas och dela med dig av din kunskap'
   o: >-
-    Om du är en SEOtjej och vill gå med i SEOGIRLS, gå med i vår
-    [LinkedIn-grupp](https://www.linkedin.com/groups/12241414/) och
-    [Slack-kanal](https://join.slack.com/t/seogirls/shared_invite/zt-n3dc84ja-QbFNN59apKLwlbvMAhrTpA)!
-    Där annonserar vi nästa event. Eventen kommer också annonseras här på sajten
-    i förväg och du kan [signa upp dig på vårt
-    mejlutskick](https://eepurl.com/gMgZTD) så får du ett mejl nästa gång
-    biljetterna släpps. Men passa på! Biljetterna brukar gå på bara några
-    timmar.
+    Om du är en en kvinna som jobbar med SEO och vill gå med i SEOGIRLS, gå med
+    i vår [LinkedIn-grupp](https://www.linkedin.com/groups/12241414/),
+    [Facebook-grupp](https://www.facebook.com/groups/469176120312158) och
+    [Slack-kanal](https://forms.gle/zFkUuCvE8c17gp7J7)! Där annonserar vi nästa
+    event. Eventen kommer också annonseras här på sajten i förväg och du kan
+    [signa upp dig på vårt mejlutskick](https://eepurl.com/gMgZTD) så får du ett
+    mejl nästa gång biljetterna släpps. Men passa på! Biljetterna brukar gå på
+    bara några timmar.
   s: >-
     SEO-branschen är idag väldigt mansdominerad, vilket vi vill ändra på. Alla
     mår bättre av en balanserad bransch! Syftet med att ha ett nätverk för bara

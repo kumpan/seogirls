@@ -1,7 +1,7 @@
 ---
 name: Footer
 title: Kom och mingla med oss!
-copyright: "© SEOGIRLS 2020"
+copyright: © SEOGIRLS 2022
 linkscenter: |-
   #### Häng med oss
   * [LinkedIn](https://www.linkedin.com/groups/12241414/)
@@ -12,3 +12,4 @@ linksright: |-
 
   * <mailto:info@seogirls.se>
 ---
+

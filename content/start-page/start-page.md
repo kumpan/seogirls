@@ -10,7 +10,7 @@ eventspages:
   nexteventbuttondestination: 'https://www.seogirls.se/events/kommande'
   nexteventbuttontext: Se alla inplanerade mingel
   nexteventtitle: Kommande mingel
-  pasteventbuttondestination: 'https://www.seogirls.se/events/tidigare'
+  pasteventbuttondestination: /events/tidigare
   pasteventbuttontext: Se alla tidigare mingel
   pasteventtitle: Tidigare mingel
 about:

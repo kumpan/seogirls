@@ -5,7 +5,7 @@ copyright: © SEOGIRLS 2022
 linkscenter: |-
   #### Häng med oss
   * [LinkedIn](https://www.linkedin.com/groups/12241414/)
-  * [Slack](https://seogirls.slack.se/)
+  * [Slack](https://forms.gle/ajnSvFEqcyugsdgD8)
   * [Signa upp för mejlutskick](https://eepurl.com/gMgZTD)
 linksright: |-
   #### Kontakt

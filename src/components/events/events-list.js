@@ -28,8 +28,7 @@ const EventsList = ({
           edges {
             node {
               frontmatter {
-                events {
-                  nexteventtitle
+                eventspages {
                   nexteventbuttontext
                   nexteventbuttondestination
                   pasteventtitle
@@ -61,7 +60,7 @@ const EventsList = ({
   // Icons to use
   const arrowRightIcon = <ArrowRightIcon />
 
-  const pageContent = data.allMdx.edges[0].node.frontmatter.events
+  const pageContent = data.allMdx.edges[0].node.frontmatter.eventspages
 
   return (
     <div className={styles.events}>
